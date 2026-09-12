@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: aa964fcf-a00c-5526-835d-77270b8ab703
+  bundle: image
+  default_langcode: en
+  depends:
+    c13e8c9d-9c37-56c2-aebd-b20dbc4facc8: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Glowing red and green clouds of gas surrounded by thousands of stars
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Glowing red and green clouds of gas surrounded by thousands of stars.
+    title: ''
+    width: 1600
+    height: 1302
+    entity: c13e8c9d-9c37-56c2-aebd-b20dbc4facc8

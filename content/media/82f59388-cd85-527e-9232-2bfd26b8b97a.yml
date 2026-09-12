@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 82f59388-cd85-527e-9232-2bfd26b8b97a
+  bundle: image
+  default_langcode: en
+  depends:
+    adb79275-1aaa-5668-9ed7-fa41503cac8f: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A dark wooden house with a steep gabled roof under a teal sky
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A dark wooden house with a steep gabled roof under a teal sky.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: adb79275-1aaa-5668-9ed7-fa41503cac8f

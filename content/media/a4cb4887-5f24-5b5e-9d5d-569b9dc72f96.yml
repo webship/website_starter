@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a4cb4887-5f24-5b5e-9d5d-569b9dc72f96
+  bundle: image
+  default_langcode: en
+  depends:
+    f0c88b48-9e7b-56bc-a96c-195585b4ed80: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Two views of the edge of the Sun, in copper and gold, with a bright flare
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Two views of the edge of the Sun, in copper and gold, with a bright flare.
+    title: ''
+    width: 1600
+    height: 1422
+    entity: f0c88b48-9e7b-56bc-a96c-195585b4ed80

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3c2bbcf9-d086-5a1e-b1b9-4f0586ded97d
+  bundle: image
+  default_langcode: en
+  depends:
+    13a91437-2173-5b3a-8dab-2c64ef0f74ad: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A person in a knitted hood holding a camera up to their face in the snow
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A person in a knitted hood holding a camera up to their face in the snow.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: 13a91437-2173-5b3a-8dab-2c64ef0f74ad

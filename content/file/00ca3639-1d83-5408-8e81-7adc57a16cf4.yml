@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 00ca3639-1d83-5408-8e81-7adc57a16cf4
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: crew-dragon-approaching-iss.jpg
+  uri:
+  - value: public://website-starter/crew-dragon-approaching-iss.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 92393
+  status:
+  - value: true

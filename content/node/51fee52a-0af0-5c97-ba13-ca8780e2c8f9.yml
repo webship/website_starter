@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 51fee52a-0af0-5c97-ba13-ca8780e2c8f9
+  bundle: webblog
+  default_langcode: en
+  depends:
+    82f59388-cd85-527e-9232-2bfd26b8b97a: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: 162 icons ready to use
+  created:
+  - value: 1788825600
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/162-icons-ready-to-use
+    langcode: en
+    pathauto: 0
+  body:
+  - value: <p class="uk-text-lead">The UIkit icons ship with the theme as an icon pack, rendered as inline SVG.</p><p>The 162 UIkit icons ship with the theme in <code>icons/uikit</code>, declared as the <code>uikit</code> icon pack for UI Icons.</p><p>They are rendered as inline SVG with a <em>ratio</em> setting, so they follow the text color and scale with the design.</p>
+    format: full_html
+    summary: The UIkit icons ship with the theme as an icon pack, rendered as inline SVG.
+  field_media:
+  - entity: 82f59388-cd85-527e-9232-2bfd26b8b97a

@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 572e275b-f00a-56ed-89cb-60fd505a019c
+  bundle: webblog
+  default_langcode: en
+  depends:
+    72bd3e08-5ed7-5672-b143-ddb4e0006b15: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: UIkit utilities in the Styles panel
+  created:
+  - value: 1788912000
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/uikit-utilities-in-the-styles-panel
+    langcode: en
+    pathauto: 0
+  body:
+  - value: '<p class="uk-text-lead">Text, colors, margins, flex, shadows and animations: the UIkit utility classes are one click away.</p><p>UI Styles exposes the UIkit utility classes: text, typography, colors, inverse, margin, padding, width, height, flex, position, visibility, box shadow, border radius and animation.</p><p>Pick them for blocks, components and layouts in the Display Builder <em>Styles</em> panel, instead of writing CSS.</p>'
+    format: full_html
+    summary: 'Text, colors, margins, flex, shadows and animations: the UIkit utility classes are one click away.'
+  field_media:
+  - entity: 72bd3e08-5ed7-5672-b143-ddb4e0006b15

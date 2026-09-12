@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: aca5fefb-8e37-5f6e-8035-1492c91fbeae
+  bundle: webblog
+  default_langcode: en
+  depends:
+    bab6f6ea-ff4f-5365-92f8-a4989fead3cb: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Start your own theme from the starterkit
+  created:
+  - value: 1788652800
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/start-your-own-theme
+    langcode: en
+    pathauto: 0
+  body:
+  - value: <p class="uk-text-lead">Generate a theme of your own from UI Suite UIkit with a single command.</p><p>UI Suite UIkit is a starterkit theme. Generate your own theme from it with <code>php core/scripts/drupal generate-theme my_theme --starterkit ui_suite_uikit</code>.</p><p>The machine name, the label and the CSS class names are renamed, the development files are left out and the new theme gets its own README.</p>
+    format: full_html
+    summary: Generate a theme of your own from UI Suite UIkit with a single command.
+  field_media:
+  - entity: bab6f6ea-ff4f-5365-92f8-a4989fead3cb

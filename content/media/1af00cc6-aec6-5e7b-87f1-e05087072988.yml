@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1af00cc6-aec6-5e7b-87f1-e05087072988
+  bundle: image
+  default_langcode: en
+  depends:
+    f0b00ae5-a36f-5e45-9006-50476ede6c76: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Glasses and brown leather cases on a black background
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Glasses and brown leather cases on a black background.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: f0b00ae5-a36f-5e45-9006-50476ede6c76

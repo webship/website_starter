@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9d2d9dda-8225-5317-af97-4132fa20b38e
+  bundle: webblog
+  default_langcode: en
+  depends:
+    22c5a3c1-e32d-5eb1-9272-4c9a6a6a3195: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Page changes without full reloads
+  created:
+  - value: 1788739200
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/page-changes-without-full-reloads
+    langcode: en
+    pathauto: 0
+  body:
+  - value: '<p class="uk-text-lead">With the HTMX navigation, only the page wrapper is swapped when a link is followed.</p><p>The HTMX navigation boosts the links of the page with Drupal core HTMX: only the page wrapper is swapped. Core loads the new CSS and JavaScript, merges <code>drupalSettings</code> and attaches the behaviors.</p><p>Forms, administration pages, files, contextual and dialog links keep the normal navigation. The focus moves to the main content and the new page title is announced to screen readers.</p>'
+    format: full_html
+    summary: With the HTMX navigation, only the page wrapper is swapped when a link is followed.
+  field_media:
+  - entity: 22c5a3c1-e32d-5eb1-9272-4c9a6a6a3195

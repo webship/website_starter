@@ -14,5 +14,12 @@ All notable changes to the Website Starter site template.
 - Drupal CMS recipes without Canvas: administration UI, anti-spam, authentication, basic SEO.
 - Webship editor, SEO, security and configuration management recipes.
 - Contact webform, Pathauto pattern for the blog, social media menu.
-- Demo content: pages, 24 blog posts with images, a video, menus.
+- Demo content: pages, 32 blog posts with images, a video, menus.
+- UIkit showcase: landing, Features, Get started, Gallery, Slideshows, Elements, Support and Image credits
+  webpages, with the UIkit demo images and NASA public domain photos.
 - Webship-js functional tests.
+
+### Changed
+
+- No Layout Builder: the settings of core Standard and the Drupal CMS admin UI are part of the recipe, without
+  Navigation and Dashboard, which require Layout Builder.

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 52fe1999-16d3-51f9-8461-51ef9d821598
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: uikit-size2.jpg
+  uri:
+  - value: public://website-starter/uikit-size2.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 28863
+  status:
+  - value: true

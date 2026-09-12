@@ -10,10 +10,30 @@ Feature: Webpages and the contact webform
       And the page should not contain escaped markup
 
     Examples:
-      | path      | title    |
-      | /about-us | About us |
-      | /privacy  | Privacy  |
-      | /terms    | Terms    |
+      | path                 | title          |
+      | /about-us            | About us       |
+      | /privacy             | Privacy        |
+      | /terms               | Terms          |
+      | /welcome             | UIkit showcase |
+      | /features            | Features       |
+      | /get-started         | Get started    |
+      | /showcase/gallery    | Gallery        |
+      | /showcase/slideshows | Slideshows     |
+      | /showcase/elements   | Elements       |
+      | /support             | Support        |
+      | /image-credits       | Image credits  |
+
+  Scenario: The UIkit showcase pages use the UIkit components
+    Given I am an anonymous user
+     When I go to "/showcase/gallery"
+     Then "[uk-lightbox]" should be visible
+      And the page should not contain escaped markup
+     When I go to "/showcase/slideshows"
+     Then "[uk-slideshow]" should be visible
+      And "[uk-slider]" should be visible
+     When I go to "/welcome"
+     Then ".uk-cover-container" should be visible
+      And there should be no JavaScript errors
 
   Scenario: The contact webform uses the UIkit form styles
     Given I am an anonymous user

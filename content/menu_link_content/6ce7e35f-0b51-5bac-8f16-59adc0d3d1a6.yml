@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 6ce7e35f-0b51-5bac-8f16-59adc0d3d1a6
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    6bb3e629-b752-5c8e-820f-4f3d07f97a7d: node
+    c378d580-ce32-5479-b6e5-1b8dbc8d9c42: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Get started
+  menu_name:
+  - value: main
+  link:
+  - target_uuid: 6bb3e629-b752-5c8e-820f-4f3d07f97a7d
+    title: ''
+    options: {}
+  external:
+  - value: false
+  rediscover:
+  - value: false
+  weight:
+  - value: 2
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:c378d580-ce32-5479-b6e5-1b8dbc8d9c42

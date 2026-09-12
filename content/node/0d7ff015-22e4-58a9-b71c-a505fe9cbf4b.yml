@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0d7ff015-22e4-58a9-b71c-a505fe9cbf4b
+  bundle: webblog
+  default_langcode: en
+  depends:
+    3c2bbcf9-d086-5a1e-b1b9-4f0586ded97d: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Sticky navbar and offcanvas menu
+  created:
+  - value: 1788480000
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/sticky-navbar-and-offcanvas-menu
+    langcode: en
+    pathauto: 0
+  body:
+  - value: '<p class="uk-text-lead">The navbar has left, center and right regions, and an offcanvas menu on small screens.</p><p>The page template builds the header with the UIkit navbar, in three regions: <em>Navbar left</em>, <em>Navbar center</em> and <em>Navbar right</em>. A theme setting makes it sticky.</p><p>On small screens, the navbar toggle opens the <em>Offcanvas</em> region, with the main menu as a UIkit nav.</p>'
+    format: full_html
+    summary: The navbar has left, center and right regions, and an offcanvas menu on small screens.
+  field_media:
+  - entity: 3c2bbcf9-d086-5a1e-b1b9-4f0586ded97d

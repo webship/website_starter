@@ -1,0 +1,65 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 027af54f-1d82-5db7-835b-b2e263a6cbc0
+  bundle: webpage
+  default_langcode: en
+  depends:
+    adb79275-1aaa-5668-9ed7-fa41503cac8f: file
+    a448ce03-a790-50f5-98ca-c65c1e38653f: file
+    13a91437-2173-5b3a-8dab-2c64ef0f74ad: file
+    f0b00ae5-a36f-5e45-9006-50476ede6c76: file
+    30130fd8-6386-5cce-bbac-381972e657a2: file
+    d16ce8a5-7404-563e-bb97-54c4c8bc8680: file
+    9cd0060c-7b25-5a43-8433-0f0758b35b3e: file
+    52fe1999-16d3-51f9-8461-51ef9d821598: file
+    744ce256-2026-5335-9231-6f3bb7f41489: file
+    fc6c7bd4-4dc5-5ddb-9040-a72086709dd4: file
+    00ca3639-1d83-5408-8e81-7adc57a16cf4: file
+    844575c2-9cb1-5c02-aac4-3d85b09b33f1: file
+    416b5956-8b09-5aed-b1b8-04d42c05a73a: file
+    d2c3fc64-5ccd-5569-a4bf-9aabb06423fa: file
+    c13e8c9d-9c37-56c2-aebd-b20dbc4facc8: file
+    f0c88b48-9e7b-56bc-a96c-195585b4ed80: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Gallery
+  created:
+  - value: 1789088220
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /showcase/gallery
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <p class="uk-text-lead">A masonry grid with a lightbox: select a photo to open it, then browse with the arrows or the keyboard.</p>
+      <div class="uk-child-width-1-2 uk-child-width-1-3@m uk-grid-small" uk-grid="masonry: pack" uk-lightbox="animation: slide">
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-photo.jpg" data-caption="A dark wooden house with a steep gabled roof under a teal sky."><img src="/sites/default/files/website-starter/uikit-photo.jpg" data-entity-type="file" data-entity-uuid="adb79275-1aaa-5668-9ed7-fa41503cac8f" width="1600" height="1067" alt="A dark wooden house with a steep gabled roof under a teal sky." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/iss-aurora-borealis.jpg" data-caption="Green and red aurora glowing above the curve of the Earth at night."><img src="/sites/default/files/website-starter/iss-aurora-borealis.jpg" data-entity-type="file" data-entity-uuid="fc6c7bd4-4dc5-5ddb-9040-a72086709dd4" width="1600" height="1067" alt="Green and red aurora glowing above the curve of the Earth at night." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-size-v.jpg" data-caption="A spiral wooden staircase seen from above, with a person climbing it."><img src="/sites/default/files/website-starter/uikit-size-v.jpg" data-entity-type="file" data-entity-uuid="d16ce8a5-7404-563e-bb97-54c4c8bc8680" width="800" height="1600" alt="A spiral wooden staircase seen from above, with a person climbing it." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-photo3.jpg" data-caption="A person in a knitted hood holding a camera up to their face in the snow."><img src="/sites/default/files/website-starter/uikit-photo3.jpg" data-entity-type="file" data-entity-uuid="13a91437-2173-5b3a-8dab-2c64ef0f74ad" width="1600" height="1067" alt="A person in a knitted hood holding a camera up to their face in the snow." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/cassini-saturn-portrait.jpg" data-caption="Saturn and its wide rings against black space."><img src="/sites/default/files/website-starter/cassini-saturn-portrait.jpg" data-entity-type="file" data-entity-uuid="d2c3fc64-5ccd-5569-a4bf-9aabb06423fa" width="1600" height="818" alt="Saturn and its wide rings against black space." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-light.jpg" data-caption="A hand holding an open book of black and white architecture photographs."><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/artemis-i-sls-launch-pad.jpg" data-caption="An orange and white rocket next to its launch tower, with the coast behind."><img src="/sites/default/files/website-starter/artemis-i-sls-launch-pad.jpg" data-entity-type="file" data-entity-uuid="844575c2-9cb1-5c02-aac4-3d85b09b33f1" width="778" height="1600" alt="An orange and white rocket next to its launch tower, with the coast behind." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-size1.jpg" data-caption="A cyclist riding along a road through green hills at sunset."><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e" width="900" height="600" alt="A cyclist riding along a road through green hills at sunset." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/apollo-8-earthrise.jpg" data-caption="Earth, half in shadow, rising above the grey horizon of the Moon."><img src="/sites/default/files/website-starter/apollo-8-earthrise.jpg" data-entity-type="file" data-entity-uuid="744ce256-2026-5335-9231-6f3bb7f41489" width="1600" height="1600" alt="Earth, half in shadow, rising above the grey horizon of the Moon." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-dark.jpg" data-caption="Glasses and brown leather cases on a black background."><img src="/sites/default/files/website-starter/uikit-dark.jpg" data-entity-type="file" data-entity-uuid="f0b00ae5-a36f-5e45-9006-50476ede6c76" width="1600" height="1067" alt="Glasses and brown leather cases on a black background." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/perseverance-ingenuity-selfie.jpg" data-caption="A rover on reddish-brown rocky ground, with a small helicopter behind it."><img src="/sites/default/files/website-starter/perseverance-ingenuity-selfie.jpg" data-entity-type="file" data-entity-uuid="416b5956-8b09-5aed-b1b8-04d42c05a73a" width="1600" height="1177" alt="A rover on reddish-brown rocky ground, with a small helicopter behind it." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-photo2.jpg" data-caption="A silver laptop in a tan leather sleeve on a grey sofa."><img src="/sites/default/files/website-starter/uikit-photo2.jpg" data-entity-type="file" data-entity-uuid="a448ce03-a790-50f5-98ca-c65c1e38653f" width="1600" height="1067" alt="A silver laptop in a tan leather sleeve on a grey sofa." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/spitzer-omega-nebula.jpg" data-caption="Glowing red and green clouds of gas surrounded by thousands of stars."><img src="/sites/default/files/website-starter/spitzer-omega-nebula.jpg" data-entity-type="file" data-entity-uuid="c13e8c9d-9c37-56c2-aebd-b20dbc4facc8" width="1600" height="1302" alt="Glowing red and green clouds of gas surrounded by thousands of stars." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/uikit-size2.jpg" data-caption="A winding road through a snow-covered landscape."><img src="/sites/default/files/website-starter/uikit-size2.jpg" data-entity-type="file" data-entity-uuid="52fe1999-16d3-51f9-8461-51ef9d821598" width="700" height="500" alt="A winding road through a snow-covered landscape." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/crew-dragon-approaching-iss.jpg" data-caption="A small white capsule approaching the International Space Station above the Earth."><img src="/sites/default/files/website-starter/crew-dragon-approaching-iss.jpg" data-entity-type="file" data-entity-uuid="00ca3639-1d83-5408-8e81-7adc57a16cf4" width="1067" height="1600" alt="A small white capsule approaching the International Space Station above the Earth." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      <div><a class="uk-inline-clip uk-transition-toggle uk-display-block" href="/sites/default/files/website-starter/sdo-x8-solar-flare.jpg" data-caption="Two views of the edge of the Sun, in copper and gold, with a bright flare."><img src="/sites/default/files/website-starter/sdo-x8-solar-flare.jpg" data-entity-type="file" data-entity-uuid="f0c88b48-9e7b-56bc-a96c-195585b4ed80" width="1600" height="1422" alt="Two views of the edge of the Sun, in copper and gold, with a bright flare." class="uk-transition-scale-up uk-transition-opaque"></a></div>
+      </div>
+    format: full_html
+    summary: ''

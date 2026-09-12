@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 58fdebff-d5c2-5082-a3d5-f7aa6f7da938
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: uikit-avatar.jpg
+  uri:
+  - value: public://website-starter/uikit-avatar.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 84758
+  status:
+  - value: true

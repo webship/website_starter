@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f2693b04-9731-5cf5-b0ea-892eac6187de
+  bundle: image
+  default_langcode: en
+  depends:
+    fc6c7bd4-4dc5-5ddb-9040-a72086709dd4: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Green and red aurora glowing above the curve of the Earth at night
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Green and red aurora glowing above the curve of the Earth at night.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: fc6c7bd4-4dc5-5ddb-9040-a72086709dd4

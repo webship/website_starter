@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 72bd3e08-5ed7-5672-b143-ddb4e0006b15
+  bundle: image
+  default_langcode: en
+  depends:
+    30130fd8-6386-5cce-bbac-381972e657a2: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A hand holding an open book of black and white architecture photographs
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A hand holding an open book of black and white architecture photographs.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: 30130fd8-6386-5cce-bbac-381972e657a2

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3998b03a-059c-5c07-905f-261b0d177440
+  bundle: image
+  default_langcode: en
+  depends:
+    1b385964-f637-56c1-aea9-93554c91d65b: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A lone figure in a yellow jacket in a vast white, misty landscape
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A lone figure in a yellow jacket in a vast white, misty landscape.
+    title: ''
+    width: 1600
+    height: 400
+    entity: 1b385964-f637-56c1-aea9-93554c91d65b

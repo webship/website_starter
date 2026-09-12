@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0e547589-666d-5e40-a0c3-f960f05f9fb9
+  bundle: webblog
+  default_langcode: en
+  depends:
+    1af00cc6-aec6-5e7b-87f1-e05087072988: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Design tokens and dark mode
+  created:
+  - value: 1788998400
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/design-tokens-and-dark-mode
+    langcode: en
+    pathauto: 0
+  body:
+  - value: <p class="uk-text-lead">The UIkit global colors and font family are CSS variables, with Light and Dark color modes.</p><p>With UI Skins, the UIkit global colors and font family are CSS variables, editable in <em>Appearance &gt; CSS variables</em> and in the Display Builder <em>Design tokens</em> panel.</p><p>Every declaration using a UIkit global color falls back to the UIkit value, so the rendering stays identical to UIkit until a variable is set. The <em>Light</em> and <em>Dark</em> color modes switch with a <code>data-theme</code> attribute on the <code>html</code> element.</p>
+    format: full_html
+    summary: The UIkit global colors and font family are CSS variables, with Light and Dark color modes.
+  field_media:
+  - entity: 1af00cc6-aec6-5e7b-87f1-e05087072988

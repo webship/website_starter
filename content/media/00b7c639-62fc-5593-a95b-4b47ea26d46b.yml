@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 00b7c639-62fc-5593-a95b-4b47ea26d46b
+  bundle: image
+  default_langcode: en
+  depends:
+    c454eb69-cb69-5fc3-bcbb-ab1a3f4e6718: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: The fully lit Earth, with Africa and the Antarctic ice cap under white clouds
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: The fully lit Earth, with Africa and the Antarctic ice cap under white clouds.
+    title: ''
+    width: 1600
+    height: 1600
+    entity: c454eb69-cb69-5fc3-bcbb-ab1a3f4e6718

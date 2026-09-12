@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d2c3fc64-5ccd-5569-a4bf-9aabb06423fa
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: cassini-saturn-portrait.jpg
+  uri:
+  - value: public://website-starter/cassini-saturn-portrait.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 47241
+  status:
+  - value: true

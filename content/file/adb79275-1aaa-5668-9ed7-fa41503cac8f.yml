@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: adb79275-1aaa-5668-9ed7-fa41503cac8f
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: uikit-photo.jpg
+  uri:
+  - value: public://website-starter/uikit-photo.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 194910
+  status:
+  - value: true

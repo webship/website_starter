@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 30130fd8-6386-5cce-bbac-381972e657a2
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: uikit-light.jpg
+  uri:
+  - value: public://website-starter/uikit-light.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 78091
+  status:
+  - value: true

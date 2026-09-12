@@ -1,0 +1,70 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: dfed3873-ceff-53df-bc0c-3040659f250e
+  bundle: webpage
+  default_langcode: en
+  depends:
+    9cd0060c-7b25-5a43-8433-0f0758b35b3e: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Elements
+  created:
+  - value: 1789088100
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /showcase/elements
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <h2 class="uk-heading-divider">Typography</h2>
+      <p class="uk-text-lead">A lead paragraph stands out at the start of a page.</p>
+      <p>Regular text with <a href="#">a link</a>, <strong>strong text</strong>, <em>emphasis</em>, <code>inline code</code> and <mark>highlighted text</mark>.</p>
+      <p class="uk-text-meta">Meta text, for dates and authors.</p>
+      <h3 class="uk-heading-bullet">Bullet heading</h3>
+      <h3 class="uk-heading-line"><span>Line heading</span></h3>
+      <blockquote cite="https://www.drupal.org/community"><p class="uk-margin-small-bottom">Come for the software, stay for the community.</p><footer>The Drupal community motto</footer></blockquote>
+      <div class="uk-child-width-1-3@m" uk-grid>
+      <div><ul class="uk-list uk-list-bullet"><li>Bullet list</li><li>Second item</li><li>Third item</li></ul></div>
+      <div><ul class="uk-list uk-list-divider"><li>Divider list</li><li>Second item</li><li>Third item</li></ul></div>
+      <div><dl class="uk-description-list uk-description-list-divider"><dt>Description list</dt><dd>A term and its description.</dd><dt>Second term</dt><dd>Another description.</dd></dl></div>
+      </div>
+      <h2 class="uk-heading-divider uk-margin-large-top">Buttons</h2>
+      <p><a class="uk-button uk-button-default" href="#">Default</a> <a class="uk-button uk-button-primary" href="#">Primary</a> <a class="uk-button uk-button-secondary" href="#">Secondary</a> <a class="uk-button uk-button-danger" href="#">Danger</a> <a class="uk-button uk-button-text" href="#">Text</a> <a class="uk-button uk-button-link" href="#">Link</a></p>
+      <p><button class="uk-button uk-button-primary uk-button-small" type="button">Small</button> <button class="uk-button uk-button-primary uk-button-large" type="button">Large</button> <button class="uk-button uk-button-default" type="button" uk-tooltip="title: A tooltip; pos: top">With a tooltip</button></p>
+      <h2 class="uk-heading-divider uk-margin-large-top">Labels, badges and feedback</h2>
+      <p><span class="uk-label">Default</span> <span class="uk-label uk-label-success">Success</span> <span class="uk-label uk-label-warning">Warning</span> <span class="uk-label uk-label-danger">Danger</span> <span class="uk-badge">42</span></p>
+      <div class="uk-alert-primary" uk-alert><a href="#" class="uk-alert-close" uk-close></a><p>A primary alert, with a close button.</p></div>
+      <div class="uk-alert-success" uk-alert><p>The changes have been saved.</p></div>
+      <div class="uk-alert-warning" uk-alert><p>Some fields need your attention.</p></div>
+      <div class="uk-alert-danger" uk-alert><p>Something went wrong.</p></div>
+      <progress class="uk-progress" value="65" max="100">65%</progress>
+      <p><span uk-spinner></span> Loading…</p>
+      <h2 class="uk-heading-divider uk-margin-large-top">Cards</h2>
+      <div class="uk-child-width-1-3@m uk-grid-match" uk-grid>
+      <div><div class="uk-card uk-card-default uk-card-body"><h3 class="uk-card-title">Default</h3><p>A card with the default style.</p></div></div>
+      <div><div class="uk-card uk-card-primary uk-card-body"><h3 class="uk-card-title">Primary</h3><p>A card with the primary style.</p></div></div>
+      <div><div class="uk-card uk-card-secondary uk-card-body"><h3 class="uk-card-title">Secondary</h3><p>A card with the secondary style.</p></div></div>
+      </div>
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid><div class="uk-card-media-left uk-cover-container"><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e" width="900" height="600" alt="A cyclist riding along a road through green hills at sunset." uk-cover><canvas width="600" height="400"></canvas></div><div><div class="uk-card-body"><h3 class="uk-card-title">Media left</h3><p>A horizontal card, with the image on the left from small screens.</p></div></div></div>
+      <h2 class="uk-heading-divider uk-margin-large-top">Table</h2>
+      <div class="uk-overflow-auto"><table class="uk-table uk-table-divider uk-table-hover"><thead><tr><th>Group</th><th>Components</th></tr></thead><tbody><tr><td>Layout</td><td>Section, Container, Grid, Tile, Placeholder</td></tr><tr><td>Navigation</td><td>Navbar, Nav, Subnav, Tab, Breadcrumb, Pagination</td></tr><tr><td>Media</td><td>Cover, Overlay, Slider, Slideshow, Lightbox</td></tr></tbody></table></div>
+      <h2 class="uk-heading-divider uk-margin-large-top">Form elements</h2>
+      <div class="uk-form-stacked uk-width-1-2@m">
+      <div class="uk-margin"><label class="uk-form-label" for="demo-name">Name</label><div class="uk-form-controls"><input class="uk-input" id="demo-name" type="text" placeholder="Your name"></div></div>
+      <div class="uk-margin"><label class="uk-form-label" for="demo-topic">Topic</label><div class="uk-form-controls"><select class="uk-select" id="demo-topic"><option>Components</option><option>Design tokens</option></select></div></div>
+      <div class="uk-margin"><label class="uk-form-label" for="demo-message">Message</label><div class="uk-form-controls"><textarea class="uk-textarea" id="demo-message" rows="4"></textarea></div></div>
+      <div class="uk-margin"><label><input class="uk-checkbox" type="checkbox" checked> Checkbox</label> <label class="uk-margin-left"><input class="uk-radio" type="radio" name="demo-radio" checked> Radio</label></div>
+      </div>
+    format: full_html
+    summary: ''

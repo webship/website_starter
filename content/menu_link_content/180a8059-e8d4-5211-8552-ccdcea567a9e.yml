@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 180a8059-e8d4-5211-8552-ccdcea567a9e
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    00da26a5-3cac-5985-8ef0-ff9e2a6d9391: node
+    c378d580-ce32-5479-b6e5-1b8dbc8d9c42: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Slideshows
+  menu_name:
+  - value: main
+  link:
+  - target_uuid: 00da26a5-3cac-5985-8ef0-ff9e2a6d9391
+    title: ''
+    options: {}
+  external:
+  - value: false
+  rediscover:
+  - value: false
+  weight:
+  - value: 4
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:c378d580-ce32-5479-b6e5-1b8dbc8d9c42

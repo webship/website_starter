@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 5df9d9e4-8743-5523-989d-27fbe140f9bd
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    2550fa46-f312-57ad-90cf-758e7450bc5f: node
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Image credits
+  menu_name:
+  - value: footer
+  link:
+  - target_uuid: 2550fa46-f312-57ad-90cf-758e7450bc5f
+    title: ''
+    options: {}
+  external:
+  - value: false
+  rediscover:
+  - value: false
+  weight:
+  - value: -45
+  expanded:
+  - value: false

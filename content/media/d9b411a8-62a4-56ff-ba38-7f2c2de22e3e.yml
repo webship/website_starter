@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d9b411a8-62a4-56ff-ba38-7f2c2de22e3e
+  bundle: image
+  default_langcode: en
+  depends:
+    00ca3639-1d83-5408-8e81-7adc57a16cf4: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A small white capsule approaching the International Space Station above the Earth
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A small white capsule approaching the International Space Station above the Earth.
+    title: ''
+    width: 1067
+    height: 1600
+    entity: 00ca3639-1d83-5408-8e81-7adc57a16cf4

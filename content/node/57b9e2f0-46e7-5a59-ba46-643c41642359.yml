@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 57b9e2f0-46e7-5a59-ba46-643c41642359
+  bundle: webblog
+  default_langcode: en
+  depends:
+    00b7c639-62fc-5593-a95b-4b47ea26d46b: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: UIkit from a CDN or locally
+  created:
+  - value: 1788566400
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/uikit-from-a-cdn-or-locally
+    langcode: en
+    pathauto: 0
+  body:
+  - value: <p class="uk-text-lead">UIkit is loaded from the jsDelivr CDN by default, or from a local copy.</p><p>UIkit 3.25.22 is loaded from the jsDelivr CDN by default. To serve it locally, install the library in <code>web/libraries/uikit</code>, for example with Asset Packagist, and select <em>Local copy</em> in the theme settings.</p>
+    format: full_html
+    summary: UIkit is loaded from the jsDelivr CDN by default, or from a local copy.
+  field_media:
+  - entity: 00b7c639-62fc-5593-a95b-4b47ea26d46b

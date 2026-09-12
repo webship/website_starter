@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f0b00ae5-a36f-5e45-9006-50476ede6c76
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: uikit-dark.jpg
+  uri:
+  - value: public://website-starter/uikit-dark.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 178120
+  status:
+  - value: true

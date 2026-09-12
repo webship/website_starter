@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c454eb69-cb69-5fc3-bcbb-ab1a3f4e6718
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: apollo-17-blue-marble.jpg
+  uri:
+  - value: public://website-starter/apollo-17-blue-marble.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 276526
+  status:
+  - value: true

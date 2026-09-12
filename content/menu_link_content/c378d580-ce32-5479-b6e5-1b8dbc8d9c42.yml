@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c378d580-ce32-5479-b6e5-1b8dbc8d9c42
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    703280ee-2c4b-5f2e-81a6-70209959f2c5: node
+default:
+  enabled:
+  - value: true
+  title:
+  - value: UIkit showcase
+  menu_name:
+  - value: main
+  link:
+  - target_uuid: 703280ee-2c4b-5f2e-81a6-70209959f2c5
+    title: ''
+    options: {}
+  external:
+  - value: false
+  rediscover:
+  - value: false
+  weight:
+  - value: 2
+  expanded:
+  - value: true

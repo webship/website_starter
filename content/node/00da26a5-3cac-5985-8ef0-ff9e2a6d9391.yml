@@ -1,0 +1,82 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 00da26a5-3cac-5985-8ef0-ff9e2a6d9391
+  bundle: webpage
+  default_langcode: en
+  depends:
+    adb79275-1aaa-5668-9ed7-fa41503cac8f: file
+    13a91437-2173-5b3a-8dab-2c64ef0f74ad: file
+    30130fd8-6386-5cce-bbac-381972e657a2: file
+    58fdebff-d5c2-5082-a3d5-f7aa6f7da938: file
+    1b385964-f637-56c1-aea9-93554c91d65b: file
+    d16ce8a5-7404-563e-bb97-54c4c8bc8680: file
+    9cd0060c-7b25-5a43-8433-0f0758b35b3e: file
+    52fe1999-16d3-51f9-8461-51ef9d821598: file
+    c454eb69-cb69-5fc3-bcbb-ab1a3f4e6718: file
+    00ca3639-1d83-5408-8e81-7adc57a16cf4: file
+    2f2b6e52-8ab6-5a47-9285-40b917cad0e3: file
+    844575c2-9cb1-5c02-aac4-3d85b09b33f1: file
+    416b5956-8b09-5aed-b1b8-04d42c05a73a: file
+    d2c3fc64-5ccd-5569-a4bf-9aabb06423fa: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Slideshows
+  created:
+  - value: 1789088160
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /showcase/slideshows
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <h2 class="uk-heading-bullet">Slideshow</h2>
+      <div uk-slideshow="animation: push; ratio: 7:3; autoplay: true">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+      <div class="uk-slideshow-items">
+      <div><img src="/sites/default/files/website-starter/uikit-photo.jpg" data-entity-type="file" data-entity-uuid="adb79275-1aaa-5668-9ed7-fa41503cac8f" width="1600" height="1067" alt="A dark wooden house with a steep gabled roof under a teal sky." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"><h3 class="uk-margin-remove">Push animation</h3></div></div>
+      <div><img src="/sites/default/files/website-starter/falcon-9-crew-3-launch.jpg" data-entity-type="file" data-entity-uuid="2f2b6e52-8ab6-5a47-9285-40b917cad0e3" width="1600" height="593" alt="A rocket lifting off at night, lighting its exhaust cloud and the launch tower." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"><h3 class="uk-margin-remove">Covering images</h3></div></div>
+      <div><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e" width="900" height="600" alt="A cyclist riding along a road through green hills at sunset." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"><h3 class="uk-margin-remove">Slide navigation</h3></div></div>
+      <div><img src="/sites/default/files/website-starter/cassini-saturn-portrait.jpg" data-entity-type="file" data-entity-uuid="d2c3fc64-5ccd-5569-a4bf-9aabb06423fa" width="1600" height="818" alt="Saturn and its wide rings against black space." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"><h3 class="uk-margin-remove">Dot navigation</h3></div></div>
+      <div><img src="/sites/default/files/website-starter/uikit-photo3.jpg" data-entity-type="file" data-entity-uuid="13a91437-2173-5b3a-8dab-2c64ef0f74ad" width="1600" height="1067" alt="A person in a knitted hood holding a camera up to their face in the snow." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"><h3 class="uk-margin-remove">Overlay captions</h3></div></div>
+      </div>
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" aria-label="Previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" aria-label="Next"></a>
+      </div>
+      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+      </div>
+      <h2 class="uk-heading-bullet uk-margin-large-top">Slider</h2>
+      <div uk-slider="finite: true">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+      <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid-small">
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/uikit-size-v.jpg" data-entity-type="file" data-entity-uuid="d16ce8a5-7404-563e-bb97-54c4c8bc8680" width="800" height="1600" alt="A spiral wooden staircase seen from above, with a person climbing it." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/artemis-i-sls-launch-pad.jpg" data-entity-type="file" data-entity-uuid="844575c2-9cb1-5c02-aac4-3d85b09b33f1" width="778" height="1600" alt="An orange and white rocket next to its launch tower, with the coast behind." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/uikit-avatar.jpg" data-entity-type="file" data-entity-uuid="58fdebff-d5c2-5082-a3d5-f7aa6f7da938" width="800" height="800" alt="Portrait of a woman with long hair wearing a brown felt hat." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/crew-dragon-approaching-iss.jpg" data-entity-type="file" data-entity-uuid="00ca3639-1d83-5408-8e81-7adc57a16cf4" width="1067" height="1600" alt="A small white capsule approaching the International Space Station above the Earth." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/perseverance-ingenuity-selfie.jpg" data-entity-type="file" data-entity-uuid="416b5956-8b09-5aed-b1b8-04d42c05a73a" width="1600" height="1177" alt="A rover on reddish-brown rocky ground, with a small helicopter behind it." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/uikit-size2.jpg" data-entity-type="file" data-entity-uuid="52fe1999-16d3-51f9-8461-51ef9d821598" width="700" height="500" alt="A winding road through a snow-covered landscape." uk-cover></div></div>
+      <div><div class="uk-cover-container uk-height-medium"><img src="/sites/default/files/website-starter/apollo-17-blue-marble.jpg" data-entity-type="file" data-entity-uuid="c454eb69-cb69-5fc3-bcbb-ab1a3f4e6718" width="1600" height="1600" alt="The fully lit Earth, with Africa and the Antarctic ice cap under white clouds." uk-cover></div></div>
+      </div>
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous" aria-label="Previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next" aria-label="Next"></a>
+      </div>
+      <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+      </div>
+      <h2 class="uk-heading-bullet uk-margin-large-top">Cover and overlay</h2>
+      <div class="uk-child-width-1-2@m" uk-grid>
+      <div><div class="uk-cover-container uk-height-medium uk-light uk-flex uk-flex-center uk-flex-middle"><img src="/sites/default/files/website-starter/uikit-size-h.jpg" data-entity-type="file" data-entity-uuid="1b385964-f637-56c1-aea9-93554c91d65b" width="1600" height="400" alt="A lone figure in a yellow jacket in a vast white, misty landscape." uk-cover><div class="uk-overlay uk-overlay-primary uk-position-relative"><p class="uk-margin-remove">A cover image with an overlay</p></div></div></div>
+      <div><div class="uk-inline"><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs."><div class="uk-overlay uk-overlay-default uk-position-bottom"><p>An overlay at the bottom of an image</p></div></div></div>
+      </div>
+    format: full_html
+    summary: ''

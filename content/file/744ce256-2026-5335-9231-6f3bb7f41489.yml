@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 744ce256-2026-5335-9231-6f3bb7f41489
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: apollo-8-earthrise.jpg
+  uri:
+  - value: public://website-starter/apollo-8-earthrise.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 94666
+  status:
+  - value: true

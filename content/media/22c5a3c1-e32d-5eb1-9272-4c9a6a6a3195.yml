@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 22c5a3c1-e32d-5eb1-9272-4c9a6a6a3195
+  bundle: image
+  default_langcode: en
+  depends:
+    9cd0060c-7b25-5a43-8433-0f0758b35b3e: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A cyclist riding along a road through green hills at sunset
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A cyclist riding along a road through green hills at sunset.
+    title: ''
+    width: 900
+    height: 600
+    entity: 9cd0060c-7b25-5a43-8433-0f0758b35b3e

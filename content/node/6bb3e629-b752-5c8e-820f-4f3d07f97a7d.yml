@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 6bb3e629-b752-5c8e-820f-4f3d07f97a7d
+  bundle: webpage
+  default_langcode: en
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Get started
+  created:
+  - value: 1789088280
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /get-started
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <p class="uk-text-lead uk-text-center">Three ways to start with UI Suite UIkit. All of them are free and open source (GPL-2.0-or-later).</p>
+      <div class="uk-child-width-1-3@m uk-grid-match uk-margin-large-top" uk-grid>
+      <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><h3 class="uk-card-title">Theme</h3><p class="uk-heading-small uk-margin-remove">Free</p><p class="uk-text-meta">On an existing site</p><ul class="uk-list uk-list-divider uk-text-left"><li><code>composer require drupal/ui_suite_uikit</code></li><li><code>drush theme:enable ui_suite_uikit</code></li><li>Default blocks placed in the regions</li><li>UIkit from the CDN</li></ul><a class="uk-button uk-button-default uk-width-1-1" href="https://www.drupal.org/project/ui_suite_uikit">Project page</a></div></div>
+      <div><div class="uk-card uk-card-primary uk-light uk-card-body uk-text-center"><div class="uk-card-badge uk-label">Popular</div><h3 class="uk-card-title">Full stack</h3><p class="uk-heading-small uk-margin-remove">Free</p><p class="uk-text-meta">Recommended</p><ul class="uk-list uk-list-divider uk-text-left"><li>The UI Suite Base recipe</li><li>UI Patterns, UI Styles, UI Icons</li><li>Display Builder and UI Skins</li><li>Everything configured</li></ul><a class="uk-button uk-button-default uk-width-1-1" href="https://www.drupal.org/project/ui_suite">UI Suite</a></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body uk-text-center"><h3 class="uk-card-title">Your own theme</h3><p class="uk-heading-small uk-margin-remove">Free</p><p class="uk-text-meta">For themers</p><ul class="uk-list uk-list-divider uk-text-left"><li>Generated from the starterkit</li><li>Your machine name and label</li><li>Your own README</li><li>Updates by comparison</li></ul><a class="uk-button uk-button-default uk-width-1-1" href="/blog/start-your-own-theme">Read how</a></div></div>
+      </div>
+    format: full_html
+    summary: ''

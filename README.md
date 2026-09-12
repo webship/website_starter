@@ -49,11 +49,15 @@ ddev launch
 - **Content displays** built in Display Builder: blog posts as UIkit articles, blog teasers as UIkit cards, a
   paginated front page listing.
 - **Contact webform** with anti-spam protection.
-- **Administration**: Gin, dashboard and navigation; authentication, anti-spam and basic SEO recipes of Drupal
-  CMS; editor, SEO, security and configuration management features of Webship.
+- **Administration**: Gin with its toolbar, Coffee, Project Browser and automatic updates, without Navigation
+  and Dashboard (they require Layout Builder); authentication, anti-spam and basic SEO recipes of Drupal CMS;
+  editor, SEO, security and configuration management features of Webship.
 - **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
   dark color modes) and UI Icons pack.
-- **Demo content**: About us, Privacy and Terms pages, 24 illustrated blog posts, a video, menus and footer
+- **UIkit showcase**: the common pages of the free UIkit demos, in a *UIkit showcase* menu: a landing page,
+  Features, Get started, Gallery (masonry grid and lightbox), Slideshows and Elements, with Support and Image
+  credits pages in the footer. The images are the UIkit demo images (MIT) and NASA public domain photos.
+- **Demo content**: About us, Privacy and Terms pages, 32 illustrated blog posts, a video, menus and footer
   links — imported as Drupal default content.
 
 ## Requirements

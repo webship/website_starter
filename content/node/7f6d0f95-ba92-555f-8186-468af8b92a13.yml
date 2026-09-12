@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7f6d0f95-ba92-555f-8186-468af8b92a13
+  bundle: webpage
+  default_langcode: en
+  depends:
+    adb79275-1aaa-5668-9ed7-fa41503cac8f: file
+    a448ce03-a790-50f5-98ca-c65c1e38653f: file
+    f0b00ae5-a36f-5e45-9006-50476ede6c76: file
+    30130fd8-6386-5cce-bbac-381972e657a2: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Features
+  created:
+  - value: 1789088340
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /features
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <p class="uk-text-lead">UI Suite UIkit brings the UIkit framework to the Drupal back office.</p>
+      <ul uk-tab>
+      <li class="uk-active"><a href="#">Components</a></li>
+      <li><a href="#">Styles</a></li>
+      <li><a href="#">Design tokens</a></li>
+      <li><a href="#">Icons</a></li>
+      </ul>
+      <ul class="uk-switcher uk-margin">
+      <li><div class="uk-grid-medium uk-flex-middle" uk-grid><div class="uk-width-1-2@m"><img src="/sites/default/files/website-starter/uikit-photo2.jpg" data-entity-type="file" data-entity-uuid="a448ce03-a790-50f5-98ca-c65c1e38653f" width="1600" height="1067" alt="A silver laptop in a tan leather sleeve on a grey sofa."></div><div class="uk-width-1-2@m"><h3>More than 50 components</h3><p>Layout, navigation, elements, data display, feedback, interactive, media and forms: every UIkit component has a group, clear slot titles and typed props, shown in the Display Builder panels.</p><ul class="uk-list uk-list-check"><li>Section, Container and Grid layouts</li><li>Navbar, Nav, Subnav, Tab, Breadcrumb and Pagination</li><li>Card, Accordion, Modal, Offcanvas and Switcher</li><li>Cover, Overlay, Slider, Slideshow and Lightbox</li></ul></div></div></li>
+      <li><div class="uk-grid-medium uk-flex-middle" uk-grid><div class="uk-width-1-2@m"><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs."></div><div class="uk-width-1-2@m"><h3>UIkit utilities</h3><p>The UIkit utility classes are available in UI Styles and in the Display Builder <em>Styles</em> panel.</p><ul class="uk-list uk-list-check"><li>Text, typography, colors and inverse</li><li>Margin, padding, width and height</li><li>Flex, position and visibility</li><li>Box shadow, border radius and animation</li></ul></div></div></li>
+      <li><div class="uk-grid-medium uk-flex-middle" uk-grid><div class="uk-width-1-2@m"><img src="/sites/default/files/website-starter/uikit-dark.jpg" data-entity-type="file" data-entity-uuid="f0b00ae5-a36f-5e45-9006-50476ede6c76" width="1600" height="1067" alt="Glasses and brown leather cases on a black background."></div><div class="uk-width-1-2@m"><h3>CSS variables and color modes</h3><p>The UIkit global colors and font family are CSS variables, editable in <em>Appearance &gt; CSS variables</em> and in the Display Builder <em>Design tokens</em> panel, with <em>Light</em> and <em>Dark</em> color modes.</p></div></div></li>
+      <li><div class="uk-grid-medium uk-flex-middle" uk-grid><div class="uk-width-1-2@m"><img src="/sites/default/files/website-starter/uikit-photo.jpg" data-entity-type="file" data-entity-uuid="adb79275-1aaa-5668-9ed7-fa41503cac8f" width="1600" height="1067" alt="A dark wooden house with a steep gabled roof under a teal sky."></div><div class="uk-width-1-2@m"><h3>162 icons</h3><p>The UIkit icons ship as the <code>uikit</code> icon pack for UI Icons, rendered as inline SVG.</p><p><span uk-icon="icon: heart; ratio: 1.5"></span> <span uk-icon="icon: star; ratio: 1.5"></span> <span uk-icon="icon: bolt; ratio: 1.5"></span> <span uk-icon="icon: camera; ratio: 1.5"></span> <span uk-icon="icon: world; ratio: 1.5"></span> <span uk-icon="icon: rss; ratio: 1.5"></span></p></div></div></li>
+      </ul>
+      <h2 class="uk-heading-bullet uk-margin-large-top">Frequently asked questions</h2>
+      <ul uk-accordion="collapsible: false">
+      <li class="uk-open"><a class="uk-accordion-title" href="#">Which Drupal version do I need?</a><div class="uk-accordion-content"><p>Drupal 11.4 or 12, with UI Patterns 2, UI Styles and UI Icons.</p></div></li>
+      <li><a class="uk-accordion-title" href="#">Do I need Display Builder?</a><div class="uk-accordion-content"><p>No, but it is recommended: the components also work in blocks, Views and field formatters with UI Patterns.</p></div></li>
+      <li><a class="uk-accordion-title" href="#">Can I serve UIkit locally?</a><div class="uk-accordion-content"><p>Yes. Install UIkit in <code>web/libraries/uikit</code> and select <em>Local copy</em> in the theme settings.</p></div></li>
+      <li><a class="uk-accordion-title" href="#">How do I get a dark mode?</a><div class="uk-accordion-content"><p>Enable UI Skins: the theme provides the <em>Light</em> and <em>Dark</em> color modes.</p></div></li>
+      <li><a class="uk-accordion-title" href="#">Can I create my own theme from it?</a><div class="uk-accordion-content"><p>Yes, UI Suite UIkit is a starterkit: <code>php core/scripts/drupal generate-theme my_theme --starterkit ui_suite_uikit</code>.</p></div></li>
+      </ul>
+    format: full_html
+    summary: ''

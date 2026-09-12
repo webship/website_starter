@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 696dfe01-12cb-5d52-ac5b-48e09be11d4f
+  bundle: image
+  default_langcode: en
+  depends:
+    52fe1999-16d3-51f9-8461-51ef9d821598: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A winding road through a snow-covered landscape
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A winding road through a snow-covered landscape.
+    title: ''
+    width: 700
+    height: 500
+    entity: 52fe1999-16d3-51f9-8461-51ef9d821598

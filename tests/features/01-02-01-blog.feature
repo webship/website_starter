@@ -3,16 +3,16 @@ Feature: The Web Blog with Display Builder displays
   I want to browse the blog posts as UIkit cards and read them as UIkit articles
   So that I can read the website news
 
-  Scenario: The front page lists the blog posts as cards over 3 pages
+  Scenario: The front page lists the blog posts as cards over 4 pages
     Given I am an anonymous user
      When I go to the homepage
      Then "[data-component-id='ui_suite_uikit:card']" should have a count of 10
       And ".uk-pagination" should be visible
-      And ".uk-pagination" should contain text "3"
+      And ".uk-pagination" should contain text "4"
       And the page should not contain escaped markup
-     When I go to "/?page=2"
-     Then "[data-component-id='ui_suite_uikit:card']" should have a count of 4
-      And ".uk-pagination li.uk-active" should contain text "3"
+     When I go to "/?page=3"
+     Then "[data-component-id='ui_suite_uikit:card']" should have a count of 2
+      And ".uk-pagination li.uk-active" should contain text "4"
 
   Scenario: A blog post is a UIkit article with its image
     Given I am an anonymous user

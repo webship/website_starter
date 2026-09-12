@@ -1,0 +1,70 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 703280ee-2c4b-5f2e-81a6-70209959f2c5
+  bundle: webpage
+  default_langcode: en
+  depends:
+    a448ce03-a790-50f5-98ca-c65c1e38653f: file
+    f0b00ae5-a36f-5e45-9006-50476ede6c76: file
+    30130fd8-6386-5cce-bbac-381972e657a2: file
+    58fdebff-d5c2-5082-a3d5-f7aa6f7da938: file
+    9cd0060c-7b25-5a43-8433-0f0758b35b3e: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: UIkit showcase
+  created:
+  - value: 1789088400
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /welcome
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <div class="uk-cover-container uk-height-large uk-light uk-flex uk-flex-middle uk-margin-large-bottom">
+      <img src="/sites/default/files/website-starter/uikit-dark.jpg" data-entity-type="file" data-entity-uuid="f0b00ae5-a36f-5e45-9006-50476ede6c76" width="1600" height="1067" alt="Glasses and brown leather cases on a black background." uk-cover>
+      <div class="uk-position-cover uk-overlay-primary"></div>
+      <div class="uk-position-relative uk-padding-large uk-width-2-3@m">
+      <h2 class="uk-heading-medium">UIkit, built into Drupal</h2>
+      <p class="uk-text-lead">More than 50 UIkit components, ready for Display Builder, Views, blocks and entity displays.</p>
+      <a class="uk-button uk-button-default uk-button-large" href="/get-started">Get started</a>
+      </div>
+      </div>
+      <h2 class="uk-heading-line uk-text-center"><span>Everything in the back office</span></h2>
+      <div class="uk-child-width-1-3@m uk-grid-match uk-margin-large-bottom" uk-grid>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: thumbnails; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Components</h3><p>Every UIkit component is a single directory component with props, slots, variants and stories.</p></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: grid; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Display Builder</h3><p>Build page layouts, entity displays and views with the components.</p></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: paint-bucket; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Design tokens</h3><p>Colors and fonts are CSS variables, with Light and Dark color modes.</p></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: settings; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Utilities</h3><p>The UIkit utility classes in the Styles panel: spacing, colors, flex, shadows.</p></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: happy; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Icons</h3><p>The 162 UIkit icons, shipped as an icon pack and rendered as inline SVG.</p></div></div>
+      <div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: bolt; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">HTMX navigation</h3><p>Only the page wrapper is swapped when a link is followed.</p></div></div>
+      </div>
+      <h2 class="uk-heading-line uk-text-center"><span>From the blog</span></h2>
+      <div class="uk-child-width-1-3@m uk-grid-match uk-margin-large-bottom" uk-grid>
+      <div><div class="uk-card uk-card-default uk-card-hover"><div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-photo2.jpg" data-entity-type="file" data-entity-uuid="a448ce03-a790-50f5-98ca-c65c1e38653f" width="1600" height="1067" alt="A silver laptop in a tan leather sleeve on a grey sofa."></div><div class="uk-card-body"><h3 class="uk-card-title">Build pages with Display Builder</h3><p>Page layouts, entity displays and views with the UIkit components.</p><a class="uk-button uk-button-text" href="/blog/build-pages-with-display-builder">Read more</a></div></div></div>
+      <div><div class="uk-card uk-card-default uk-card-hover"><div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs."></div><div class="uk-card-body"><h3 class="uk-card-title">UIkit utilities in the Styles panel</h3><p>Text, colors, margins, flex and shadows, one click away.</p><a class="uk-button uk-button-text" href="/blog/uikit-utilities-in-the-styles-panel">Read more</a></div></div></div>
+      <div><div class="uk-card uk-card-default uk-card-hover"><div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e" width="900" height="600" alt="A cyclist riding along a road through green hills at sunset."></div><div class="uk-card-body"><h3 class="uk-card-title">Page changes without full reloads</h3><p>The HTMX navigation swaps the page wrapper only.</p><a class="uk-button uk-button-text" href="/blog/page-changes-without-full-reloads">Read more</a></div></div></div>
+      </div>
+      <h2 class="uk-heading-line uk-text-center"><span>Made for every role</span></h2>
+      <div class="uk-child-width-1-3@m uk-grid-match uk-margin-large-bottom" uk-grid>
+      <div><article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><img src="/sites/default/files/website-starter/uikit-avatar.jpg" data-entity-type="file" data-entity-uuid="58fdebff-d5c2-5082-a3d5-f7aa6f7da938" width="800" height="800" alt="Portrait of a woman with long hair wearing a brown felt hat." class="uk-border-circle" style="width: 64px; height: 64px; object-fit: cover;"></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Site builders</h4><p class="uk-comment-meta uk-margin-remove">No code</p></div></header><div class="uk-comment-body"><p>Drag components into layouts, pick utilities in the Styles panel and change the colors in the Design tokens panel.</p></div></article></div>
+      <div><article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><span class="uk-text-primary" uk-icon="icon: code; ratio: 2.5"></span></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Themers</h4><p class="uk-comment-meta uk-margin-remove">Twig and YAML</p></div></header><div class="uk-comment-body"><p>Start from the starterkit, override a component template or add a variant, and keep the stories as documentation.</p></div></article></div>
+      <div><article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><span class="uk-text-primary" uk-icon="icon: file-edit; ratio: 2.5"></span></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Editors</h4><p class="uk-comment-meta uk-margin-remove">Content first</p></div></header><div class="uk-comment-body"><p>Write articles and pages with a consistent design, in light or dark mode, on every screen size.</p></div></article></div>
+      </div>
+      <div class="uk-section uk-section-secondary uk-light uk-text-center uk-padding-large">
+      <h2>Make it your own</h2>
+      <p class="uk-text-lead">Generate a theme from the UI Suite UIkit starterkit, with a single command.</p>
+      <a class="uk-button uk-button-primary uk-button-large" href="/blog/start-your-own-theme">Start your theme</a>
+      </div>
+    format: full_html
+    summary: ''

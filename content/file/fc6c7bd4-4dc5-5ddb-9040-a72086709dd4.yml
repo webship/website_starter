@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fc6c7bd4-4dc5-5ddb-9040-a72086709dd4
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: iss-aurora-borealis.jpg
+  uri:
+  - value: public://website-starter/iss-aurora-borealis.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 137709
+  status:
+  - value: true

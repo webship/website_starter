@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 434d6232-2ace-5d2b-98fb-bf562ae3d4fe
+  bundle: image
+  default_langcode: en
+  depends:
+    d2c3fc64-5ccd-5569-a4bf-9aabb06423fa: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: Saturn and its wide rings against black space
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: Saturn and its wide rings against black space.
+    title: ''
+    width: 1600
+    height: 818
+    entity: d2c3fc64-5ccd-5569-a4bf-9aabb06423fa

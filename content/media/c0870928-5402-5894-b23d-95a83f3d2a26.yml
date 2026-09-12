@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c0870928-5402-5894-b23d-95a83f3d2a26
+  bundle: image
+  default_langcode: en
+  depends:
+    844575c2-9cb1-5c02-aac4-3d85b09b33f1: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: An orange and white rocket next to its launch tower, with the coast behind
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: An orange and white rocket next to its launch tower, with the coast behind.
+    title: ''
+    width: 778
+    height: 1600
+    entity: 844575c2-9cb1-5c02-aac4-3d85b09b33f1

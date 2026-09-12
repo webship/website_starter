@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2f391225-c2d7-5740-ae07-3150d37e5edc
+  bundle: image
+  default_langcode: en
+  depends:
+    2f2b6e52-8ab6-5a47-9285-40b917cad0e3: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A rocket lifting off at night, lighting its exhaust cloud and the launch tower
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A rocket lifting off at night, lighting its exhaust cloud and the launch tower.
+    title: ''
+    width: 1600
+    height: 593
+    entity: 2f2b6e52-8ab6-5a47-9285-40b917cad0e3

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4067937a-e798-5397-a5e6-fe94098ceef9
+  bundle: image
+  default_langcode: en
+  depends:
+    a448ce03-a790-50f5-98ca-c65c1e38653f: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  name:
+  - value: A silver laptop in a tan leather sleeve on a grey sofa
+  path:
+  - langcode: en
+    alias: null
+  field_media_image:
+  - alt: A silver laptop in a tan leather sleeve on a grey sofa.
+    title: ''
+    width: 1600
+    height: 1067
+    entity: a448ce03-a790-50f5-98ca-c65c1e38653f

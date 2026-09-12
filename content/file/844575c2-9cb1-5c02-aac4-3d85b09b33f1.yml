@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 844575c2-9cb1-5c02-aac4-3d85b09b33f1
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: artemis-i-sls-launch-pad.jpg
+  uri:
+  - value: public://website-starter/artemis-i-sls-launch-pad.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 305716
+  status:
+  - value: true

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2f2b6e52-8ab6-5a47-9285-40b917cad0e3
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: falcon-9-crew-3-launch.jpg
+  uri:
+  - value: public://website-starter/falcon-9-crew-3-launch.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 58609
+  status:
+  - value: true

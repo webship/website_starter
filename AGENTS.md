@@ -17,8 +17,12 @@ demo content. Part of the Webship Workspace (`~/workspace/products`): DDEV only.
 
 ## Rules
 
-- No Canvas, no Layout Builder displays: displays are built with Display Builder and UIkit components
-  (`ui_suite_uikit:*`). Source trees follow the UI Patterns 2 format.
+- No Canvas and no Layout Builder, not even installed: displays are built with Display Builder and UIkit
+  components (`ui_suite_uikit:*`). Source trees follow the UI Patterns 2 format. Core Standard and the Drupal
+  CMS admin UI are not included as recipes (they install Navigation, and Navigation and Dashboard require
+  Layout Builder): their settings are copied in `recipe.yml` without them.
+- The UIkit showcase webpages use the Full HTML text format with the UIkit markup, and the UIkit demo images
+  (MIT) and NASA public domain photos only: never placeholder or CC BY-NC images.
 - Config existing before this recipe (entity displays, fields) is changed with config actions, not by files in
   `config/` (non-strict recipes keep existing config).
 - Default content changes: edit the YAML in `content/`, or build the content on a development site and export

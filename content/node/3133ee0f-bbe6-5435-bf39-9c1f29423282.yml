@@ -1,0 +1,31 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3133ee0f-bbe6-5435-bf39-9c1f29423282
+  bundle: webblog
+  default_langcode: en
+  depends:
+    4067937a-e798-5397-a5e6-fe94098ceef9: media
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Build pages with Display Builder
+  created:
+  - value: 1789084800
+  promote:
+  - value: true
+  sticky:
+  - value: false
+  path:
+  - alias: /blog/build-pages-with-display-builder
+    langcode: en
+    pathauto: 0
+  body:
+  - value: '<p class="uk-text-lead">Every UIkit component is ready for Display Builder: page layouts, entity displays and views.</p><p>Every UIkit component of UI Suite UIkit is a single directory component, with typed props, slots, variants and stories. In Display Builder, you drag them into page layouts, entity displays and views.</p><p>Container components declare the components expected in their slots: accordion items, switcher tabs and panels, table rows and cells, slideshow items. Layouts are variants: <em>Grid: 2 columns</em> offers 50/50, 66/33, 33/66, 75/25 and 25/75.</p>'
+    format: full_html
+    summary: 'Every UIkit component is ready for Display Builder: page layouts, entity displays and views.'
+  field_media:
+  - entity: 4067937a-e798-5397-a5e6-fe94098ceef9

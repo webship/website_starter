@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c73a6e04-d65a-53df-906e-f758f3bb3448
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    027af54f-1d82-5db7-835b-b2e263a6cbc0: node
+    c378d580-ce32-5479-b6e5-1b8dbc8d9c42: menu_link_content
+default:
+  enabled:
+  - value: true
+  title:
+  - value: Gallery
+  menu_name:
+  - value: main
+  link:
+  - target_uuid: 027af54f-1d82-5db7-835b-b2e263a6cbc0
+    title: ''
+    options: {}
+  external:
+  - value: false
+  rediscover:
+  - value: false
+  weight:
+  - value: 3
+  expanded:
+  - value: false
+  parent:
+  - value: menu_link_content:c378d580-ce32-5479-b6e5-1b8dbc8d9c42

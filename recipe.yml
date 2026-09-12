@@ -1,22 +1,33 @@
 name: 'Website Starter'
-description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog content displays, contact webform, menus and demo content. No Canvas, no Layout Builder.'
+description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog content displays, contact webform, menus, a UIkit showcase and demo content. No Canvas, no Layout Builder.'
 type: 'Site'
 # Site template metadata for the Drupal CMS installer.
 extra:
   drupal_cms_installer:
     creator: 'Webship'
 recipes:
-  # Webship content types and media, before Standard: the Standard roles
-  # reference their permissions. Webpage first: it installs Node.
+  # Webship content types and media, before the roles: the roles reference
+  # their permissions. Webpage first: it installs Node.
   - modules/contrib/webpage/recipes/default
   - modules/contrib/webassets/recipes/default
   - modules/contrib/webdev/recipes/default
   - modules/contrib/webblog/recipes/default
   - core/recipes/tags_taxonomy
-  - core/recipes/standard
-  # Drupal CMS recipes without Canvas: administration (Gin, dashboard,
-  # navigation), anti-spam, authentication and basic SEO.
-  - drupal_cms_admin_ui
+  # The recipes of core Standard. Standard itself and the Drupal CMS admin UI
+  # are not included: they install Navigation, and Navigation and Dashboard
+  # require Layout Builder. Their settings are below, without them.
+  - core/recipes/basic_block_type
+  - core/recipes/basic_html_format_editor
+  - core/recipes/full_html_format_editor
+  - core/recipes/core_recommended_performance
+  - core/recipes/core_recommended_maintenance
+  - core/recipes/core_recommended_admin_theme
+  - core/recipes/core_recommended_front_end_theme
+  - core/recipes/user_picture
+  - core/recipes/restricted_html_format
+  - core/recipes/administrator_role
+  - core/recipes/content_editor_role
+  # Drupal CMS recipes without Canvas: anti-spam, authentication and basic SEO.
   - drupal_cms_anti_spam
   - drupal_cms_authentication
   - drupal_cms_seo_basic
@@ -26,6 +37,34 @@ recipes:
   - modules/contrib/websecurity/recipes/default
   - modules/contrib/webconfig/recipes/default
 install:
+  # Core Standard, without Navigation.
+  - image
+  - help
+  - config
+  - contextual
+  - menu_link_content
+  - datetime
+  - menu_ui
+  - options
+  - field_ui
+  - views_ui
+  # Drupal CMS admin UI, without Dashboard and Navigation.
+  - announcements_feed
+  - automatic_updates
+  - coffee
+  - dblog
+  - drupal_cms_helper
+  - drupical
+  - file
+  - gin
+  - gin_login
+  - gin_toolbar
+  - project_browser
+  - sam
+  - tagify
+  - tagify_user_list
+  - update
+  - view_password
   # UI Patterns 2.
   - ui_patterns
   - ui_patterns_blocks
@@ -59,6 +98,41 @@ install:
 config:
   strict: false
   import:
+    # Core Standard.
+    claro:
+      - block.block.claro_help
+      - block.block.claro_breadcrumbs
+      - block.block.claro_content
+      - block.block.claro_local_actions
+      - block.block.claro_messages
+      - block.block.claro_page_title
+      - block.block.claro_primary_local_tasks
+      - block.block.claro_secondary_local_tasks
+    image:
+      - image.style.large
+      - image.style.thumbnail
+    node:
+      - views.view.archive
+      - views.view.content
+      - views.view.content_recent
+      - views.view.frontpage
+      - views.view.glossary
+    olivero:
+      - block.block.olivero_help
+    user:
+      - core.entity_view_mode.user.compact
+      - views.view.user_admin_people
+      - views.view.who_s_new
+      - views.view.who_s_online
+    # Drupal CMS admin UI.
+    gin:
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
     # Optional config is not installed by recipes: the default profile and the
     # text format of Display Builder.
     display_builder:
@@ -70,17 +144,81 @@ config:
     system.theme:
       simpleConfigUpdate:
         default: ui_suite_uikit
+        admin: gin
     system.site:
       simpleConfigUpdate:
         slogan: 'Built with Display Builder and UIkit'
         page.front: /node
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
     user.settings:
       simpleConfigUpdate:
+        verify_mail: true
         register: admin_only
-    # The demo video is a WebM file.
-    field.field.media.video.field_media_video_file:
+        cancel_method: user_cancel_block
+    user.role.anonymous:
+      grantPermission: 'access content'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access content'
+        - 'delete own files'
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'view the administration theme'
+    user.role.content_editor:
+      grantPermissions:
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access files overview'
+        - 'administer url aliases'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'edit terms in tags'
+        - 'delete own files'
+        - 'revert all revisions'
+        - 'view all revisions'
+        - 'view the administration theme'
+      grantPermissionsForEachNodeType:
+        - 'create %bundle content'
+        - 'delete %bundle revisions'
+        - 'delete own %bundle content'
+        - 'edit own %bundle content'
+    announcements_feed.settings:
       simpleConfigUpdate:
-        settings.file_extensions: 'mp4 webm'
+        limit: 2
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true
+    core.menu.static_menu_link_overrides:
+      overrideMenuLinks:
+        announcements_feed.announcement:
+          enabled: false
+    drupical.settings:
+      simpleConfigUpdate:
+        limit: 5
+    gin_login.settings:
+      simpleConfigUpdate:
+        brand_image:
+          use_default: false
+          # The file entity of the login wallpaper ships in content/file.
+          path: public://login-wallpaper.png
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allow_ui_install: true
+        max_selections: 1
+    tagify.settings:
+      simpleConfigUpdate:
+        set_default_widget: true
+    update.settings:
+      simpleConfigUpdate:
+        check.disabled_extensions: true
+    # The demo video is a WebM file. Set through the field API, so the demo
+    # content imported next validates against the new extensions.
+    field.field.media.video.field_media_video_file:
+      setSettings:
+        file_extensions: 'mp4 webm'
     # Media embedded in the body of the demo content (<drupal-media>).
     filter.format.full_html:
       setFilterConfig:

@@ -1,0 +1,18 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c13e8c9d-9c37-56c2-aebd-b20dbc4facc8
+  default_langcode: en
+default:
+  uid:
+  - target_id: 1
+  filename:
+  - value: spitzer-omega-nebula.jpg
+  uri:
+  - value: public://website-starter/spitzer-omega-nebula.jpg
+  filemime:
+  - value: image/jpeg
+  filesize:
+  - value: 449828
+  status:
+  - value: true

@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9f102c6e-740c-5c70-82cf-6223aa748545
+  bundle: webpage
+  default_langcode: en
+  depends:
+    13a91437-2173-5b3a-8dab-2c64ef0f74ad: file
+default:
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Support
+  created:
+  - value: 1789088040
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /support
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |
+      <div class="uk-grid-large uk-flex-middle" uk-grid><div class="uk-width-1-2@m"><img src="/sites/default/files/website-starter/uikit-photo3.jpg" data-entity-type="file" data-entity-uuid="13a91437-2173-5b3a-8dab-2c64ef0f74ad" width="1600" height="1067" alt="A person in a knitted hood holding a camera up to their face in the snow."></div><div class="uk-width-1-2@m">
+      <p class="uk-text-lead">UI Suite UIkit is maintained on Drupal.org.</p>
+      <dl class="uk-description-list uk-description-list-divider">
+      <dt>Project page</dt><dd><a href="https://www.drupal.org/project/ui_suite_uikit">drupal.org/project/ui_suite_uikit</a></dd>
+      <dt>Issue queue</dt><dd><a href="https://www.drupal.org/project/issues/ui_suite_uikit">Report a bug or request a feature</a></dd>
+      <dt>UI Suite</dt><dd><a href="https://www.drupal.org/project/ui_suite">The UI Suite initiative</a></dd>
+      <dt>UIkit documentation</dt><dd><a href="https://getuikit.com/docs/introduction">getuikit.com/docs</a></dd>
+      </dl>
+      </div></div>
+    format: full_html
+    summary: ''
