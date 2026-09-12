@@ -13,6 +13,8 @@ All notable changes to the Website Starter site template.
   social links and copyright block.
 - Drupal CMS recipes without Canvas: administration UI, anti-spam, authentication, basic SEO.
 - Webship editor, SEO, security and configuration management recipes.
+- Web Dashboard recipe: the Webmaster (site administrators) and Editorial (content editors) default dashboards,
+  built with Display Builder.
 - Contact webform, Pathauto pattern for the blog, social media menu.
 - Demo content: pages, 32 blog posts with images, a video, menus.
 - UIkit showcase: landing, Features, Get started, Gallery, Slideshows, Elements, Support and Image credits

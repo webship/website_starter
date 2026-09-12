@@ -31,6 +31,9 @@ recipes:
   - drupal_cms_anti_spam
   - drupal_cms_authentication
   - drupal_cms_seo_basic
+  # The default dashboards of the Webship site templates, built with Display
+  # Builder: Webmaster for site administrators, Editorial for content editors.
+  - webdash
   # Webship features: editor, SEO, security and configuration management.
   - modules/contrib/webeditor/recipes/default
   - modules/contrib/webseo/recipes/default

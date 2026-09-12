@@ -29,6 +29,7 @@
         "drupal/webassets": "~12.0@dev",
         "drupal/webblog": "~12.0@dev",
         "drupal/webconfig": "~12.0@dev",
+        "drupal/webdash": "^1.0@dev",
         "drupal/webdev": "~12.0@dev",
         "drupal/webeditor": "~12.0@dev",
         "drupal/webform": "^6.3@beta",

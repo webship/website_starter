@@ -50,8 +50,10 @@ ddev launch
   paginated front page listing.
 - **Contact webform** with anti-spam protection.
 - **Administration**: Gin with its toolbar, Coffee, Project Browser and automatic updates, without Navigation
-  and Dashboard (they require Layout Builder); authentication, anti-spam and basic SEO recipes of Drupal CMS;
-  editor, SEO, security and configuration management features of Webship.
+  and Dashboard (they require Layout Builder); the Webmaster and Editorial default dashboards of the
+  [Web Dashboard recipe](https://www.drupal.org/project/webdash), built with Display Builder; authentication,
+  anti-spam and basic SEO recipes of Drupal CMS; editor, SEO, security and configuration management features of
+  Webship.
 - **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
   dark color modes) and UI Icons pack.
 - **UIkit showcase**: the common pages of the free UIkit demos, in a *UIkit showcase* menu: a landing page,
