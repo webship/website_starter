@@ -1,17 +1,30 @@
 {
     "name": "drupal/website_starter",
-    "description": "A website starter built with Display Builder and the UI Suite UIkit design system: page layout, content displays, menus and default content.",
+    "description": "A website starter built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog displays, contact webform, menus and demo content. No Canvas, no Layout Builder.",
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/website_starter",
-    "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter"],
+    "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter", "Webship"],
     "require": {
         "drupal/core": "^11.4 || ^12",
         "drupal/display_builder": "^1.0@beta",
+        "drupal/drupal_cms_admin_ui": "^2",
+        "drupal/drupal_cms_anti_spam": "^2",
+        "drupal/drupal_cms_authentication": "^2",
+        "drupal/drupal_cms_seo_basic": "^2",
         "drupal/ui_icons": "^2.0",
         "drupal/ui_patterns": "^2.0.21",
         "drupal/ui_skins": "^1.2",
         "drupal/ui_styles": "^1.22",
-        "drupal/ui_suite_uikit": "^1.0@dev"
+        "drupal/ui_suite_uikit": "^1.0@dev",
+        "drupal/webassets": "~12.0@dev",
+        "drupal/webblog": "~12.0@dev",
+        "drupal/webconfig": "~12.0@dev",
+        "drupal/webdev": "~12.0@dev",
+        "drupal/webeditor": "~12.0@dev",
+        "drupal/webform": "^6.3@beta",
+        "drupal/webpage": "~12.0@dev",
+        "drupal/websecurity": "~12.0@dev",
+        "drupal/webseo": "~12.0@dev"
     }
 }

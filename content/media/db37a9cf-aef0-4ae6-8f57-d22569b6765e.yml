@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: db37a9cf-aef0-4ae6-8f57-d22569b6765e
+  bundle: image
+  default_langcode: en
+  depends:
+    2149d02a-e078-4855-b304-a45e2ee41295: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Layouts
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Layouts
+      title: ''
+      width: 1200
+      height: 675
+      entity: 2149d02a-e078-4855-b304-a45e2ee41295

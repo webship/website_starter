@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3025110a-1fac-43ef-a331-4a76d5ae74a3
+  bundle: image
+  default_langcode: en
+  depends:
+    1bf634b1-4de4-426e-a54a-6393378fbc92: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Uikit hero'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Uikit hero'
+      title: ''
+      width: 1200
+      height: 675
+      entity: 1bf634b1-4de4-426e-a54a-6393378fbc92

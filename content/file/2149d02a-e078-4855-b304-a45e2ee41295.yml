@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2149d02a-e078-4855-b304-a45e2ee41295
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: layouts.jpg
+  uri:
+    -
+      value: 'public://website-starter/layouts.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 12123
+  status:
+    -
+      value: true

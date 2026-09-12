@@ -1,0 +1,33 @@
+#
+# A curated list of recommended add-ons, shown by the Drupal CMS installer after
+# choosing this site template. Only add-ons without Canvas are listed.
+#
+drupal/easy_email_express:
+  title: 'Email templates'
+  type: recipe
+  logo: null
+  core: '^11.4'
+  machineName: easy_email_express
+  body:
+    summary: 'Sends the site emails with HTML templates that can be edited from the administration interface.'
+  packageName: drupal/easy_email_express
+
+drupal/webnewsletter:
+  title: 'Newsletter'
+  type: module
+  logo: null
+  core: '^11.4'
+  machineName: webnewsletter
+  body:
+    summary: 'Adds a newsletter subscription webform to collect subscribers.'
+  packageName: drupal/webnewsletter
+
+drupal/webshare:
+  title: 'Social sharing'
+  type: module
+  logo: null
+  core: '^11.4'
+  machineName: webshare
+  body:
+    summary: 'Adds social sharing links to the content pages.'
+  packageName: drupal/webshare

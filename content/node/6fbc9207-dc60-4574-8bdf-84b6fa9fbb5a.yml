@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 6fbc9207-dc60-4574-8bdf-84b6fa9fbb5a
+  bundle: webblog
+  default_langcode: en
+  depends:
+    fc980560-986a-4e36-a461-d7d24ea9abfc: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Testing themes with webship-js'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/testing-themes-webship-js
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Behaviour-driven scenarios that check the design system in a real browser on every change.</p><h2>A workflow for design and development</h2><p>The UIkit components are also drawn in a Penpot design system with the same variant names as the Drupal components. Designers pick a primary button or a card with the image on the left, and the developer finds exactly the same variant in the component library.</p><p>Stories document every component in Drupal, the SDC Devel module validates the definitions, and automated webship-js scenarios check the pages in a real browser. Changes to the design system are therefore visible, reviewed and tested.</p><h2>Accessibility is part of the components</h2><p>Components encode accessibility once, for every page that uses them. Navigation landmarks have labels, the current page is announced in the breadcrumb and the pagination, the offcanvas menu can be closed with the keyboard and the icons without text are hidden from screen readers.</p><p>With HTMX navigation enabled, the focus moves to the main content after each page change and the new page title is announced, so faster navigation does not come at the expense of assistive technologies.</p><ol><li>Use the heading level props to keep a logical outline</li><li>Give every image media an alternative text</li><li>Check the color contrast after changing the tokens</li></ol><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>Key takeaways</h2><ul><li>A workflow for design and development</li><li>Accessibility is part of the components</li><li>Fast by default</li></ul>'
+      format: full_html
+      summary: 'Behaviour-driven scenarios that check the design system in a real browser on every change.'
+  field_media:
+    -
+      entity: fc980560-986a-4e36-a461-d7d24ea9abfc

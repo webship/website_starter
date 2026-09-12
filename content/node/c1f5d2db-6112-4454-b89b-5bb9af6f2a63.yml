@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c1f5d2db-6112-4454-b89b-5bb9af6f2a63
+  bundle: webblog
+  default_langcode: en
+  depends:
+    3025110a-1fac-43ef-a331-4a76d5ae74a3: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Accessible navigation patterns'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/accessible-navigation-patterns
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Landmarks, focus management and announcements for menus, pagination and offcanvas panels.</p><h2>Accessibility is part of the components</h2><p>Components encode accessibility once, for every page that uses them. Navigation landmarks have labels, the current page is announced in the breadcrumb and the pagination, the offcanvas menu can be closed with the keyboard and the icons without text are hidden from screen readers.</p><p>With HTMX navigation enabled, the focus moves to the main content after each page change and the new page title is announced, so faster navigation does not come at the expense of assistive technologies.</p><ol><li>Use the heading level props to keep a logical outline</li><li>Give every image media an alternative text</li><li>Check the color contrast after changing the tokens</li></ol><h2>Why UIkit fits content-rich websites</h2><p>UIkit is a modular front-end framework with more than sixty components, from navbars and cards to sliders, lightboxes and sortable lists. Every component is written with the same naming conventions, so once an editor or a developer has seen a card, the modal and the tile feel familiar.</p><p>The framework ships its JavaScript as small, self-initializing components. They watch the page for new markup, which means a card inserted by Display Builder, a slide loaded by HTMX or a modal rendered by a view starts working immediately, without any glue code in the theme.</p><p>Because the look is driven by a handful of global variables — colors, fonts, borders, spacing — a brand can be applied in minutes. The UI Suite UIkit theme exposes those variables as CSS custom properties, so the brand can even be changed from the administration interface.</p><ul><li>Consistent class names for every component</li><li>Components that initialize themselves after any DOM change</li><li>Responsive utilities for width, visibility and spacing</li><li>An icon set of more than 160 SVG icons</li></ul><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>Key takeaways</h2><ul><li>Accessibility is part of the components</li><li>Why UIkit fits content-rich websites</li><li>Fast by default</li></ul>'
+      format: full_html
+      summary: 'Landmarks, focus management and announcements for menus, pagination and offcanvas panels.'
+  field_media:
+    -
+      entity: 3025110a-1fac-43ef-a331-4a76d5ae74a3

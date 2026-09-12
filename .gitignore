@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+screenshots
+tests/reports/*
+!tests/reports/README.md
+.playwright-mcp

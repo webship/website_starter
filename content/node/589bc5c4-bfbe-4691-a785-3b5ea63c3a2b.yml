@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 589bc5c4-bfbe-4691-a785-3b5ea63c3a2b
+  bundle: webblog
+  default_langcode: en
+  depends:
+    db37a9cf-aef0-4ae6-8f57-d22569b6765e: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Recipes for faster websites'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/recipes-faster-websites
+      langcode: en
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">Starting new projects in minutes with Drupal recipes and a ready design system.</p><h2>From recipe to running site</h2><p>The Website Starter is a Drupal recipe. It installs the content types, the media types, the design system, the page layout and this demo content in one command, on a new site or on an existing Drupal CMS project.</p><p>Recipes are plain configuration and content files, so they can be reviewed, versioned and extended. A project can start from the Website Starter, change a few tokens, rearrange the page layout in Display Builder and ship.</p><pre><code>ddev composer create-project drupal/website my_site
+        ddev drush site:install drupal_cms_installer -y</code></pre><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>Building pages with Display Builder</h2><p>Display Builder gives site builders a canvas where pages are composed from the components of the design system. The left sidebar lists the components by group — layout, navigation, elements, media — and a component is added by dragging it into a slot of the page.</p><p>Each component comes with a form generated from its definition: variants such as primary or secondary, sizes, alignment, and the content sources for its slots. A slot can hold a block, a field of the current entity, a menu, a view or another component, so complex layouts are assembled without writing a template.</p><p>The builder keeps a history of the changes, previews the result in several viewports and only publishes when the page is ready. Page layouts, content displays and views all use the same tool, which makes the whole site consistent.</p><h2>Key takeaways</h2><ul><li>From recipe to running site</li><li>Fast by default</li><li>Building pages with Display Builder</li></ul>
+      format: full_html
+      summary: 'Starting new projects in minutes with Drupal recipes and a ready design system.'
+  field_media:
+    -
+      entity: db37a9cf-aef0-4ae6-8f57-d22569b6765e

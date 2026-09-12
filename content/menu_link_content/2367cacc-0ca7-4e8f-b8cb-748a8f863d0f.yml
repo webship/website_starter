@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 2367cacc-0ca7-4e8f-b8cb-748a8f863d0f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    ee44b73a-813f-4a7b-952f-3c19c28032ad: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Privacy
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: ee44b73a-813f-4a7b-952f-3c19c28032ad
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

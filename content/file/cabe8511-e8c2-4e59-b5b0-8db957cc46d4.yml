@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: cabe8511-e8c2-4e59-b5b0-8db957cc46d4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: display-builder.jpg
+  uri:
+    -
+      value: 'public://website-starter/display-builder.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 16539
+  status:
+    -
+      value: true

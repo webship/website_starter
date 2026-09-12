@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ee44b73a-813f-4a7b-952f-3c19c28032ad
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Privacy
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /privacy
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">We only collect the data needed to answer your requests and we never share it.</p><p>This page is part of the demo content of the Website Starter. Replace it with the text reviewed by your legal team before publishing the website.</p><p>For any question about this page, use the contact form: we answer every request within two working days.</p>'
+      format: full_html
+      summary: ''

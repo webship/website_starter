@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 466f630c-2eb8-432e-8f93-0b9e41b8f9f2
+  bundle: webblog
+  default_langcode: en
+  depends:
+    20865ace-2a3f-47c0-b611-a45b744b756c: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Design tokens in practice'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/design-tokens-practice
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">How CSS variables and UI Skins let editors apply a brand to the whole site from the administration interface.</p><h2>Design tokens that editors can change</h2><p>A design token is a named decision: the primary background, the muted text color, the border color. In the Website Starter every UIkit color used by the components reads a CSS variable, and the variables are declared for UI Skins.</p><p>Changing the primary color from the CSS variables page recolors the buttons, the active tabs, the links and the progress bars at once. The dark color mode is nothing more than another set of values for the same variables.</p><blockquote><p>Tokens turn a style guide into something a site builder can actually use.</p><footer>A front-end lead, after the first brand workshop</footer></blockquote><h2>Why UIkit fits content-rich websites</h2><p>UIkit is a modular front-end framework with more than sixty components, from navbars and cards to sliders, lightboxes and sortable lists. Every component is written with the same naming conventions, so once an editor or a developer has seen a card, the modal and the tile feel familiar.</p><p>The framework ships its JavaScript as small, self-initializing components. They watch the page for new markup, which means a card inserted by Display Builder, a slide loaded by HTMX or a modal rendered by a view starts working immediately, without any glue code in the theme.</p><p>Because the look is driven by a handful of global variables — colors, fonts, borders, spacing — a brand can be applied in minutes. The UI Suite UIkit theme exposes those variables as CSS custom properties, so the brand can even be changed from the administration interface.</p><ul><li>Consistent class names for every component</li><li>Components that initialize themselves after any DOM change</li><li>Responsive utilities for width, visibility and spacing</li><li>An icon set of more than 160 SVG icons</li></ul><h2>A workflow for design and development</h2><p>The UIkit components are also drawn in a Penpot design system with the same variant names as the Drupal components. Designers pick a primary button or a card with the image on the left, and the developer finds exactly the same variant in the component library.</p><p>Stories document every component in Drupal, the SDC Devel module validates the definitions, and automated webship-js scenarios check the pages in a real browser. Changes to the design system are therefore visible, reviewed and tested.</p><h2>Key takeaways</h2><ul><li>Design tokens that editors can change</li><li>Why UIkit fits content-rich websites</li><li>A workflow for design and development</li></ul>'
+      format: full_html
+      summary: 'How CSS variables and UI Skins let editors apply a brand to the whole site from the administration interface.'
+  field_media:
+    -
+      entity: 20865ace-2a3f-47c0-b611-a45b744b756c

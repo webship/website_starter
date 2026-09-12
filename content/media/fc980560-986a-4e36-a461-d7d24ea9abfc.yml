@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fc980560-986a-4e36-a461-d7d24ea9abfc
+  bundle: image
+  default_langcode: en
+  depends:
+    6657a4b1-38d0-4996-9aa8-2082beb77c73: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Design tokens'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Design tokens'
+      title: ''
+      width: 1200
+      height: 675
+      entity: 6657a4b1-38d0-4996-9aa8-2082beb77c73

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webblog
+  module:
+    - node
+id: webblog
+label: 'Web Blog'
+type: 'canonical_entities:node'
+pattern: '/blog/[node:title]'
+selection_criteria:
+  7b1f0e3c-6a55-4f3e-9d2a-5b8c1e4f2a90:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 7b1f0e3c-6a55-4f3e-9d2a-5b8c1e4f2a90
+    context_mapping:
+      node: node
+    bundles:
+      webblog: webblog
+selection_logic: and
+weight: -10
+relationships: {  }

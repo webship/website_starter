@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 38042922-364e-4e4b-8ce8-6e6494680382
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: components.jpg
+  uri:
+    -
+      value: 'public://website-starter/components.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 13707
+  status:
+    -
+      value: true

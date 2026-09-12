@@ -284,6 +284,21 @@ sources:
                                       set_active_trail: false
                                       expand_all_items: false
                                 slots: {  }
+                          - source_id: component
+                            source:
+                              component:
+                                component_id: 'ui_suite_uikit:subnav'
+                                variant_id: null
+                                props:
+                                  items:
+                                    source_id: menu
+                                    source:
+                                      menu: social-media-menu
+                                      level: 1
+                                      depth: 1
+                                      set_active_trail: false
+                                      expand_all_items: false
+                                slots: {  }
                       column_2:
                         sources:
                           - source_id: component
@@ -297,6 +312,13 @@ sources:
                                     source:
                                       value: 'class="uk-float-right"'
                                 slots: {  }
+                          - source_id: block
+                            source:
+                              plugin_id: 'block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11'
+                              'block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11':
+                                status: true
+                                info: ''
+                                view_mode: full
                           - source_id: block
                             source:
                               plugin_id: system_powered_by_block

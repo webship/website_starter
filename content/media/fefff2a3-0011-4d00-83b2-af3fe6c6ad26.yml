@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fefff2a3-0011-4d00-83b2-af3fe6c6ad26
+  bundle: video
+  default_langcode: en
+  depends:
+    5d2f7c1e-8b44-4f0a-9a61-3e7c2b9d4f10: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'A tour of the Website Starter'
+  revision_translation_affected:
+    -
+      value: true
+  field_media_video_file:
+    -
+      display: true
+      description: ''
+      entity: 5d2f7c1e-8b44-4f0a-9a61-3e7c2b9d4f10

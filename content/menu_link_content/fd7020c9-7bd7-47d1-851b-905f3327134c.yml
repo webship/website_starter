@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: fd7020c9-7bd7-47d1-851b-905f3327134c
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    792e7941-f530-4eb5-be48-36f52602047b: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Terms
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 792e7941-f530-4eb5-be48-36f52602047b
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

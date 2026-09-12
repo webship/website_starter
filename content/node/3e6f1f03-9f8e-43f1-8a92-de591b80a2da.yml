@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3e6f1f03-9f8e-43f1-8a92-de591b80a2da
+  bundle: webblog
+  default_langcode: en
+  depends:
+    db37a9cf-aef0-4ae6-8f57-d22569b6765e: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Utility classes with UI Styles'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/utility-classes-ui-styles
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Spacing, alignment, visibility and effects applied from Display Builder with UIkit utilities.</p><h2>Building pages with Display Builder</h2><p>Display Builder gives site builders a canvas where pages are composed from the components of the design system. The left sidebar lists the components by group — layout, navigation, elements, media — and a component is added by dragging it into a slot of the page.</p><p>Each component comes with a form generated from its definition: variants such as primary or secondary, sizes, alignment, and the content sources for its slots. A slot can hold a block, a field of the current entity, a menu, a view or another component, so complex layouts are assembled without writing a template.</p><p>The builder keeps a history of the changes, previews the result in several viewports and only publishes when the page is ready. Page layouts, content displays and views all use the same tool, which makes the whole site consistent.</p><h2>Design tokens that editors can change</h2><p>A design token is a named decision: the primary background, the muted text color, the border color. In the Website Starter every UIkit color used by the components reads a CSS variable, and the variables are declared for UI Skins.</p><p>Changing the primary color from the CSS variables page recolors the buttons, the active tabs, the links and the progress bars at once. The dark color mode is nothing more than another set of values for the same variables.</p><blockquote><p>Tokens turn a style guide into something a site builder can actually use.</p><footer>A front-end lead, after the first brand workshop</footer></blockquote><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>Key takeaways</h2><ul><li>Building pages with Display Builder</li><li>Design tokens that editors can change</li><li>Fast by default</li></ul>'
+      format: full_html
+      summary: 'Spacing, alignment, visibility and effects applied from Display Builder with UIkit utilities.'
+  field_media:
+    -
+      entity: db37a9cf-aef0-4ae6-8f57-d22569b6765e

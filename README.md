@@ -1,57 +1,82 @@
 # Website Starter
 
-A Drupal site recipe to start a website with [Display Builder](https://www.drupal.org/project/display_builder)
-and the [UI Suite UIkit](https://www.drupal.org/project/ui_suite_uikit) design system — no Layout Builder,
-no Canvas: every page and every content display is built with UIkit components.
+A Drupal site template for company and product websites, built with
+[Display Builder](https://www.drupal.org/project/display_builder) and the
+[UI Suite UIkit](https://www.drupal.org/project/ui_suite_uikit) design system. Pages, blog listings and blog
+posts are made of UIkit components arranged in Display Builder — no Canvas, no Layout Builder displays.
 
-## What you get
+![Website Starter](screenshot.webp)
 
-- **The Standard recipe** of Drupal core: Article and Basic page content types, tags, text formats, roles,
-  the Claro administration theme and the Navigation module.
-- **The UI Suite stack**: UI Patterns 2 (library, blocks, layouts, field formatters, views), UI Styles,
-  UI Icons, UI Skins, and Display Builder with its page layout, entity view and views integrations.
-- **UI Suite UIkit** as the front-end theme.
-- **A default page layout** built in Display Builder with UIkit components: sticky Navbar (logo, main menu,
-  account menu, toggle), Offcanvas menu for small screens, content Section and footer Section.
-- **Content displays** built in Display Builder: articles as UIkit Articles, teasers as UIkit Cards.
-- **Default content**: pages (About, Services, Contact), a dozen articles with images spread over several
-  pages of the front page listing, and the main and footer menu links.
+## Install with Composer
 
-## Requirements
+Start a new project with the [Website](https://www.drupal.org/project/website) project template, which
+installs this site template:
 
-- Drupal 11.4 or 12.
-- Composer, with the dependencies declared in `composer.json`.
+```shell
+composer create-project drupal/website my_site
+cd my_site
+```
 
-## Installation
-
-Install a new site from the recipe:
+Or add the site template to an existing Drupal 11.4 project, for example a Drupal CMS project:
 
 ```shell
 composer require drupal/website_starter
 drush site:install recipes/website_starter
 ```
 
-Or start a whole project with the [Website](https://www.drupal.org/project/website) project template:
+On an already installed site, apply it as a recipe:
 
 ```shell
-composer create-project drupal/website my_site
-cd my_site && drush site:install recipes/website_starter
+drush recipe recipes/website_starter
 ```
 
-With DDEV:
+## Local setup with DDEV
 
 ```shell
-ddev config --project-type=drupal --docroot=web
+ddev config --project-type=drupal11 --docroot=web
 ddev start
+ddev composer require drupal/website_starter
 ddev drush site:install recipes/website_starter -y
+ddev launch
 ```
 
-## After installation
+## What you get
 
-- Build the page layout: *Structure > Page layouts* (`/admin/structure/page-layout`).
-- Build the content displays: *Structure > Content types > Article > Manage display*.
-- Browse the UIkit components: `/admin/appearance/ui/components/ui_suite_uikit`.
-- Tune the design tokens: *Appearance > CSS variables > UI Suite UIkit*.
+- **Content types**: Webpage and Web Blog, with the media library (images, documents, audio, video) of Web
+  Assets.
+- **A page layout** built in Display Builder with UIkit components: sticky navbar with logo, main and account
+  menus, offcanvas menu on small screens, content section and footer with menus, social links and copyright.
+- **Content displays** built in Display Builder: blog posts as UIkit articles, blog teasers as UIkit cards, a
+  paginated front page listing.
+- **Contact webform** with anti-spam protection.
+- **Administration**: Gin, dashboard and navigation; authentication, anti-spam and basic SEO recipes of Drupal
+  CMS; editor, SEO, security and configuration management features of Webship.
+- **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
+  dark color modes) and UI Icons pack.
+- **Demo content**: About us, Privacy and Terms pages, 24 illustrated blog posts, a video, menus and footer
+  links — imported as Drupal default content.
+
+## Requirements
+
+- Drupal 11.4 or later.
+- PHP 8.3 or later.
+- Composer 2.
+
+## Tests
+
+Automated functional tests use [webship-js](https://www.npmjs.com/package/webship-js) against a site
+installed from this recipe:
+
+```shell
+npm install
+LAUNCH_URL=https://my-site.ddev.site npm test
+```
+
+## Learn more
+
+- [Display Builder documentation](https://project.pages.drupalcode.org/display_builder)
+- [UI Suite UIkit components](https://www.drupal.org/project/ui_suite_uikit)
+- [Drupal recipes](https://www.drupal.org/docs/extending-drupal/drupal-recipes)
 
 ## Maintainers
 

@@ -1,11 +1,30 @@
 name: 'Website Starter'
-description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, content displays, menus and default content.'
+description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog content displays, contact webform, menus and demo content. No Canvas, no Layout Builder.'
 type: 'Site'
+# Site template metadata for the Drupal CMS installer.
+extra:
+  drupal_cms_installer:
+    creator: 'Webship'
 recipes:
-  # Content types first: the Standard roles reference their permissions.
-  - core/recipes/page_content_type
-  - core/recipes/article_tags
+  # Webship content types and media, before Standard: the Standard roles
+  # reference their permissions. Webpage first: it installs Node.
+  - modules/contrib/webpage/recipes/default
+  - modules/contrib/webassets/recipes/default
+  - modules/contrib/webdev/recipes/default
+  - modules/contrib/webblog/recipes/default
+  - core/recipes/tags_taxonomy
   - core/recipes/standard
+  # Drupal CMS recipes without Canvas: administration (Gin, dashboard,
+  # navigation), anti-spam, authentication and basic SEO.
+  - drupal_cms_admin_ui
+  - drupal_cms_anti_spam
+  - drupal_cms_authentication
+  - drupal_cms_seo_basic
+  # Webship features: editor, SEO, security and configuration management.
+  - modules/contrib/webeditor/recipes/default
+  - modules/contrib/webseo/recipes/default
+  - modules/contrib/websecurity/recipes/default
+  - modules/contrib/webconfig/recipes/default
 install:
   # UI Patterns 2.
   - ui_patterns
@@ -32,6 +51,9 @@ install:
   - display_builder_page_layout
   - display_builder_ui
   - display_builder_views
+  # Forms.
+  - webform
+  - webform_ui
   # Theme.
   - ui_suite_uikit
 config:
@@ -42,6 +64,8 @@ config:
     display_builder:
       - display_builder.profile.default
       - filter.format.display_builder_html
+    webform:
+      - webform.webform.contact
   actions:
     system.theme:
       simpleConfigUpdate:
@@ -50,8 +74,78 @@ config:
       simpleConfigUpdate:
         slogan: 'Built with Display Builder and UIkit'
         page.front: /node
-    # Full article: a UIkit Article.
-    core.entity_view_display.node.article.default:
+    user.settings:
+      simpleConfigUpdate:
+        register: admin_only
+    # The demo video is a WebM file.
+    field.field.media.video.field_media_video_file:
+      simpleConfigUpdate:
+        settings.file_extensions: 'mp4 webm'
+    # Media embedded in the body of the demo content (<drupal-media>).
+    filter.format.full_html:
+      setFilterConfig:
+        instance_id: media_embed
+        configuration:
+          id: media_embed
+          provider: media
+          status: true
+          weight: 100
+          settings:
+            default_view_mode: default
+            allowed_view_modes: {  }
+            allowed_media_types: {  }
+    # The contact form of the Webship profile.
+    webform.webform.contact:
+      simpleConfigUpdate:
+        description: '<p>Contact us.</p>'
+        third_party_settings:
+          antibot:
+            antibot: true
+          honeypot:
+            honeypot: true
+            time_restriction: true
+        elements: |-
+          contact_paragraph:
+            '#type': webform_markup
+            '#markup': "<h3>We'd love to talk to you</h3><p>Leave us your details and we will contact you soon.</p>"
+          layout_1:
+            '#type': webform_flexbox
+            name:
+              '#type': textfield
+              '#title': 'Your Name'
+              '#placeholder': 'Your full name'
+              '#required': true
+              '#default_value': '[current-user:display-name]'
+            company_name:
+              '#type': textfield
+              '#title': 'Company name'
+              '#placeholder': 'Your company name'
+          layout_2:
+            '#type': webform_flexbox
+            email:
+              '#type': email
+              '#title': 'Business email'
+              '#placeholder': 'Your business email'
+              '#required': true
+              '#default_value': '[current-user:mail]'
+            phone_number:
+              '#type': textfield
+              '#title': 'Phone number'
+              '#placeholder': 'Your phone number'
+          message:
+            '#type': textarea
+            '#title': 'Your message'
+            '#placeholder': 'Your message'
+            '#required': true
+          privacy:
+            '#type': webform_markup
+            '#markup': '<p>By contacting us through this form, you agree to our <a href="/privacy">Privacy policy</a>.</p>'
+          actions:
+            '#type': webform_actions
+            '#title': 'Submit button(s)'
+            '#submit__label': Submit
+    # Full Web Blog post: a UIkit Article.
+    core.entity_view_display.node.webblog.full:
       setThirdPartySettings:
         - module: display_builder
           key: profile
@@ -75,49 +169,31 @@ config:
                       sources:
                         - source_id: entity_field
                           source:
-                            derivable_context: 'field:node:article:field_image'
-                            'field:node:article:field_image':
+                            derivable_context: 'field:node:webblog:field_media'
+                            'field:node:webblog:field_media':
                               value:
                                 sources:
-                                  - source_id: 'field_formatter:node:article:field_image'
+                                  - source_id: 'field_formatter:node:webblog:field_media'
                                     source:
-                                      type: image
+                                      type: entity_reference_entity_view
                                       label: hidden
                                       settings:
-                                        image_link: ''
-                                        image_style: wide
-                                        image_loading:
-                                          attribute: eager
+                                        view_mode: ultrawide
                                       third_party_settings: {  }
                         - source_id: entity_field
                           source:
-                            derivable_context: 'field:node:article:body'
-                            'field:node:article:body':
+                            derivable_context: 'field:node:webblog:body'
+                            'field:node:webblog:body':
                               value:
                                 sources:
-                                  - source_id: 'field_formatter:node:article:body'
+                                  - source_id: 'field_formatter:node:webblog:body'
                                     source:
                                       type: text_default
                                       label: hidden
                                       settings: {  }
                                       third_party_settings: {  }
-                    footer:
-                      sources:
-                        - source_id: entity_field
-                          source:
-                            derivable_context: 'field:node:article:field_tags'
-                            'field:node:article:field_tags':
-                              value:
-                                sources:
-                                  - source_id: 'field_formatter:node:article:field_tags'
-                                    source:
-                                      type: entity_reference_label
-                                      label: inline
-                                      settings:
-                                        link: true
-                                      third_party_settings: {  }
-    # Teaser: a UIkit Card with the image on the left.
-    core.entity_view_display.node.article.teaser:
+    # Web Blog teaser: a UIkit Card with the image on the left.
+    core.entity_view_display.node.webblog.teaser:
       setThirdPartySettings:
         - module: display_builder
           key: profile
@@ -151,29 +227,26 @@ config:
                       sources:
                         - source_id: entity_field
                           source:
-                            derivable_context: 'field:node:article:field_image'
-                            'field:node:article:field_image':
+                            derivable_context: 'field:node:webblog:field_media'
+                            'field:node:webblog:field_media':
                               value:
                                 sources:
-                                  - source_id: 'field_formatter:node:article:field_image'
+                                  - source_id: 'field_formatter:node:webblog:field_media'
                                     source:
-                                      type: image
+                                      type: entity_reference_entity_view
                                       label: hidden
                                       settings:
-                                        image_link: content
-                                        image_style: wide
-                                        image_loading:
-                                          attribute: lazy
+                                        view_mode: standard
                                       third_party_settings: {  }
                     title:
                       sources:
                         - source_id: entity_field
                           source:
-                            derivable_context: 'field:node:article:title'
-                            'field:node:article:title':
+                            derivable_context: 'field:node:webblog:title'
+                            'field:node:webblog:title':
                               value:
                                 sources:
-                                  - source_id: 'field_formatter:node:article:title'
+                                  - source_id: 'field_formatter:node:webblog:title'
                                     source:
                                       type: string
                                       label: hidden
@@ -184,11 +257,26 @@ config:
                       sources:
                         - source_id: entity_field
                           source:
-                            derivable_context: 'field:node:article:body'
-                            'field:node:article:body':
+                            derivable_context: 'field:node:webblog:created'
+                            'field:node:webblog:created':
                               value:
                                 sources:
-                                  - source_id: 'field_formatter:node:article:body'
+                                  - source_id: 'field_formatter:node:webblog:created'
+                                    source:
+                                      type: timestamp
+                                      label: hidden
+                                      settings:
+                                        date_format: medium
+                                        custom_date_format: ''
+                                        timezone: ''
+                                      third_party_settings: {  }
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:webblog:body'
+                            'field:node:webblog:body':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:webblog:body'
                                     source:
                                       type: text_summary_or_trimmed
                                       label: hidden

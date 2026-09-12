@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 630532dc-1320-4e62-87e1-a6f8c73b3a75
+  bundle: image
+  default_langcode: en
+  depends:
+    38042922-364e-4e4b-8ce8-6e6494680382: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Components
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Components
+      title: ''
+      width: 1200
+      height: 675
+      entity: 38042922-364e-4e4b-8ce8-6e6494680382

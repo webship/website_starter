@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 38197b04-9d13-423b-bee4-81c3b9d3a908
+  bundle: webblog
+  default_langcode: en
+  depends:
+    db37a9cf-aef0-4ae6-8f57-d22569b6765e: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Responsive layouts with grids'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/responsive-layouts-grids
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Two, three and four column layouts that adapt to every screen, chosen from ready-made ratios.</p><h2>Building pages with Display Builder</h2><p>Display Builder gives site builders a canvas where pages are composed from the components of the design system. The left sidebar lists the components by group — layout, navigation, elements, media — and a component is added by dragging it into a slot of the page.</p><p>Each component comes with a form generated from its definition: variants such as primary or secondary, sizes, alignment, and the content sources for its slots. A slot can hold a block, a field of the current entity, a menu, a view or another component, so complex layouts are assembled without writing a template.</p><p>The builder keeps a history of the changes, previews the result in several viewports and only publishes when the page is ready. Page layouts, content displays and views all use the same tool, which makes the whole site consistent.</p><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>Accessibility is part of the components</h2><p>Components encode accessibility once, for every page that uses them. Navigation landmarks have labels, the current page is announced in the breadcrumb and the pagination, the offcanvas menu can be closed with the keyboard and the icons without text are hidden from screen readers.</p><p>With HTMX navigation enabled, the focus moves to the main content after each page change and the new page title is announced, so faster navigation does not come at the expense of assistive technologies.</p><ol><li>Use the heading level props to keep a logical outline</li><li>Give every image media an alternative text</li><li>Check the color contrast after changing the tokens</li></ol><h2>Key takeaways</h2><ul><li>Building pages with Display Builder</li><li>Fast by default</li><li>Accessibility is part of the components</li></ul>'
+      format: full_html
+      summary: 'Two, three and four column layouts that adapt to every screen, chosen from ready-made ratios.'
+  field_media:
+    -
+      entity: db37a9cf-aef0-4ae6-8f57-d22569b6765e

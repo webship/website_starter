@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5d2f7c1e-8b44-4f0a-9a61-3e7c2b9d4f10
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: website-starter-tour.webm
+  uri:
+    -
+      value: 'public://website-starter/website-starter-tour.webm'
+  filemime:
+    -
+      value: video/webm
+  filesize:
+    -
+      value: 1417939
+  status:
+    -
+      value: true

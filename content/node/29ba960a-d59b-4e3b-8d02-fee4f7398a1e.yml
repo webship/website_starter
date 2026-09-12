@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 29ba960a-d59b-4e3b-8d02-fee4f7398a1e
+  bundle: webblog
+  default_langcode: en
+  depends:
+    7280e0db-b4e6-477e-84e5-200c9f02088b: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Getting started with UIkit'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/getting-started-uikit
+      langcode: en
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">A practical introduction to the UIkit framework and how the Website Starter uses it to build a complete website.</p><h2>Why UIkit fits content-rich websites</h2><p>UIkit is a modular front-end framework with more than sixty components, from navbars and cards to sliders, lightboxes and sortable lists. Every component is written with the same naming conventions, so once an editor or a developer has seen a card, the modal and the tile feel familiar.</p><p>The framework ships its JavaScript as small, self-initializing components. They watch the page for new markup, which means a card inserted by Display Builder, a slide loaded by HTMX or a modal rendered by a view starts working immediately, without any glue code in the theme.</p><p>Because the look is driven by a handful of global variables — colors, fonts, borders, spacing — a brand can be applied in minutes. The UI Suite UIkit theme exposes those variables as CSS custom properties, so the brand can even be changed from the administration interface.</p><ul><li>Consistent class names for every component</li><li>Components that initialize themselves after any DOM change</li><li>Responsive utilities for width, visibility and spacing</li><li>An icon set of more than 160 SVG icons</li></ul><drupal-media data-entity-type="media" data-entity-uuid="fefff2a3-0011-4d00-83b2-af3fe6c6ad26" data-view-mode="default"></drupal-media><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>From recipe to running site</h2><p>The Website Starter is a Drupal recipe. It installs the content types, the media types, the design system, the page layout and this demo content in one command, on a new site or on an existing Drupal CMS project.</p><p>Recipes are plain configuration and content files, so they can be reviewed, versioned and extended. A project can start from the Website Starter, change a few tokens, rearrange the page layout in Display Builder and ship.</p><pre><code>ddev composer create-project drupal/website my_site
+        ddev drush site:install drupal_cms_installer -y</code></pre><h2>Key takeaways</h2><ul><li>Why UIkit fits content-rich websites</li><li>Fast by default</li><li>From recipe to running site</li></ul>
+      format: full_html
+      summary: 'A practical introduction to the UIkit framework and how the Website Starter uses it to build a complete website.'
+  field_media:
+    -
+      entity: 7280e0db-b4e6-477e-84e5-200c9f02088b

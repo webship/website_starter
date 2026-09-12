@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 292a9fa1-3e55-4341-8947-f16ea4918571
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: accessibility.jpg
+  uri:
+    -
+      value: 'public://website-starter/accessibility.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14260
+  status:
+    -
+      value: true

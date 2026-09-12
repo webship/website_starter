@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1bf634b1-4de4-426e-a54a-6393378fbc92
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: uikit-hero.jpg
+  uri:
+    -
+      value: 'public://website-starter/uikit-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 18462
+  status:
+    -
+      value: true

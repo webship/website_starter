@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 792e7941-f530-4eb5-be48-36f52602047b
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Terms
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /terms
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">By using this website you agree to these terms and conditions.</p><p>This page is part of the demo content of the Website Starter. Replace it with the text reviewed by your legal team before publishing the website.</p><p>For any question about this page, use the contact form: we answer every request within two working days.</p>'
+      format: full_html
+      summary: ''

@@ -1,0 +1,16 @@
+{
+  "name": "website_starter",
+  "private": true,
+  "description": "Webship-js tests of the Website Starter recipe.",
+  "license": "GPL-2.0-or-later",
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "devDependencies": {
+    "webship-js": "2.0.5"
+  },
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports"
+  }
+}

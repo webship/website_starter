@@ -1,30 +1,35 @@
 # Website Starter — agent guide
 
-Drupal site recipe (`drupal/website_starter`): Standard recipe + UI Suite stack + Display Builder + the
-UI Suite UIkit theme, with a component-built page layout, content displays and default content.
-Part of the Webship Workspace (`~/workspace/products`): DDEV only.
+Drupal site template recipe (`drupal/website_starter`, recipe `type: Site`): Webship 12.0.x content types
+(Webpage, Web Blog, media), Canvas-free Drupal CMS recipes, Webship service recipes, Webform, the UI Suite
+stack, Display Builder and the UI Suite UIkit theme, with a component-built page layout, content displays and
+demo content. Part of the Webship Workspace (`~/workspace/products`): DDEV only.
 
 ## Layout
 
-- `recipe.yml`: recipes, modules and config actions.
-- `config/`: config imported as is (Display Builder page layout, displays).
-- `content/`: default content in the core default content format (`drush content:export`).
-- `scripts/generate-content.php`: maintainer script (re)generating the default content on a dev site.
+- `recipe.yml`: included recipes, modules, config imports and config actions (the Drupal core Recipe and
+  Config Action APIs: `simpleConfigUpdate`, `setThirdPartySettings`, …) and `extra.drupal_cms_installer` for
+  the site template metadata.
+- `config/`: default config imported as is (Display Builder page layout, social media menu, Pathauto pattern).
+- `content/`: default content in the core default content format (YAML per entity, files next to the file
+  entities). It is plain data maintained like config: no PHP script ships with the recipe.
+- `tests/`: webship-js features, run against a site installed from the recipe.
 
 ## Rules
 
-- No Layout Builder and no Canvas: displays are built with Display Builder and UIkit components
-  (`ui_suite_uikit:*`). Source trees follow the UI Patterns 2 format: `source_id` + `source`, components as
-  `component_id` / `variant_id` / `props` / `slots.<slot>.sources`.
-- Config existing after the Standard recipe (entity displays) is changed with config actions, not by files in
+- No Canvas, no Layout Builder displays: displays are built with Display Builder and UIkit components
+  (`ui_suite_uikit:*`). Source trees follow the UI Patterns 2 format.
+- Config existing before this recipe (entity displays, fields) is changed with config actions, not by files in
   `config/` (non-strict recipes keep existing config).
+- Default content changes: edit the YAML in `content/`, or build the content on a development site and export
+  it with `drush content:export <entity_type> --with-dependencies --dir=…/content`.
 
 ## Test site
 
-`~/workspace/test/websitetest` mounts this repository at `recipes/website_starter` and the theme at
-`web/themes/contrib/ui_suite_uikit`:
+`~/workspace/test/websitetest` mounts this repository at `recipes/website_starter`:
 
 ```shell
 cd ~/workspace/test/websitetest
-ddev drush site:install recipes/website_starter -y
+ddev drush sql:drop -y && ddev drush site:install ../recipes/website_starter -y
+cd ~/workspace/products/website_starter && npm test
 ```

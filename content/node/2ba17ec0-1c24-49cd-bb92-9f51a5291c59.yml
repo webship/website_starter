@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2ba17ec0-1c24-49cd-bb92-9f51a5291c59
+  bundle: webblog
+  default_langcode: en
+  depends:
+    fc980560-986a-4e36-a461-d7d24ea9abfc: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Theming with CSS variables'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/theming-css-variables
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Generated token stylesheets keep UIkit untouched while every color becomes configurable.</p><h2>Design tokens that editors can change</h2><p>A design token is a named decision: the primary background, the muted text color, the border color. In the Website Starter every UIkit color used by the components reads a CSS variable, and the variables are declared for UI Skins.</p><p>Changing the primary color from the CSS variables page recolors the buttons, the active tabs, the links and the progress bars at once. The dark color mode is nothing more than another set of values for the same variables.</p><blockquote><p>Tokens turn a style guide into something a site builder can actually use.</p><footer>A front-end lead, after the first brand workshop</footer></blockquote><h2>Fast by default</h2><p>The theme adds almost no CSS or JavaScript of its own: UIkit is loaded once, the design tokens are a small generated stylesheet, and the components do not depend on jQuery.</p><p>HTMX navigation only swaps the page content, keeping the already loaded assets, while Drupal core loads the new libraries a page may need. Combined with the page cache and responsive images, most page changes feel instant.</p><h2>A workflow for design and development</h2><p>The UIkit components are also drawn in a Penpot design system with the same variant names as the Drupal components. Designers pick a primary button or a card with the image on the left, and the developer finds exactly the same variant in the component library.</p><p>Stories document every component in Drupal, the SDC Devel module validates the definitions, and automated webship-js scenarios check the pages in a real browser. Changes to the design system are therefore visible, reviewed and tested.</p><h2>Key takeaways</h2><ul><li>Design tokens that editors can change</li><li>Fast by default</li><li>A workflow for design and development</li></ul>'
+      format: full_html
+      summary: 'Generated token stylesheets keep UIkit untouched while every color becomes configurable.'
+  field_media:
+    -
+      entity: fc980560-986a-4e36-a461-d7d24ea9abfc
