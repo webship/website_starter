@@ -1,0 +1,66 @@
+################
+# GitLab CI for the Website Starter site template (a drupal-recipe project).
+#
+# The drupal.org GitLab templates build a Drupal site with this recipe in
+# recipes/website_starter, then run composer-lint and cspell. The `recipe` job
+# below installs Drupal from the recipe to prove that it applies.
+# Documentation: https://project.pages.drupalcode.org/gitlab_templates/
+################
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  _TARGET_PHP: '8.4'
+  DRUPAL_CORE: &drupal_core '11.4.x-dev'
+  # No PHP, CSS or PHPUnit tests here. The only JavaScript is the webship-js
+  # test tooling, and the recipe YAML is checked by applying the recipe.
+  SKIP_ESLINT: '1'
+  SKIP_PHPCS: '1'
+  SKIP_PHPSTAN: '1'
+  SKIP_PHPUNIT: '1'
+  SKIP_STYLELINT: '1'
+  # Node modules are only needed by cspell, which installs them itself.
+  _COMPOSER_YARN_INSTALL: '0'
+  # composer-lint and cspell must pass.
+  _ALL_VALIDATE_ALLOW_FAILURE: '0'
+  # Exported demo content: markup, file names and image credits.
+  _CSPELL_IGNORE_PATHS: 'content/**'
+
+composer:
+  variables:
+    # The composer job sets its own DRUPAL_CORE: use the global value.
+    DRUPAL_CORE: *drupal_core
+  # @todo Remove when webblog 12.0.x has the Display Builder displays and
+  #   requires ~12.0 of webassets and webdev:
+  #   https://git.drupalcode.org/project/webblog/-/merge_requests/4
+  before_script:
+    - composer config repositories.webblog vcs https://git.drupalcode.org/issue/webblog-3591554.git
+    - composer require --no-update "drupal/webblog:dev-3591554-display-builder as 12.0.x-dev"
+
+# Install Drupal from the recipe, and check the result.
+recipe:
+  extends: .testing-job-base
+  needs: [composer]
+  # Only the database: no browser is needed.
+  services:
+    - name: $_CONFIG_DOCKERHUB_ROOT/$_TARGET_DB_TYPE-$_TARGET_DB_VERSION:$_TARGET_DB_IMAGE_TAG
+      alias: database
+  variables:
+    EXPECTED_THEME: 'ui_suite_uikit'
+  script:
+    - cd $CI_PROJECT_DIR
+    - test "$COMPOSER_END_CODE" = "0"
+    # Run the Drush PHP script directly: vendor/bin/drush is a shell proxy.
+    - export DRUSH="php -d memory_limit=-1 $CI_PROJECT_DIR/vendor/drush/drush/drush.php --root=$CI_PROJECT_DIR/$_WEB_ROOT"
+    - $DRUSH site:install $CI_PROJECT_DIR/recipes/$PROJECT_NAME -y
+      --db-url=mysql://$MYSQL_USER:$MYSQL_PASSWORD@database/$MYSQL_DATABASE
+      --account-name=admin --account-pass=admin --site-name="$PROJECT_NAME"
+    - $DRUSH status --fields=drupal-version,db-status,theme
+    - test "$($DRUSH config:get system.theme default --format=string)" = "$EXPECTED_THEME"
+    # The demo content of the recipe is imported.
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->count()->execute();')" -gt 0
