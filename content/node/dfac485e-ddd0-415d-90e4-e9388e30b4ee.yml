@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: dfac485e-ddd0-415d-90e4-e9388e30b4ee
+  bundle: article
+  default_langcode: en
+  depends:
+    0f986e84-497f-472b-b7ba-8dd93c033710: file
+    bec93f1d-a60d-40de-a703-e8eb529ae296: taxonomy_term
+    711fef33-fddb-473b-9e0c-73cda9edad47: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Views with Display Builder'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/views-with-display-builder
+      langcode: en
+  body:
+    -
+      value: '<p>Display Builder lets site builders compose pages from design system components, with a live preview.</p><p>Every component is a Single Directory Component with typed props, slots, variants and stories.</p><p>Design tokens are CSS variables: change the brand colors once and every component follows.</p><p>Layouts are components too: sections, containers and grids with ratios chosen from the variants.</p><p>Accessible markup, keyboard navigation and color contrast are built into the components.</p><p>UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.</p>'
+      format: basic_html
+      summary: 'Display Builder lets site builders compose pages from design system components, with a live preview.'
+  field_image:
+    -
+      alt: 'Views with Display Builder'
+      title: ''
+      width: 1200
+      height: 675
+      entity: 0f986e84-497f-472b-b7ba-8dd93c033710
+  field_tags:
+    -
+      entity: bec93f1d-a60d-40de-a703-e8eb529ae296
+    -
+      entity: 711fef33-fddb-473b-9e0c-73cda9edad47

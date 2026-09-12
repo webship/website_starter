@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b3391cfb-131e-4cbf-be39-908f7b2f74c5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: design-tokens.jpg
+  uri:
+    -
+      value: 'public://website-starter/design-tokens.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14088
+  status:
+    -
+      value: true

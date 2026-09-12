@@ -1,0 +1,217 @@
+name: 'Website Starter'
+description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, content displays, menus and default content.'
+type: 'Site'
+recipes:
+  # Content types first: the Standard roles reference their permissions.
+  - core/recipes/page_content_type
+  - core/recipes/article_tags
+  - core/recipes/standard
+install:
+  # UI Patterns 2.
+  - ui_patterns
+  - ui_patterns_blocks
+  - ui_patterns_field
+  - ui_patterns_field_formatters
+  - ui_patterns_layouts
+  - ui_patterns_library
+  - ui_patterns_views
+  # UI Styles.
+  - ui_styles
+  - ui_styles_block
+  - ui_styles_library
+  - ui_styles_ui_patterns
+  # UI Icons.
+  - ui_icons
+  - ui_icons_library
+  - ui_icons_patterns
+  # UI Skins.
+  - ui_skins
+  # Display Builder.
+  - display_builder
+  - display_builder_entity_view
+  - display_builder_page_layout
+  - display_builder_ui
+  - display_builder_views
+  # Theme.
+  - ui_suite_uikit
+config:
+  strict: false
+  import:
+    # Optional config is not installed by recipes: the default profile and the
+    # text format of Display Builder.
+    display_builder:
+      - display_builder.profile.default
+      - filter.format.display_builder_html
+  actions:
+    system.theme:
+      simpleConfigUpdate:
+        default: ui_suite_uikit
+    system.site:
+      simpleConfigUpdate:
+        slogan: 'Built with Display Builder and UIkit'
+        page.front: /node
+    # Full article: a UIkit Article.
+    core.entity_view_display.node.article.default:
+      setThirdPartySettings:
+        - module: display_builder
+          key: profile
+          value: default
+        - module: display_builder
+          key: sources
+          value:
+            - source_id: component
+              source:
+                component:
+                  component_id: 'ui_suite_uikit:article'
+                  variant_id: null
+                  props: {  }
+                  slots:
+                    meta:
+                      sources:
+                        - source_id: token
+                          source:
+                            value: 'By [node:author:display-name] on [node:created:medium]'
+                    content:
+                      sources:
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:field_image'
+                            'field:node:article:field_image':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:field_image'
+                                    source:
+                                      type: image
+                                      label: hidden
+                                      settings:
+                                        image_link: ''
+                                        image_style: wide
+                                        image_loading:
+                                          attribute: eager
+                                      third_party_settings: {  }
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:body'
+                            'field:node:article:body':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:body'
+                                    source:
+                                      type: text_default
+                                      label: hidden
+                                      settings: {  }
+                                      third_party_settings: {  }
+                    footer:
+                      sources:
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:field_tags'
+                            'field:node:article:field_tags':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:field_tags'
+                                    source:
+                                      type: entity_reference_label
+                                      label: inline
+                                      settings:
+                                        link: true
+                                      third_party_settings: {  }
+    # Teaser: a UIkit Card with the image on the left.
+    core.entity_view_display.node.article.teaser:
+      setThirdPartySettings:
+        - module: display_builder
+          key: profile
+          value: default
+        - module: display_builder
+          key: sources
+          value:
+            - source_id: component
+              source:
+                component:
+                  component_id: 'ui_suite_uikit:card'
+                  variant_id:
+                    source_id: select
+                    source:
+                      value: default
+                  props:
+                    image_position:
+                      source_id: select
+                      source:
+                        value: left
+                    hover:
+                      source_id: checkbox
+                      source:
+                        value: true
+                    attributes:
+                      source_id: attributes
+                      source:
+                        value: 'class="uk-margin-medium-bottom"'
+                  slots:
+                    image:
+                      sources:
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:field_image'
+                            'field:node:article:field_image':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:field_image'
+                                    source:
+                                      type: image
+                                      label: hidden
+                                      settings:
+                                        image_link: content
+                                        image_style: wide
+                                        image_loading:
+                                          attribute: lazy
+                                      third_party_settings: {  }
+                    title:
+                      sources:
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:title'
+                            'field:node:article:title':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:title'
+                                    source:
+                                      type: string
+                                      label: hidden
+                                      settings:
+                                        link_to_entity: true
+                                      third_party_settings: {  }
+                    content:
+                      sources:
+                        - source_id: entity_field
+                          source:
+                            derivable_context: 'field:node:article:body'
+                            'field:node:article:body':
+                              value:
+                                sources:
+                                  - source_id: 'field_formatter:node:article:body'
+                                    source:
+                                      type: text_summary_or_trimmed
+                                      label: hidden
+                                      settings:
+                                        trim_length: 200
+                                      third_party_settings: {  }
+                        - source_id: component
+                          source:
+                            component:
+                              component_id: 'ui_suite_uikit:button'
+                              variant_id:
+                                source_id: select
+                                source:
+                                  value: text
+                              props:
+                                url:
+                                  source_id: entity_link
+                                  source:
+                                    template: canonical
+                                    absolute: false
+                              slots:
+                                label:
+                                  sources:
+                                    - source_id: textfield
+                                      source:
+                                        value: 'Read more'

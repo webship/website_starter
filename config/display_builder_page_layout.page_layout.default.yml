@@ -1,0 +1,303 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - display_builder.profile.default
+  module:
+    - display_builder_page_layout
+    - system
+    - ui_patterns
+  theme:
+    - ui_suite_uikit
+id: default
+label: Default
+weight: 0
+conditions: {  }
+profile: default
+sources:
+  # Navbar: logo, main menu (medium screens and up), account menu, toggle.
+  - source_id: component
+    source:
+      component:
+        component_id: 'ui_suite_uikit:navbar'
+        variant_id: null
+        props:
+          container:
+            source_id: select
+            source:
+              value: default
+          sticky:
+            source_id: checkbox
+            source:
+              value: true
+        slots:
+          left:
+            sources:
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:logo'
+                    variant_id: null
+                    props:
+                      url:
+                        source_id: url
+                        source:
+                          value: '/'
+                      image:
+                        source_id: url
+                        source:
+                          value: '/themes/contrib/ui_suite_uikit/logo.svg'
+                      image_alt:
+                        source_id: textfield
+                        source:
+                          value: 'Home'
+                      navbar_item:
+                        source_id: checkbox
+                        source:
+                          value: true
+                    slots:
+                      label:
+                        sources:
+                          - source_id: token
+                            source:
+                              value: '[site:name]'
+          center:
+            sources:
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:navbar_nav'
+                    variant_id: null
+                    props:
+                      attributes:
+                        source_id: attributes
+                        source:
+                          value: 'class="uk-visible@m"'
+                      items:
+                        source_id: menu
+                        source:
+                          menu: main
+                          level: 1
+                          depth: 2
+                          set_active_trail: true
+                          expand_all_items: true
+                    slots: {  }
+          right:
+            sources:
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:navbar_nav'
+                    variant_id: null
+                    props:
+                      attributes:
+                        source_id: attributes
+                        source:
+                          value: 'class="uk-visible@m"'
+                      items:
+                        source_id: menu
+                        source:
+                          menu: account
+                          level: 1
+                          depth: 1
+                          set_active_trail: false
+                          expand_all_items: false
+                    slots: {  }
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:navbar_toggle'
+                    variant_id: null
+                    props:
+                      attributes:
+                        source_id: attributes
+                        source:
+                          value: 'class="uk-hidden@m"'
+                      target:
+                        source_id: textfield
+                        source:
+                          value: website-offcanvas
+                    slots: {  }
+  # Offcanvas: main and account menus on small screens.
+  - source_id: component
+    source:
+      component:
+        component_id: 'ui_suite_uikit:offcanvas'
+        variant_id: null
+        props:
+          offcanvas_id:
+            source_id: textfield
+            source:
+              value: website-offcanvas
+          mode:
+            source_id: select
+            source:
+              value: push
+          flip:
+            source_id: checkbox
+            source:
+              value: true
+          overlay:
+            source_id: checkbox
+            source:
+              value: true
+          close:
+            source_id: checkbox
+            source:
+              value: true
+        slots:
+          content:
+            sources:
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:nav'
+                    variant_id:
+                      source_id: select
+                      source:
+                        value: primary
+                    props:
+                      accordion:
+                        source_id: checkbox
+                        source:
+                          value: true
+                      items:
+                        source_id: menu
+                        source:
+                          menu: main
+                          level: 1
+                          depth: 0
+                          set_active_trail: true
+                          expand_all_items: true
+                    slots: {  }
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:divider'
+                    variant_id: null
+                    props: {  }
+                    slots: {  }
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:nav'
+                    variant_id: null
+                    props:
+                      items:
+                        source_id: menu
+                        source:
+                          menu: account
+                          level: 1
+                          depth: 1
+                          set_active_trail: false
+                          expand_all_items: false
+                    slots: {  }
+  # Main content.
+  - source_id: component
+    source:
+      component:
+        component_id: 'ui_suite_uikit:section'
+        variant_id: null
+        props:
+          size:
+            source_id: select
+            source:
+              value: small
+          container:
+            source_id: select
+            source:
+              value: default
+        slots:
+          content:
+            sources:
+              - source_id: block
+                source:
+                  plugin_id: system_messages_block
+                  system_messages_block: {  }
+              - source_id: block
+                source:
+                  plugin_id: system_breadcrumb_block
+                  system_breadcrumb_block: {  }
+              - source_id: page_title
+                source: {  }
+              - source_id: block
+                source:
+                  plugin_id: local_tasks_block
+                  local_tasks_block:
+                    primary: true
+                    secondary: true
+              - source_id: block
+                source:
+                  plugin_id: local_actions_block
+                  local_actions_block: {  }
+              - source_id: main_page_content
+                source: {  }
+  # Footer.
+  - source_id: component
+    source:
+      component:
+        component_id: 'ui_suite_uikit:section'
+        variant_id:
+          source_id: select
+          source:
+            value: secondary
+        props:
+          size:
+            source_id: select
+            source:
+              value: small
+          container:
+            source_id: select
+            source:
+              value: default
+        slots:
+          content:
+            sources:
+              - source_id: component
+                source:
+                  component:
+                    component_id: 'ui_suite_uikit:grid_2_columns'
+                    variant_id: null
+                    props:
+                      vertical_align:
+                        source_id: select
+                        source:
+                          value: middle
+                    slots:
+                      column_1:
+                        sources:
+                          - source_id: component
+                            source:
+                              component:
+                                component_id: 'ui_suite_uikit:subnav'
+                                variant_id:
+                                  source_id: select
+                                  source:
+                                    value: divider
+                                props:
+                                  items:
+                                    source_id: menu
+                                    source:
+                                      menu: footer
+                                      level: 1
+                                      depth: 1
+                                      set_active_trail: false
+                                      expand_all_items: false
+                                slots: {  }
+                      column_2:
+                        sources:
+                          - source_id: component
+                            source:
+                              component:
+                                component_id: 'ui_suite_uikit:totop'
+                                variant_id: null
+                                props:
+                                  attributes:
+                                    source_id: attributes
+                                    source:
+                                      value: 'class="uk-float-right"'
+                                slots: {  }
+                          - source_id: block
+                            source:
+                              plugin_id: system_powered_by_block
+                              system_powered_by_block: {  }

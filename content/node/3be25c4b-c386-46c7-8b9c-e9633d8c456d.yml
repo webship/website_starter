@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3be25c4b-c386-46c7-8b9c-e9633d8c456d
+  bundle: article
+  default_langcode: en
+  depends:
+    3df0e46d-1ea9-476f-8b22-c47a954321ee: file
+    711fef33-fddb-473b-9e0c-73cda9edad47: taxonomy_term
+    3f1691b3-c642-4e36-b885-80ccc82af78c: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Shipping a design system'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/shipping-a-design-system
+      langcode: en
+  body:
+    -
+      value: '<p>Design tokens are CSS variables: change the brand colors once and every component follows.</p><p>Layouts are components too: sections, containers and grids with ratios chosen from the variants.</p><p>Accessible markup, keyboard navigation and color contrast are built into the components.</p><p>UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.</p><p>Display Builder lets site builders compose pages from design system components, with a live preview.</p><p>Every component is a Single Directory Component with typed props, slots, variants and stories.</p>'
+      format: basic_html
+      summary: 'Design tokens are CSS variables: change the brand colors once and every component follows.'
+  field_image:
+    -
+      alt: 'Shipping a design system'
+      title: ''
+      width: 1200
+      height: 675
+      entity: 3df0e46d-1ea9-476f-8b22-c47a954321ee
+  field_tags:
+    -
+      entity: 711fef33-fddb-473b-9e0c-73cda9edad47
+    -
+      entity: 3f1691b3-c642-4e36-b885-80ccc82af78c

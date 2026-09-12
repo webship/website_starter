@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4f0403ba-4889-4ea4-ae08-5a4c8c119826
+  bundle: article
+  default_langcode: en
+  depends:
+    b3391cfb-131e-4cbf-be39-908f7b2f74c5: file
+    3f1691b3-c642-4e36-b885-80ccc82af78c: taxonomy_term
+    4721a1d9-437d-49da-8425-21192afc3d42: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Theming with CSS variables'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/theming-with-css-variables
+      langcode: en
+  body:
+    -
+      value: '<p>Every component is a Single Directory Component with typed props, slots, variants and stories.</p><p>Design tokens are CSS variables: change the brand colors once and every component follows.</p><p>Layouts are components too: sections, containers and grids with ratios chosen from the variants.</p><p>Accessible markup, keyboard navigation and color contrast are built into the components.</p><p>UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.</p><p>Display Builder lets site builders compose pages from design system components, with a live preview.</p>'
+      format: basic_html
+      summary: 'Every component is a Single Directory Component with typed props, slots, variants and stories.'
+  field_image:
+    -
+      alt: 'Theming with CSS variables'
+      title: ''
+      width: 1200
+      height: 675
+      entity: b3391cfb-131e-4cbf-be39-908f7b2f74c5
+  field_tags:
+    -
+      entity: 3f1691b3-c642-4e36-b885-80ccc82af78c
+    -
+      entity: 4721a1d9-437d-49da-8425-21192afc3d42

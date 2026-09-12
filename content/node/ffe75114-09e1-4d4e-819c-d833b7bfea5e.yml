@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ffe75114-09e1-4d4e-819c-d833b7bfea5e
+  bundle: article
+  default_langcode: en
+  depends:
+    e23d8022-47a7-4359-a1fa-ccca8ef47a8f: file
+    38066972-f64c-40af-9a58-12ce7c3068e7: taxonomy_term
+    bec93f1d-a60d-40de-a703-e8eb529ae296: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page layouts without Layout Builder'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/page-layouts-without-layout-builder
+      langcode: en
+  body:
+    -
+      value: '<p>Accessible markup, keyboard navigation and color contrast are built into the components.</p><p>UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.</p><p>Display Builder lets site builders compose pages from design system components, with a live preview.</p><p>Every component is a Single Directory Component with typed props, slots, variants and stories.</p><p>Design tokens are CSS variables: change the brand colors once and every component follows.</p><p>Layouts are components too: sections, containers and grids with ratios chosen from the variants.</p>'
+      format: basic_html
+      summary: 'Accessible markup, keyboard navigation and color contrast are built into the components.'
+  field_image:
+    -
+      alt: 'Page layouts without Layout Builder'
+      title: ''
+      width: 1200
+      height: 675
+      entity: e23d8022-47a7-4359-a1fa-ccca8ef47a8f
+  field_tags:
+    -
+      entity: 38066972-f64c-40af-9a58-12ce7c3068e7
+    -
+      entity: bec93f1d-a60d-40de-a703-e8eb529ae296

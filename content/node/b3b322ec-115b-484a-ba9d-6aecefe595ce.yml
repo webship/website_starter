@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b3b322ec-115b-484a-ba9d-6aecefe595ce
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Services
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /services
+      langcode: en
+  body:
+    -
+      value: '<p class="uk-text-lead">Design systems, component libraries, page layouts and content displays built for site builders.</p><p>UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.</p><p>Display Builder lets site builders compose pages from design system components, with a live preview.</p><p>Every component is a Single Directory Component with typed props, slots, variants and stories.</p><p>Design tokens are CSS variables: change the brand colors once and every component follows.</p><p>Layouts are components too: sections, containers and grids with ratios chosen from the variants.</p><p>Accessible markup, keyboard navigation and color contrast are built into the components.</p>'
+      format: basic_html
+      summary: ''
