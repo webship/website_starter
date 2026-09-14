@@ -192,7 +192,7 @@ sources:
                           set_active_trail: false
                           expand_all_items: false
                     slots: {  }
-  # Main content.
+  # Main content, in the main landmark of the page.
   - source_id: component
     source:
       component:
@@ -207,6 +207,10 @@ sources:
             source_id: select
             source:
               value: default
+          attributes:
+            source_id: attributes
+            source:
+              value: 'role="main"'
         slots:
           content:
             sources:
