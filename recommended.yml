@@ -1,6 +1,6 @@
 #
-# A curated list of recommended add-ons, shown by the Drupal CMS installer after
-# choosing this site template. Only add-ons without Canvas are listed.
+# A curated list of recommended add-ons, shown by the site installer after
+# choosing this site template: email templates, a newsletter and social sharing.
 #
 drupal/easy_email_express:
   title: 'Email templates'

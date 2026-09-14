@@ -4,6 +4,7 @@ natshah
 tagify
 totop
 ultrawide
+webadmin
 webassets
 webblog
 webconfig
@@ -12,6 +13,7 @@ webdev
 webeditor
 webform
 webnewsletter
+webpage
 websecurity
 webseo
 webshare

@@ -1,10 +1,12 @@
 name: 'Website Starter'
 description: 'A website built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog content displays, contact webform, menus, a UIkit showcase and demo content. No Canvas, no Layout Builder.'
 type: 'Site'
-# Site template metadata for the Drupal CMS installer.
+# Site template metadata for the Webship installer.
 extra:
-  drupal_cms_installer:
+  webship_installer:
     creator: 'Webship'
+# A site template works on its own: it applies the default recipes of the
+# Webship modules, Web Dashboard and core recipes, never another site template.
 recipes:
   # Webship content types and media, before the roles: the roles reference
   # their permissions. Webpage first: it installs Node.
@@ -13,9 +15,8 @@ recipes:
   - modules/contrib/webdev/recipes/default
   - modules/contrib/webblog/recipes/default
   - core/recipes/tags_taxonomy
-  # The recipes of core Standard. Standard itself and the Drupal CMS admin UI
-  # are not included: they install Navigation, and Navigation and Dashboard
-  # require Layout Builder. Their settings are below, without them.
+  # The core recipes of the text formats, the themes, the roles and the
+  # recommended settings.
   - core/recipes/basic_block_type
   - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
@@ -27,139 +28,33 @@ recipes:
   - core/recipes/restricted_html_format
   - core/recipes/administrator_role
   - core/recipes/content_editor_role
-  # Drupal CMS recipes without Canvas: anti-spam, authentication and basic SEO.
-  - drupal_cms_anti_spam
-  - drupal_cms_authentication
-  - drupal_cms_seo_basic
+  # The Webship administration, SEO and security features. Web Admin comes
+  # after the core admin theme recipe: it sets Gin as the admin theme.
+  - modules/contrib/webadmin/recipes/default
+  - modules/contrib/webseo/recipes/default
+  - modules/contrib/websecurity/recipes/default
   # The default dashboards of the Webship site templates, built with Display
   # Builder: Webmaster for site administrators, Editorial for content editors.
   - webdash
-  # Webship features: editor, SEO, security and configuration management.
+  # Webship features: editor and configuration management.
   - modules/contrib/webeditor/recipes/default
-  - modules/contrib/webseo/recipes/default
-  - modules/contrib/websecurity/recipes/default
   - modules/contrib/webconfig/recipes/default
 install:
-  # Core Standard, without Navigation.
-  - image
-  - help
-  - config
-  - contextual
-  - menu_link_content
-  - datetime
-  - menu_ui
-  - options
-  - field_ui
-  - views_ui
-  # Drupal CMS admin UI, without Dashboard and Navigation.
-  - announcements_feed
-  - automatic_updates
-  - coffee
-  - dblog
-  - drupal_cms_helper
-  - drupical
-  - file
-  - gin
-  - gin_login
-  - gin_toolbar
-  - project_browser
-  - sam
-  - tagify
-  - tagify_user_list
-  - update
-  - view_password
-  # UI Patterns 2.
-  - ui_patterns
-  - ui_patterns_blocks
-  - ui_patterns_field
-  - ui_patterns_field_formatters
-  - ui_patterns_layouts
-  - ui_patterns_library
-  - ui_patterns_views
-  # UI Styles.
-  - ui_styles
-  - ui_styles_block
-  - ui_styles_library
-  - ui_styles_ui_patterns
-  # UI Icons.
-  - ui_icons
-  - ui_icons_library
-  - ui_icons_patterns
-  # UI Skins.
-  - ui_skins
-  # Display Builder.
-  - display_builder
-  - display_builder_entity_view
-  - display_builder_page_layout
-  - display_builder_ui
-  - display_builder_views
-  # Forms.
-  - webform
-  - webform_ui
   # Theme.
   - ui_suite_uikit
 config:
   strict: false
   import:
-    # Core Standard.
-    claro:
-      - block.block.claro_help
-      - block.block.claro_breadcrumbs
-      - block.block.claro_content
-      - block.block.claro_local_actions
-      - block.block.claro_messages
-      - block.block.claro_page_title
-      - block.block.claro_primary_local_tasks
-      - block.block.claro_secondary_local_tasks
-    image:
-      - image.style.large
-      - image.style.thumbnail
-    node:
-      - views.view.archive
-      - views.view.content
-      - views.view.content_recent
-      - views.view.frontpage
-      - views.view.glossary
     olivero:
       - block.block.olivero_help
-    user:
-      - core.entity_view_mode.user.compact
-      - views.view.user_admin_people
-      - views.view.who_s_new
-      - views.view.who_s_online
-    # Drupal CMS admin UI.
-    gin:
-      - block.block.gin_breadcrumbs
-      - block.block.gin_content
-      - block.block.gin_local_actions
-      - block.block.gin_messages
-      - block.block.gin_page_title
-      - block.block.gin_primary_local_tasks
-      - block.block.gin_secondary_local_tasks
-    # Optional config is not installed by recipes: the default profile and the
-    # text format of Display Builder.
-    display_builder:
-      - display_builder.profile.default
-      - filter.format.display_builder_html
-    webform:
-      - webform.webform.contact
   actions:
     system.theme:
       simpleConfigUpdate:
         default: ui_suite_uikit
-        admin: gin
     system.site:
       simpleConfigUpdate:
         slogan: 'Built with Display Builder and UIkit'
         page.front: /node
-    node.settings:
-      simpleConfigUpdate:
-        use_admin_theme: true
-    user.settings:
-      simpleConfigUpdate:
-        verify_mail: true
-        register: admin_only
-        cancel_method: user_cancel_block
     user.role.anonymous:
       grantPermission: 'access content'
     user.role.authenticated:
@@ -167,9 +62,7 @@ config:
         - 'access content'
         - 'delete own files'
         - 'access administration pages'
-        - 'access coffee'
-        - 'access contextual links'
-        - 'view the administration theme'
+    # Content editors manage the content of every content type of the site.
     user.role.content_editor:
       grantPermissions:
         - 'access content overview'
@@ -188,57 +81,51 @@ config:
         - 'delete %bundle revisions'
         - 'delete own %bundle content'
         - 'edit own %bundle content'
-    announcements_feed.settings:
-      simpleConfigUpdate:
-        limit: 2
-    automatic_updates.settings:
-      simpleConfigUpdate:
-        allow_core_minor_updates: true
-    core.menu.static_menu_link_overrides:
-      overrideMenuLinks:
-        announcements_feed.announcement:
-          enabled: false
-    drupical.settings:
-      simpleConfigUpdate:
-        limit: 5
     gin_login.settings:
       simpleConfigUpdate:
         brand_image:
           use_default: false
           # The file entity of the login wallpaper ships in content/file.
           path: public://login-wallpaper.png
-    project_browser.admin_settings:
-      simpleConfigUpdate:
-        allow_ui_install: true
-        max_selections: 1
-    tagify.settings:
-      simpleConfigUpdate:
-        set_default_widget: true
-    update.settings:
-      simpleConfigUpdate:
-        check.disabled_extensions: true
     # The demo video is a WebM file. Set through the field API, so the demo
     # content imported next validates against the new extensions.
     field.field.media.video.field_media_video_file:
       setSettings:
         file_extensions: 'mp4 webm'
-    # Media embedded in the body of the demo content (<drupal-media>).
     filter.format.full_html:
-      setFilterConfig:
-        instance_id: media_embed
-        configuration:
-          id: media_embed
-          provider: media
-          status: true
-          weight: 100
-          settings:
-            default_view_mode: default
-            allowed_view_modes: {  }
-            allowed_media_types: {  }
-    # The contact form of the Webship profile.
+      setFilterConfigs:
+        # Media embedded in the body of the demo content (<drupal-media>).
+        -
+          instance_id: media_embed
+          configuration:
+            id: media_embed
+            provider: media
+            status: true
+            weight: 100
+            settings:
+              default_view_mode: default
+              allowed_view_modes: {  }
+              allowed_media_types: {  }
+        # Tokens in the demo content, like the year in the footer copyright
+        # block ([date:custom:Y]).
+        -
+          instance_id: token_filter
+          configuration:
+            id: token_filter
+            provider: token_filter
+            status: true
+            weight: 110
+            settings:
+              replace_empty: false
+    # The front page lists the blog posts and has no title of its own: the
+    # browser title of the front page is the site name and slogan.
+    metatag.metatag_defaults.front:
+      setProperties:
+        tags.title: '[site:name] | [site:slogan]'
+    # The contact webform of the site: anti-spam protection, and a line that
+    # links to the Privacy page of the demo content.
     webform.webform.contact:
       simpleConfigUpdate:
-        description: '<p>Contact us.</p>'
         third_party_settings:
           antibot:
             antibot: true

@@ -16,7 +16,7 @@ default:
       value: main
   link:
     -
-      uri: 'internal:/node'
+      uri: 'internal:/blog'
       title: null
       options: {  }
   external:

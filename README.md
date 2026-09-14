@@ -5,6 +5,10 @@ A Drupal site template for company and product websites, built with
 [UI Suite UIkit](https://www.drupal.org/project/ui_suite_uikit) design system. Pages, blog listings and blog
 posts are made of UIkit components arranged in Display Builder — no Canvas, no Layout Builder displays.
 
+The site template works on its own: it applies the Web Admin, Web SEO, Web Security, Web Development, Web Page,
+Web Assets, Web Blog, Web Editor and Web Config default recipes, the Web Dashboard recipe and core recipes, never
+another site template.
+
 ![Website Starter](screenshot.webp)
 
 ## Install with Composer
@@ -17,7 +21,7 @@ composer create-project drupal/website my_site
 cd my_site
 ```
 
-Or add the site template to an existing Drupal 11.4 project, for example a Drupal CMS project:
+Or add the site template to an existing Drupal 11.4 project:
 
 ```shell
 composer require drupal/website_starter
@@ -48,12 +52,14 @@ ddev launch
   menus, offcanvas menu on small screens, content section and footer with menus, social links and copyright.
 - **Content displays** built in Display Builder: blog posts as UIkit articles, blog teasers as UIkit cards, a
   paginated front page listing.
-- **Contact webform** with anti-spam protection.
-- **Administration**: Gin with its toolbar, Coffee, Project Browser and automatic updates, without Navigation
-  and Dashboard (they require Layout Builder); the Webmaster and Editorial default dashboards of the
-  [Web Dashboard recipe](https://www.drupal.org/project/webdash), built with Display Builder; authentication,
-  anti-spam and basic SEO recipes of Drupal CMS; editor, SEO, security and configuration management features of
-  Webship.
+- **Contact webform** with anti-spam protection, at `/form/contact`.
+- **Administration**: [Web Admin](https://www.drupal.org/project/webadmin) with Gin and its toolbar, Coffee,
+  Project Browser and automatic updates; the Webmaster and Editorial default dashboards of the
+  [Web Dashboard recipe](https://www.drupal.org/project/webdash), built with Display Builder.
+- **SEO and security**: [Web SEO](https://www.drupal.org/project/webseo) with breadcrumbs, redirects, path
+  aliases, metatags and the XML sitemap; [Web Security](https://www.drupal.org/project/websecurity) with anti-spam
+  protection and login by email or username.
+- **Editing and configuration**: the editor and configuration management features of Webship.
 - **Design system**: the UI Suite UIkit theme with its UI Styles utilities, UI Skins design tokens (light and
   dark color modes) and UI Icons pack.
 - **UIkit showcase**: the common pages of the free UIkit demos, in a *UIkit showcase* menu: a landing page,
