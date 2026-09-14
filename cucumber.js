@@ -37,6 +37,7 @@ module.exports = {
         breakpoints: {
           xs: { width: 400, height: 800 },
           l: { width: 1200, height: 900, default: true },
+          xxl: { width: 1920, height: 1080 },
         },
       },
       screenshot: {

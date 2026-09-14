@@ -54,7 +54,8 @@ config:
     system.site:
       simpleConfigUpdate:
         slogan: 'Built with Display Builder and UIkit'
-        page.front: /node
+        # The Blog page is the front page: its "Blog" title is the main heading.
+        page.front: /blog
     user.role.anonymous:
       grantPermission: 'access content'
     user.role.authenticated:
@@ -117,8 +118,76 @@ config:
             weight: 110
             settings:
               replace_empty: false
-    # The front page lists the blog posts and has no title of its own: the
-    # browser title of the front page is the site name and slogan.
+    # The Full HTML editor of the site: the core toolbar with the Media button,
+    # and complete plugin settings, so the editor passes config validation.
+    # The Advanced links plugin gets its own default settings.
+    editor.editor.full_html:
+      set:
+        property_name: settings
+        value:
+          toolbar:
+            items:
+              - bold
+              - italic
+              - strikethrough
+              - superscript
+              - subscript
+              - removeFormat
+              - '|'
+              - link
+              - '|'
+              - bulletedList
+              - numberedList
+              - '|'
+              - blockQuote
+              - drupalInsertImage
+              - drupalMedia
+              - insertTable
+              - horizontalLine
+              - '|'
+              - heading
+              - codeBlock
+              - '|'
+              - sourceEditing
+          plugins:
+            ckeditor5_codeBlock:
+              languages:
+                - { label: 'Plain text', language: plaintext }
+                - { label: C, language: c }
+                - { label: 'C#', language: cs }
+                - { label: C++, language: cpp }
+                - { label: CSS, language: css }
+                - { label: Diff, language: diff }
+                - { label: HTML, language: html }
+                - { label: Java, language: java }
+                - { label: JavaScript, language: javascript }
+                - { label: PHP, language: php }
+                - { label: Python, language: python }
+                - { label: Ruby, language: ruby }
+                - { label: TypeScript, language: typescript }
+                - { label: XML, language: xml }
+            ckeditor5_heading:
+              enabled_headings:
+                - heading2
+                - heading3
+                - heading4
+                - heading5
+                - heading6
+            ckeditor5_imageResize:
+              allow_resize: true
+            ckeditor5_list:
+              properties:
+                reversed: true
+                startIndex: true
+              multiBlock: true
+            ckeditor5_sourceEditing:
+              allowed_tags: {  }
+            editor_advanced_link_link:
+              enabled_attributes: {  }
+            media_media:
+              allow_view_mode_override: false
+    # The front page shows the Blog page: the browser title of the front page
+    # is the site name and slogan.
     metatag.metatag_defaults.front:
       setProperties:
         tags.title: '[site:name] | [site:slogan]'

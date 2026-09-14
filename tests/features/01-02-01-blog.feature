@@ -5,8 +5,11 @@ Feature: The Web Blog with Display Builder displays
 
   Scenario: The front page lists the blog posts as cards over 4 pages
     Given I am an anonymous user
+      And I set the viewport to the "xxl" breakpoint
      When I go to the homepage
-     Then "[data-component-id='ui_suite_uikit:card']" should have a count of 10
+     Then "h1" should have a count of 1
+      And "[role='main'] h1" should contain text "Blog"
+      And "[data-component-id='ui_suite_uikit:card']" should have a count of 10
       And ".uk-pagination" should be visible
       And ".uk-pagination" should contain text "4"
       And the page should not contain escaped markup
