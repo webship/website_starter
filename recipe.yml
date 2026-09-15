@@ -62,8 +62,8 @@ config:
       grantPermissions:
         - 'access content'
         - 'delete own files'
-        - 'access administration pages'
-    # Content editors manage the content of every content type of the site.
+    # Content editors manage the content of every content type of the site,
+    # and move content through the editorial workflow.
     user.role.content_editor:
       grantPermissions:
         - 'access content overview'
@@ -75,7 +75,13 @@ config:
         - 'edit terms in tags'
         - 'delete own files'
         - 'revert all revisions'
+        - 'use editorial transition archive'
+        - 'use editorial transition archived_draft'
+        - 'use editorial transition archived_published'
+        - 'use editorial transition create_new_draft'
+        - 'use editorial transition publish'
         - 'view all revisions'
+        - 'view latest version'
         - 'view the administration theme'
       grantPermissionsForEachNodeType:
         - 'create %bundle content'
@@ -184,6 +190,10 @@ config:
               allowed_tags: {  }
             editor_advanced_link_link:
               enabled_attributes: {  }
+            # Link suggestions for content, from the default Linkit profile.
+            linkit_extension:
+              linkit_enabled: true
+              linkit_profile: default
             media_media:
               allow_view_mode_override: false
     # The front page shows the Blog page: the browser title of the front page
