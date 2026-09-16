@@ -9,6 +9,7 @@
         "drupal/core": "^11.4 || ^12",
         "drupal/ui_suite_uikit": "^1.0@dev",
         "drupal/webadmin": "~12.0@dev",
+        "drupal/webai": "~12.0@dev",
         "drupal/webassets": "~12.0@dev",
         "drupal/webblog": "~12.0@dev",
         "drupal/webconfig": "~12.0@dev",
