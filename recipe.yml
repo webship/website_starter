@@ -39,6 +39,10 @@ recipes:
   # Webship features: editor and configuration management.
   - modules/contrib/webeditor/recipes/default
   - modules/contrib/webconfig/recipes/default
+  # The Web AI tools and providers. Listing the recipe here is needed: a
+  # recipe installs modules with config entity installation disabled, so
+  # the install hook of the Web AI module cannot apply its own recipe.
+  - modules/contrib/webai/recipes/default
 install:
   # Theme.
   - ui_suite_uikit
