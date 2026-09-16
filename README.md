@@ -11,37 +11,28 @@ another site template.
 
 ![Website Starter](screenshot.webp)
 
-## Install with Composer
+## Install
 
-Start a new project with the [Website](https://www.drupal.org/project/website) project template, which
-installs this site template:
-
-```shell
-composer create-project drupal/website my_site
-cd my_site
-```
-
-Or add the site template to an existing Drupal 11.4 project:
+Composer runs inside DDEV, so nothing is needed on your machine but DDEV itself. Start from the
+[Website](https://www.drupal.org/project/website) project template, which ships this site template:
 
 ```shell
-composer require drupal/website_starter
-drush site:install recipes/website_starter
-```
-
-On an already installed site, apply it as a recipe:
-
-```shell
-drush recipe recipes/website_starter
-```
-
-## Local setup with DDEV
-
-```shell
-ddev config --project-type=drupal11 --docroot=web
+mkdir -p ~/workspace/projects/my-website
+cd ~/workspace/projects/my-website
+ddev config --project-type=drupal11 --docroot=web --php-version=8.4
 ddev start
-ddev composer require drupal/website_starter
-ddev drush site:install recipes/website_starter -y
+ddev composer create-project drupal/website:^1.0@alpha
+ddev drush si -y webship --account-name=webmaster --site-name="My Website" installer_site_template_form.add_ons=website_starter
 ddev launch
+```
+
+Or open the site with `ddev launch` and pick Website Starter in the installer.
+
+On an installed site, apply it as a recipe:
+
+```shell
+ddev composer require drupal/website_starter:^1.0@alpha
+ddev drush recipe ../recipes/website_starter
 ```
 
 ## What you get
