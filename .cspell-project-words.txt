@@ -6,6 +6,7 @@ tagify
 totop
 ultrawide
 webadmin
+webai
 webassets
 webblog
 webconfig
