@@ -7,16 +7,16 @@
     "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter", "Webship"],
     "require": {
         "drupal/core": "^11.4 || ^12",
-        "drupal/ui_suite_uikit": "^1.0@dev",
-        "drupal/webadmin": "~12.0@dev",
-        "drupal/webassets": "~12.0@dev",
-        "drupal/webblog": "~12.0@dev",
-        "drupal/webconfig": "~12.0@dev",
-        "drupal/webdash": "^1.0@dev",
-        "drupal/webdev": "~12.0@dev",
-        "drupal/webeditor": "~12.0@dev",
-        "drupal/webpage": "~12.0@dev",
-        "drupal/websecurity": "~12.0@dev",
-        "drupal/webseo": "~12.0@dev"
+        "drupal/ui_suite_uikit": "^1.0@beta",
+        "drupal/webadmin": "~12.0@beta",
+        "drupal/webassets": "~12.0@beta",
+        "drupal/webblog": "~12.0@beta",
+        "drupal/webconfig": "~12.0@beta",
+        "drupal/webdash": "^1.0@beta",
+        "drupal/webdev": "~12.0@beta",
+        "drupal/webeditor": "~12.0@beta",
+        "drupal/webpage": "~12.0@beta",
+        "drupal/websecurity": "~12.0@beta",
+        "drupal/webseo": "~12.0@beta"
     }
 }
