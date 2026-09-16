@@ -29,7 +29,7 @@ recipes:
   - core/recipes/administrator_role
   - core/recipes/content_editor_role
   # The Webship administration, SEO and security features. Web Admin comes
-  # after the core admin theme recipe: it sets Gin as the admin theme.
+  # after the core admin theme recipe: it sets the administration theme.
   - modules/contrib/webadmin/recipes/default
   - modules/contrib/webseo/recipes/default
   - modules/contrib/websecurity/recipes/default
@@ -92,12 +92,6 @@ config:
         - 'delete %bundle revisions'
         - 'delete own %bundle content'
         - 'edit own %bundle content'
-    gin_login.settings:
-      simpleConfigUpdate:
-        brand_image:
-          use_default: false
-          # The file entity of the login wallpaper ships in content/file.
-          path: public://login-wallpaper.png
     # The demo video is a WebM file. Set through the field API, so the demo
     # content imported next validates against the new extensions.
     field.field.media.video.field_media_video_file:
