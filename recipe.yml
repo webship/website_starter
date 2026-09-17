@@ -33,6 +33,8 @@ recipes:
   - modules/contrib/webadmin/recipes/default
   - modules/contrib/webseo/recipes/default
   - modules/contrib/websecurity/recipes/default
+  # The report of the patches applied to this site.
+  - modules/contrib/webpatches/recipes/default
   # The default dashboards of the Webship site templates, built with Display
   # Builder: Webmaster for site administrators, Editorial for content editors.
   - webdash

@@ -16,6 +16,7 @@ webeditor
 webform
 webnewsletter
 webpage
+webpatches
 websecurity
 webseo
 webshare

@@ -59,7 +59,7 @@ recipe:
     # The blog, the dashboards and the Web Admin, Web SEO and Web Security
     # features are installed.
     - test "$($DRUSH config:get node.type.webblog type --format=string)" = "webblog"
-    - test "$($DRUSH config:get system.theme admin --format=string)" = "gin"
+    - test "$($DRUSH config:get system.theme admin --format=string)" = "default_admin"
     - $DRUSH pm:list --status=enabled --format=list | grep -qx webdashboard
     - $DRUSH pm:list --status=enabled --format=list | grep -qx easy_breadcrumb
     - $DRUSH pm:list --status=enabled --format=list | grep -qx login_emailusername

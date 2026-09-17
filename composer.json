@@ -17,6 +17,7 @@
         "drupal/webdev": "~12.0@dev",
         "drupal/webeditor": "~12.0@dev",
         "drupal/webpage": "~12.0@dev",
+        "drupal/webpatches": "~12.0@dev",
         "drupal/websecurity": "~12.0@dev",
         "drupal/webseo": "~12.0@dev"
     }
