@@ -3,6 +3,13 @@
     "description": "A website starter built with Display Builder and the UI Suite UIkit design system: page layout, Webpage and Web Blog displays, contact webform, menus, a UIkit showcase and demo content. No Canvas, no Layout Builder.",
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Webship",
+            "homepage": "https://webship.co",
+            "role": "Maintainer"
+        }
+    ],
     "homepage": "https://www.drupal.org/project/website_starter",
     "keywords": ["Drupal", "recipe", "Display Builder", "UI Suite", "UIkit", "starter", "Webship"],
     "require": {
