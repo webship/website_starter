@@ -22,7 +22,7 @@ cd ~/workspace/projects/my-website
 ddev config --project-type=drupal11 --docroot=web --php-version=8.4
 ddev start
 ddev composer create-project drupal/website:^1.0@alpha
-ddev drush si -y webship --account-name=webmaster --site-name="My Website" installer_site_template_form.add_ons=website_starter
+ddev drush site:install ../recipes/website_starter -y --account-name=webmaster --site-name="My Website"
 ddev launch
 ```
 
