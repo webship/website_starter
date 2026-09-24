@@ -317,6 +317,11 @@ config:
                     source:
                       value: default
                   props:
+                    # The listing prints its own h1, so the cards are h2.
+                    heading_level:
+                      source_id: select
+                      source:
+                        value: 2
                     image_position:
                       source_id: select
                       source:
