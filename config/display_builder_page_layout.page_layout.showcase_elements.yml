@@ -1,0 +1,736 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - display_builder_page_layout
+  theme:
+  - ui_suite_uikit
+id: showcase_elements
+label: Elements
+weight: -5
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /showcase/elements
+profile: default
+sources:
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:navbar
+      variant_id: null
+      props:
+        container:
+          source_id: select
+          source:
+            value: default
+        sticky:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        left:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:logo
+                variant_id: null
+                props:
+                  url:
+                    source_id: url
+                    source:
+                      value: /
+                  image:
+                    source_id: url
+                    source:
+                      value: /themes/contrib/ui_suite_uikit/logo.svg
+                  image_alt:
+                    source_id: textfield
+                    source:
+                      value: Home
+                  navbar_item:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  label:
+                    sources:
+                    - source_id: token
+                      source:
+                        value: '[site:name]'
+        center:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 2
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+        right:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_toggle
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-hidden@m"
+                  target:
+                    source_id: textfield
+                    source:
+                      value: website-offcanvas
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:offcanvas
+      variant_id: null
+      props:
+        offcanvas_id:
+          source_id: textfield
+          source:
+            value: website-offcanvas
+        mode:
+          source_id: select
+          source:
+            value: push
+        flip:
+          source_id: checkbox
+          source:
+            value: true
+        overlay:
+          source_id: checkbox
+          source:
+            value: true
+        close:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id:
+                  source_id: select
+                  source:
+                    value: primary
+                props:
+                  accordion:
+                    source_id: checkbox
+                    source:
+                      value: true
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 0
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:divider
+                variant_id: null
+                props: {}
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id: null
+                props:
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id: null
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+        landmark:
+          source_id: select
+          source:
+            value: main
+      slots:
+        content:
+          sources:
+          - source_id: block
+            source:
+              plugin_id: system_messages_block
+              system_messages_block: {}
+          - source_id: block
+            source:
+              plugin_id: system_breadcrumb_block
+              system_breadcrumb_block: {}
+          - source_id: page_title
+            source: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Typography
+          - source_id: textarea
+            source:
+              value: <p class="uk-text-lead">A lead paragraph stands out at the start of a page.</p><p>Regular text with <a href="#">a link</a>, <strong>strong text</strong>, <em>emphasis</em>, <code>inline
+                code</code> and <mark>highlighted text</mark>.</p><p class="uk-text-meta">Meta text, for dates and authors.</p>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 3
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Bullet heading
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id:
+                  source_id: select
+                  source:
+                    value: line
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 3
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Line heading
+          - source_id: textarea
+            source:
+              value: <blockquote cite="https://www.drupal.org/community"><p class="uk-margin-small-bottom">Come for the software, stay for the community.</p><footer>The Drupal community motto</footer></blockquote>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_3_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: medium
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <ul class="uk-list uk-list-bullet"><li>Bullet list</li><li>Second item</li><li>Third item</li></ul>
+                  column_2:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <ul class="uk-list uk-list-divider"><li>Divider list</li><li>Second item</li><li>Third item</li></ul>
+                  column_3:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <dl class="uk-description-list uk-description-list-divider"><dt>Description list</dt><dd>A term and its description.</dd><dt>Second term</dt><dd>Another description.</dd></dl>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Buttons
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:button_group
+                variant_id: null
+                props: {}
+                slots:
+                  buttons:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Default
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: primary
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Primary
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: secondary
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Secondary
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Danger
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Text
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            url:
+                              source_id: select
+                              source:
+                                value: '#'
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Link
+          - source_id: textarea
+            source:
+              value: '<p><button class="uk-button uk-button-primary uk-button-small" type="button">Small</button><button class="uk-button uk-button-primary uk-button-large" type="button">Large</button><button
+                class="uk-button uk-button-default" type="button" uk-tooltip="title: A tooltip; pos: top">With a tooltip</button></p>'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Labels, badges and feedback
+          - source_id: textarea
+            source:
+              value: "<p><span class=\"uk-label\">Default</span><span class=\"uk-label uk-label-success\">Success</span><span class=\"uk-label uk-label-warning\">Warning</span><span class=\"uk-label uk-label-danger\"\
+                >Danger</span><span class=\"uk-badge\">42</span></p><div class=\"uk-alert-primary\" uk-alert><a href=\"#\" class=\"uk-alert-close\" uk-close></a><p>A primary alert, with a close button.</p></div><div\
+                \ class=\"uk-alert-success\" uk-alert><p>The changes have been saved.</p></div><div class=\"uk-alert-warning\" uk-alert><p>Some fields need your attention.</p></div><div class=\"uk-alert-danger\"\
+                \ uk-alert><p>Something went wrong.</p></div><progress class=\"uk-progress\" value=\"65\" max=\"100\">65%</progress><p><span uk-spinner></span> Loading\u2026</p>"
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Cards
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_3_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: medium
+                  match:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: false
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Default
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <p>A card with the default style.</p>
+                  column_2:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: primary
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: false
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Primary
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <p>A card with the primary style.</p>
+                  column_3:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: secondary
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: false
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Secondary
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <p>A card with the secondary style.</p>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:card
+                variant_id:
+                  source_id: select
+                  source:
+                    value: default
+                props:
+                  hover:
+                    source_id: checkbox
+                    source:
+                      value: false
+                slots:
+                  content:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <div class="uk-card-media-left uk-cover-container"><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e"
+                          width="900" height="600" alt="A cyclist riding along a road through green hills at sunset." uk-cover><canvas width="600" height="400"></canvas></div><div><div class="uk-card-body"><h3
+                          class="uk-card-title">Media left</h3><p>A horizontal card, with the image on the left from small screens.</p></div></div>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Table
+          - source_id: textarea
+            source:
+              value: <div class="uk-overflow-auto"><table class="uk-table uk-table-divider uk-table-hover"><thead><tr><th>Group</th><th>Components</th></tr></thead><tbody><tr><td>Layout</td><td>Section,
+                Container, Grid, Tile, Placeholder</td></tr><tr><td>Navigation</td><td>Navbar, Nav, Subnav, Tab, Breadcrumb, Pagination</td></tr><tr><td>Media</td><td>Cover, Overlay, Slider, Slideshow,
+                Lightbox</td></tr></tbody></table></div>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Form elements
+          - source_id: textarea
+            source:
+              value: <div class="uk-form-stacked uk-width-1-2@m"><div class="uk-margin"><label class="uk-form-label" for="demo-name">Name</label><div class="uk-form-controls"><input class="uk-input" id="demo-name"
+                type="text" placeholder="Your name"></div></div><div class="uk-margin"><label class="uk-form-label" for="demo-topic">Topic</label><div class="uk-form-controls"><select class="uk-select"
+                id="demo-topic"><option>Components</option><option>Design tokens</option></select></div></div><div class="uk-margin"><label class="uk-form-label" for="demo-message">Message</label><div class="uk-form-controls"><textarea
+                class="uk-textarea" id="demo-message" rows="4"></textarea></div></div><div class="uk-margin"><label><input class="uk-checkbox" type="checkbox" checked> Checkbox</label><label class="uk-margin-left"><input
+                class="uk-radio" type="radio" name="demo-radio" checked> Radio</label></div></div>
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id:
+        source_id: select
+        source:
+          value: secondary
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_2_columns
+                variant_id: null
+                props:
+                  vertical_align:
+                    source_id: select
+                    source:
+                      value: middle
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: divider
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: footer
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id: null
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: social-media-menu
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                  column_2:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:totop
+                          variant_id: null
+                          props:
+                            attributes:
+                              source_id: attributes
+                              source:
+                                value: class="uk-float-right"
+                          slots: {}
+                    - source_id: block
+                      source:
+                        plugin_id: block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11
+                        block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11:
+                          status: true
+                          info: ''
+                          view_mode: full
+                    - source_id: block
+                      source:
+                        plugin_id: system_powered_by_block
+                        system_powered_by_block: {}

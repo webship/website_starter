@@ -1,18 +1,18 @@
 langcode: en
 status: true
 dependencies:
-  config:
-  - display_builder.profile.default
   module:
   - display_builder_page_layout
-  - system
-  - ui_patterns
   theme:
   - ui_suite_uikit
-id: default
-label: Default
-weight: 0
-conditions: {}
+id: support
+label: Support
+weight: -5
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /support
 profile: default
 sources:
 - source_id: component
@@ -204,10 +204,6 @@ sources:
           source_id: select
           source:
             value: default
-        attributes:
-          source_id: attributes
-          source:
-            value: role="main"
         landmark:
           source_id: select
           source:
@@ -225,18 +221,30 @@ sources:
               system_breadcrumb_block: {}
           - source_id: page_title
             source: {}
-          - source_id: block
+          - source_id: component
             source:
-              plugin_id: local_tasks_block
-              local_tasks_block:
-                primary: true
-                secondary: true
-          - source_id: block
-            source:
-              plugin_id: local_actions_block
-              local_actions_block: {}
-          - source_id: main_page_content
-            source: {}
+              component:
+                component_id: ui_suite_uikit:grid_2_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: large
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <img src="/sites/default/files/website-starter/uikit-photo3.jpg" data-entity-type="file" data-entity-uuid="13a91437-2173-5b3a-8dab-2c64ef0f74ad" width="1600" height="1067"
+                          alt="A person in a knitted hood holding a camera up to their face in the snow.">
+                  column_2:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: <p class="uk-text-lead">UI Suite UIkit is maintained on Drupal.org.</p><dl class="uk-description-list uk-description-list-divider"><dt>Project page</dt><dd><a href="https://www.drupal.org/project/ui_suite_uikit">drupal.org/project/ui_suite_uikit</a></dd><dt>Issue
+                          queue</dt><dd><a href="https://www.drupal.org/project/issues/ui_suite_uikit">Report a bug or request a feature</a></dd><dt>UI Suite</dt><dd><a href="https://www.drupal.org/project/ui_suite">The
+                          UI Suite initiative</a></dd><dt>UIkit documentation</dt><dd><a href="https://getuikit.com/docs/introduction">getuikit.com/docs</a></dd></dl>
 - source_id: component
   source:
     component:

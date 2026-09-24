@@ -54,6 +54,21 @@ config:
     olivero:
       - block.block.olivero_help
   actions:
+    # The pages are built with Display Builder components; the text parts of
+    # a page keep their images and figures, so the text format of the builder
+    # allows the media tags next to the prose ones.
+    filter.format.display_builder_html:
+      setFilterConfig:
+        instance_id: filter_html
+        configuration:
+          id: filter_html
+          provider: filter
+          status: true
+          weight: -10
+          settings:
+            allowed_html: '<a href hreflang class> <em class> <i class> <strong class> <ul type class> <ol start type="1 A I" class> <li class> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class> <img src alt width height class loading> <figure class> <figcaption class> <code class> <kbd class> <br> <span class> <drupal-icon data-icon-id data-icon-settings class role aria-label aria-hidden>'
+            filter_html_help: true
+            filter_html_nofollow: false
     system.theme:
       simpleConfigUpdate:
         default: ui_suite_uikit

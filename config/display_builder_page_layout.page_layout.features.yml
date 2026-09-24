@@ -1,0 +1,682 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - display_builder_page_layout
+  theme:
+  - ui_suite_uikit
+id: features
+label: Features
+weight: -5
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /features
+profile: default
+sources:
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:navbar
+      variant_id: null
+      props:
+        container:
+          source_id: select
+          source:
+            value: default
+        sticky:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        left:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:logo
+                variant_id: null
+                props:
+                  url:
+                    source_id: url
+                    source:
+                      value: /
+                  image:
+                    source_id: url
+                    source:
+                      value: /themes/contrib/ui_suite_uikit/logo.svg
+                  image_alt:
+                    source_id: textfield
+                    source:
+                      value: Home
+                  navbar_item:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  label:
+                    sources:
+                    - source_id: token
+                      source:
+                        value: '[site:name]'
+        center:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 2
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+        right:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_toggle
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-hidden@m"
+                  target:
+                    source_id: textfield
+                    source:
+                      value: website-offcanvas
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:offcanvas
+      variant_id: null
+      props:
+        offcanvas_id:
+          source_id: textfield
+          source:
+            value: website-offcanvas
+        mode:
+          source_id: select
+          source:
+            value: push
+        flip:
+          source_id: checkbox
+          source:
+            value: true
+        overlay:
+          source_id: checkbox
+          source:
+            value: true
+        close:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id:
+                  source_id: select
+                  source:
+                    value: primary
+                props:
+                  accordion:
+                    source_id: checkbox
+                    source:
+                      value: true
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 0
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:divider
+                variant_id: null
+                props: {}
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id: null
+                props:
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id: null
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+        landmark:
+          source_id: select
+          source:
+            value: main
+      slots:
+        content:
+          sources:
+          - source_id: block
+            source:
+              plugin_id: system_messages_block
+              system_messages_block: {}
+          - source_id: block
+            source:
+              plugin_id: system_breadcrumb_block
+              system_breadcrumb_block: {}
+          - source_id: page_title
+            source: {}
+          - source_id: textarea
+            source:
+              value: <p class="uk-text-lead">UI Suite UIkit brings the UIkit framework to the Drupal back office.</p>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:switcher
+                variant_id:
+                  source_id: select
+                  source:
+                    value: tab
+                props: {}
+                slots:
+                  tabs:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_tab
+                          variant_id: null
+                          props: {}
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Components
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_tab
+                          variant_id: null
+                          props: {}
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Styles
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_tab
+                          variant_id: null
+                          props: {}
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Design tokens
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_tab
+                          variant_id: null
+                          props: {}
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Icons
+                  panels:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_panel
+                          variant_id: null
+                          props: {}
+                          slots:
+                            content:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:grid_2_columns
+                                    variant_id: null
+                                    props:
+                                      gutter:
+                                        source_id: select
+                                        source:
+                                          value: medium
+                                    slots:
+                                      column_1:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: <img src="/sites/default/files/website-starter/uikit-photo2.jpg" data-entity-type="file" data-entity-uuid="a448ce03-a790-50f5-98ca-c65c1e38653f" width="1600"
+                                              height="1067" alt="A silver laptop in a tan leather sleeve on a gray sofa.">
+                                      column_2:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:heading
+                                              variant_id: null
+                                              props:
+                                                heading_level:
+                                                  source_id: select
+                                                  source:
+                                                    value: 3
+                                              slots:
+                                                title:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: More than 50 components
+                                        - source_id: textarea
+                                          source:
+                                            value: '<p>Layout, navigation, elements, data display, feedback, interactive, media and forms: every UIkit component has a group, clear slot titles and typed
+                                              props, shown in the Display Builder panels.</p><ul class="uk-list uk-list-check"><li>Section, Container and Grid layouts</li><li>Navbar, Nav, Subnav, Tab, Breadcrumb
+                                              and Pagination</li><li>Card, Accordion, Modal, Offcanvas and Switcher</li><li>Cover, Overlay, Slider, Slideshow and Lightbox</li></ul>'
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_panel
+                          variant_id: null
+                          props: {}
+                          slots:
+                            content:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:grid_2_columns
+                                    variant_id: null
+                                    props:
+                                      gutter:
+                                        source_id: select
+                                        source:
+                                          value: medium
+                                    slots:
+                                      column_1:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: <img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2" width="1600"
+                                              height="1067" alt="A hand holding an open book of black and white architecture photographs.">
+                                      column_2:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:heading
+                                              variant_id: null
+                                              props:
+                                                heading_level:
+                                                  source_id: select
+                                                  source:
+                                                    value: 3
+                                              slots:
+                                                title:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: UIkit utilities
+                                        - source_id: textarea
+                                          source:
+                                            value: <p>The UIkit utility classes are available in UI Styles and in the Display Builder <em>Styles</em> panel.</p><ul class="uk-list uk-list-check"><li>Text,
+                                              typography, colors and inverse</li><li>Margin, padding, width and height</li><li>Flex, position and visibility</li><li>Box shadow, border radius and animation</li></ul>
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_panel
+                          variant_id: null
+                          props: {}
+                          slots:
+                            content:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:grid_2_columns
+                                    variant_id: null
+                                    props:
+                                      gutter:
+                                        source_id: select
+                                        source:
+                                          value: medium
+                                    slots:
+                                      column_1:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: <img src="/sites/default/files/website-starter/uikit-dark.jpg" data-entity-type="file" data-entity-uuid="f0b00ae5-a36f-5e45-9006-50476ede6c76" width="1600"
+                                              height="1067" alt="Glasses and brown leather cases on a black background.">
+                                      column_2:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:heading
+                                              variant_id: null
+                                              props:
+                                                heading_level:
+                                                  source_id: select
+                                                  source:
+                                                    value: 3
+                                              slots:
+                                                title:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: CSS variables and color modes
+                                        - source_id: textarea
+                                          source:
+                                            value: <p>The UIkit global colors and font family are CSS variables, editable in <em>Appearance > CSS variables</em> and in the Display Builder <em>Design tokens</em>
+                                              panel, with <em>Light</em> and <em>Dark</em> color modes.</p>
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:switcher_panel
+                          variant_id: null
+                          props: {}
+                          slots:
+                            content:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:grid_2_columns
+                                    variant_id: null
+                                    props:
+                                      gutter:
+                                        source_id: select
+                                        source:
+                                          value: medium
+                                    slots:
+                                      column_1:
+                                        sources:
+                                        - source_id: textarea
+                                          source:
+                                            value: <img src="/sites/default/files/website-starter/uikit-photo.jpg" data-entity-type="file" data-entity-uuid="adb79275-1aaa-5668-9ed7-fa41503cac8f" width="1600"
+                                              height="1067" alt="A dark wooden house with a steep gabled roof under a teal sky.">
+                                      column_2:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:heading
+                                              variant_id: null
+                                              props:
+                                                heading_level:
+                                                  source_id: select
+                                                  source:
+                                                    value: 3
+                                              slots:
+                                                title:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: 162 icons
+                                        - source_id: textarea
+                                          source:
+                                            value: '<p>The UIkit icons ship as the <code>uikit</code> icon pack for UI Icons, rendered as inline SVG.</p><p><span uk-icon="icon: heart; ratio: 1.5"></span><span
+                                              uk-icon="icon: star; ratio: 1.5"></span><span uk-icon="icon: bolt; ratio: 1.5"></span><span uk-icon="icon: camera; ratio: 1.5"></span><span uk-icon="icon: world;
+                                              ratio: 1.5"></span><span uk-icon="icon: rss; ratio: 1.5"></span></p>'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Frequently asked questions
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:accordion
+                variant_id: null
+                props: {}
+                slots:
+                  items:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:accordion_item
+                          variant_id: null
+                          props: {}
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Which Drupal version do I need?
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <p>Drupal 11.4 or 12, with UI Patterns 2, UI Styles and UI Icons.</p>
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:accordion_item
+                          variant_id: null
+                          props: {}
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Do I need Display Builder?
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p>No, but it is recommended: the components also work in blocks, Views and field formatters with UI Patterns.</p>'
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:accordion_item
+                          variant_id: null
+                          props: {}
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Can I serve UIkit locally?
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <p>Yes. Install UIkit in <code>web/libraries/uikit</code> and select <em>Local copy</em> in the theme settings.</p>
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:accordion_item
+                          variant_id: null
+                          props: {}
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: How do I get a dark mode?
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p>Enable UI Skins: the theme provides the <em>Light</em> and <em>Dark</em> color modes.</p>'
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:accordion_item
+                          variant_id: null
+                          props: {}
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Can I create my own theme from it?
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: '<p>Yes, UI Suite UIkit is a starterkit: <code>php core/scripts/drupal generate-theme my_theme --starterkit ui_suite_uikit</code>.</p>'
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id:
+        source_id: select
+        source:
+          value: secondary
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_2_columns
+                variant_id: null
+                props:
+                  vertical_align:
+                    source_id: select
+                    source:
+                      value: middle
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: divider
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: footer
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id: null
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: social-media-menu
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                  column_2:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:totop
+                          variant_id: null
+                          props:
+                            attributes:
+                              source_id: attributes
+                              source:
+                                value: class="uk-float-right"
+                          slots: {}
+                    - source_id: block
+                      source:
+                        plugin_id: block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11
+                        block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11:
+                          status: true
+                          info: ''
+                          view_mode: full
+                    - source_id: block
+                      source:
+                        plugin_id: system_powered_by_block
+                        system_powered_by_block: {}

@@ -1,18 +1,18 @@
 langcode: en
 status: true
 dependencies:
-  config:
-  - display_builder.profile.default
   module:
   - display_builder_page_layout
-  - system
-  - ui_patterns
   theme:
   - ui_suite_uikit
-id: default
-label: Default
-weight: 0
-conditions: {}
+id: image_credits
+label: Image credits
+weight: -5
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /image-credits
 profile: default
 sources:
 - source_id: component
@@ -204,10 +204,6 @@ sources:
           source_id: select
           source:
             value: default
-        attributes:
-          source_id: attributes
-          source:
-            value: role="main"
         landmark:
           source_id: select
           source:
@@ -225,18 +221,26 @@ sources:
               system_breadcrumb_block: {}
           - source_id: page_title
             source: {}
-          - source_id: block
+          - source_id: textarea
             source:
-              plugin_id: local_tasks_block
-              local_tasks_block:
-                primary: true
-                secondary: true
-          - source_id: block
-            source:
-              plugin_id: local_actions_block
-              local_actions_block: {}
-          - source_id: main_page_content
-            source: {}
+              value: <p>The demo content uses the UIkit demo images, from the <a href="https://github.com/uikit/uikit">uikit/uikit</a> repository (MIT license), and public domain photos from the <a href="https://images.nasa.gov">NASA
+                Image and Video Library</a>. NASA does not endorse this theme.</p><div class="uk-overflow-auto"><table class="uk-table uk-table-divider uk-table-small"><thead><tr><th>File</th><th>Credit</th><th>Source</th></tr></thead><tbody><tr><td><code>uikit-photo.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo.jpg">Source</a></td></tr><tr><td><code>uikit-photo2.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo2.jpg">Source</a></td></tr><tr><td><code>uikit-photo3.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo3.jpg">Source</a></td></tr><tr><td><code>uikit-dark.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/dark.jpg">Source</a></td></tr><tr><td><code>uikit-light.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/light.jpg">Source</a></td></tr><tr><td><code>uikit-avatar.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/avatar.jpg">Source</a></td></tr><tr><td><code>uikit-size-h.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size-h.jpg">Source</a></td></tr><tr><td><code>uikit-size-v.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size-v.jpg">Source</a></td></tr><tr><td><code>uikit-size1.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size1.jpg">Source</a></td></tr><tr><td><code>uikit-size2.jpg</code></td><td>UIkit
+                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size2.jpg">Source</a></td></tr><tr><td><code>apollo-8-earthrise.jpg</code></td><td>NASA</td><td><a
+                href="https://images.nasa.gov/details/as08-14-2383">Source</a></td></tr><tr><td><code>apollo-17-blue-marble.jpg</code></td><td>NASA</td><td><a href="https://images.nasa.gov/details/as17-148-22727">Source</a></td></tr><tr><td><code>iss-aurora-borealis.jpg</code></td><td>NASA</td><td><a
+                href="https://images.nasa.gov/details/iss072e159172">Source</a></td></tr><tr><td><code>crew-dragon-approaching-iss.jpg</code></td><td>NASA</td><td><a href="https://images.nasa.gov/details/iss058e027349">Source</a></td></tr><tr><td><code>falcon-9-crew-3-launch.jpg</code></td><td>NASA/Joel
+                Kowsky</td><td><a href="https://images.nasa.gov/details/NHQ202111100022">Source</a></td></tr><tr><td><code>artemis-i-sls-launch-pad.jpg</code></td><td>NASA/Jason Parrish</td><td><a href="https://images.nasa.gov/details/KSC-20220915-PH-JNP01_0003">Source</a></td></tr><tr><td><code>perseverance-ingenuity-selfie.jpg</code></td><td>NASA/JPL-Caltech/MSSS</td><td><a
+                href="https://images.nasa.gov/details/PIA24542">Source</a></td></tr><tr><td><code>cassini-saturn-portrait.jpg</code></td><td>NASA/JPL/Space Science Institute</td><td><a href="https://images.nasa.gov/details/PIA06193">Source</a></td></tr><tr><td><code>spitzer-omega-nebula.jpg</code></td><td>NASA/JPL-Caltech/Univ.
+                of Wisc.</td><td><a href="https://images.nasa.gov/details/PIA12071">Source</a></td></tr><tr><td><code>sdo-x8-solar-flare.jpg</code></td><td>NASA/GSFC/Solar Dynamics Observatory</td><td><a
+                href="https://images.nasa.gov/details/PIA21958">Source</a></td></tr></tbody></table></div>
 - source_id: component
   source:
     component:

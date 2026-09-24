@@ -1,0 +1,699 @@
+langcode: en
+status: true
+dependencies:
+  module:
+  - display_builder_page_layout
+  theme:
+  - ui_suite_uikit
+id: welcome
+label: UIkit showcase
+weight: -5
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /welcome
+profile: default
+sources:
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:navbar
+      variant_id: null
+      props:
+        container:
+          source_id: select
+          source:
+            value: default
+        sticky:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        left:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:logo
+                variant_id: null
+                props:
+                  url:
+                    source_id: url
+                    source:
+                      value: /
+                  image:
+                    source_id: url
+                    source:
+                      value: /themes/contrib/ui_suite_uikit/logo.svg
+                  image_alt:
+                    source_id: textfield
+                    source:
+                      value: Home
+                  navbar_item:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  label:
+                    sources:
+                    - source_id: token
+                      source:
+                        value: '[site:name]'
+        center:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 2
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+        right:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_nav
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-visible@m"
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:navbar_toggle
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: class="uk-hidden@m"
+                  target:
+                    source_id: textfield
+                    source:
+                      value: website-offcanvas
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:offcanvas
+      variant_id: null
+      props:
+        offcanvas_id:
+          source_id: textfield
+          source:
+            value: website-offcanvas
+        mode:
+          source_id: select
+          source:
+            value: push
+        flip:
+          source_id: checkbox
+          source:
+            value: true
+        overlay:
+          source_id: checkbox
+          source:
+            value: true
+        close:
+          source_id: checkbox
+          source:
+            value: true
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id:
+                  source_id: select
+                  source:
+                    value: primary
+                props:
+                  accordion:
+                    source_id: checkbox
+                    source:
+                      value: true
+                  items:
+                    source_id: menu
+                    source:
+                      menu: main
+                      level: 1
+                      depth: 0
+                      set_active_trail: true
+                      expand_all_items: true
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:divider
+                variant_id: null
+                props: {}
+                slots: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:nav
+                variant_id: null
+                props:
+                  items:
+                    source_id: menu
+                    source:
+                      menu: account
+                      level: 1
+                      depth: 1
+                      set_active_trail: false
+                      expand_all_items: false
+                slots: {}
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id: null
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+        landmark:
+          source_id: select
+          source:
+            value: main
+      slots:
+        content:
+          sources:
+          - source_id: block
+            source:
+              plugin_id: system_messages_block
+              system_messages_block: {}
+          - source_id: block
+            source:
+              plugin_id: system_breadcrumb_block
+              system_breadcrumb_block: {}
+          - source_id: page_title
+            source: {}
+          - source_id: textarea
+            source:
+              value: <div class="uk-cover-container uk-height-large uk-light uk-flex uk-flex-middle uk-margin-large-bottom"><img src="/sites/default/files/website-starter/uikit-dark.jpg" data-entity-type="file"
+                data-entity-uuid="f0b00ae5-a36f-5e45-9006-50476ede6c76" width="1600" height="1067" alt="Glasses and brown leather cases on a black background." uk-cover><div class="uk-position-cover uk-overlay-primary"></div><div
+                class="uk-position-relative uk-padding-large uk-width-2-3@m"><h2 class="uk-heading-medium">UIkit, built into Drupal</h2><p class="uk-text-lead">More than 50 UIkit components, ready for Display
+                Builder, Views, blocks and entity displays.</p><a class="uk-button uk-button-default uk-button-large" href="/get-started">Get started</a></div></div>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id:
+                  source_id: select
+                  source:
+                    value: line
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Everything in the back office
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_3_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: medium
+                  match:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: thumbnails; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Components</h3><p>Every
+                          UIkit component is a single directory component with props, slots, variants and stories.</p></div></div><div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary"
+                          uk-icon="icon: settings; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Utilities</h3><p>The UIkit utility classes in the Styles panel: spacing, colors, flex, shadows.</p></div></div>'
+                  column_2:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: grid; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Display
+                          Builder</h3><p>Build page layouts, entity displays and views with the components.</p></div></div><div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary"
+                          uk-icon="icon: happy; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Icons</h3><p>The 162 UIkit icons, shipped as an icon pack and rendered as inline SVG.</p></div></div>'
+                  column_3:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary" uk-icon="icon: paint-bucket; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">Design
+                          tokens</h3><p>Colors and fonts are CSS variables, with Light and Dark color modes.</p></div></div><div><div class="uk-card uk-card-default uk-card-body"><span class="uk-text-primary"
+                          uk-icon="icon: bolt; ratio: 2"></span><h3 class="uk-card-title uk-margin-small-top">HTMX navigation</h3><p>Only the page wrapper is swapped when a link is followed.</p></div></div>'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id:
+                  source_id: select
+                  source:
+                    value: line
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: From the blog
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_3_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: medium
+                  match:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: true
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Build pages with Display Builder
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-photo2.jpg" data-entity-type="file" data-entity-uuid="a448ce03-a790-50f5-98ca-c65c1e38653f"
+                                    width="1600" height="1067" alt="A silver laptop in a tan leather sleeve on a gray sofa."></div><p>Page layouts, entity displays and views with the UIkit components.</p>
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button_group
+                                    variant_id: null
+                                    props: {}
+                                    slots:
+                                      buttons:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:button
+                                              variant_id:
+                                                source_id: select
+                                                source:
+                                                  value: default
+                                              props:
+                                                url:
+                                                  source_id: url
+                                                  source:
+                                                    value: /blog/build-pages-with-display-builder
+                                              slots:
+                                                label:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: Read more
+                  column_2:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: true
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: UIkit utilities in the Styles panel
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-light.jpg" data-entity-type="file" data-entity-uuid="30130fd8-6386-5cce-bbac-381972e657a2"
+                                    width="1600" height="1067" alt="A hand holding an open book of black and white architecture photographs."></div><p>Text, colors, margins, flex and shadows, one click
+                                    away.</p>
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button_group
+                                    variant_id: null
+                                    props: {}
+                                    slots:
+                                      buttons:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:button
+                                              variant_id:
+                                                source_id: select
+                                                source:
+                                                  value: default
+                                              props:
+                                                url:
+                                                  source_id: url
+                                                  source:
+                                                    value: /blog/uikit-utilities-in-the-styles-panel
+                                              slots:
+                                                label:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: Read more
+                  column_3:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:card
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            hover:
+                              source_id: checkbox
+                              source:
+                                value: true
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Page changes without full reloads
+                            content:
+                              sources:
+                              - source_id: textarea
+                                source:
+                                  value: <div class="uk-card-media-top"><img src="/sites/default/files/website-starter/uikit-size1.jpg" data-entity-type="file" data-entity-uuid="9cd0060c-7b25-5a43-8433-0f0758b35b3e"
+                                    width="900" height="600" alt="A cyclist riding along a road through green hills at sunset."></div><p>The HTMX navigation swaps the page wrapper only.</p>
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button_group
+                                    variant_id: null
+                                    props: {}
+                                    slots:
+                                      buttons:
+                                        sources:
+                                        - source_id: component
+                                          source:
+                                            component:
+                                              component_id: ui_suite_uikit:button
+                                              variant_id:
+                                                source_id: select
+                                                source:
+                                                  value: default
+                                              props:
+                                                url:
+                                                  source_id: url
+                                                  source:
+                                                    value: /blog/page-changes-without-full-reloads
+                                              slots:
+                                                label:
+                                                  sources:
+                                                  - source_id: textfield
+                                                    source:
+                                                      value: Read more
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id:
+                  source_id: select
+                  source:
+                    value: line
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: Made for every role
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_3_columns
+                variant_id: null
+                props:
+                  gutter:
+                    source_id: select
+                    source:
+                      value: medium
+                  match:
+                    source_id: checkbox
+                    source:
+                      value: true
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><img src="/sites/default/files/website-starter/uikit-avatar.jpg"
+                          data-entity-type="file" data-entity-uuid="58fdebff-d5c2-5082-a3d5-f7aa6f7da938" width="800" height="800" alt="Portrait of a woman with long hair wearing a brown felt hat." class="uk-border-circle"
+                          style="width: 64px; height: 64px; object-fit: cover;"></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Site builders</h4><p class="uk-comment-meta
+                          uk-margin-remove">No code</p></div></header><div class="uk-comment-body"><p>Drag components into layouts, pick utilities in the Styles panel and change the colors in the Design
+                          tokens panel.</p></div></article>'
+                  column_2:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><span
+                          class="uk-text-primary" uk-icon="icon: code; ratio: 2.5"></span></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Themers</h4><p class="uk-comment-meta
+                          uk-margin-remove">Twig and YAML</p></div></header><div class="uk-comment-body"><p>Start from the starterkit, override a component template or add a variant, and keep the stories
+                          as documentation.</p></div></article>'
+                  column_3:
+                    sources:
+                    - source_id: textarea
+                      source:
+                        value: '<article class="uk-comment uk-comment-primary uk-padding"><header class="uk-comment-header uk-flex uk-flex-middle uk-grid-small" uk-grid><div class="uk-width-auto"><span
+                          class="uk-text-primary" uk-icon="icon: file-edit; ratio: 2.5"></span></div><div class="uk-width-expand"><h4 class="uk-comment-title uk-margin-remove">Editors</h4><p class="uk-comment-meta
+                          uk-margin-remove">Content first</p></div></header><div class="uk-comment-body"><p>Write articles and pages with a consistent design, in light or dark mode, on every screen size.</p></div></article>'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:section
+                variant_id:
+                  source_id: select
+                  source:
+                    value: secondary
+                props:
+                  size:
+                    source_id: select
+                    source:
+                      value: default
+                  container:
+                    source_id: select
+                    source:
+                      value: default
+                slots:
+                  content:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:heading
+                          variant_id: null
+                          props:
+                            heading_level:
+                              source_id: select
+                              source:
+                                value: 2
+                          slots:
+                            title:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Make it your own
+                    - source_id: textarea
+                      source:
+                        value: <p class="uk-text-lead">Generate a theme from the UI Suite UIkit starterkit, with a single command.</p>
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button_group
+                          variant_id: null
+                          props: {}
+                          slots:
+                            buttons:
+                              sources:
+                              - source_id: component
+                                source:
+                                  component:
+                                    component_id: ui_suite_uikit:button
+                                    variant_id:
+                                      source_id: select
+                                      source:
+                                        value: primary
+                                    props:
+                                      url:
+                                        source_id: url
+                                        source:
+                                          value: /blog/start-your-own-theme
+                                    slots:
+                                      label:
+                                        sources:
+                                        - source_id: textfield
+                                          source:
+                                            value: Start your theme
+- source_id: component
+  source:
+    component:
+      component_id: ui_suite_uikit:section
+      variant_id:
+        source_id: select
+        source:
+          value: secondary
+      props:
+        size:
+          source_id: select
+          source:
+            value: small
+        container:
+          source_id: select
+          source:
+            value: default
+      slots:
+        content:
+          sources:
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:grid_2_columns
+                variant_id: null
+                props:
+                  vertical_align:
+                    source_id: select
+                    source:
+                      value: middle
+                slots:
+                  column_1:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: divider
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: footer
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:subnav
+                          variant_id: null
+                          props:
+                            items:
+                              source_id: menu
+                              source:
+                                menu: social-media-menu
+                                level: 1
+                                depth: 1
+                                set_active_trail: false
+                                expand_all_items: false
+                          slots: {}
+                  column_2:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:totop
+                          variant_id: null
+                          props:
+                            attributes:
+                              source_id: attributes
+                              source:
+                                value: class="uk-float-right"
+                          slots: {}
+                    - source_id: block
+                      source:
+                        plugin_id: block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11
+                        block_content:a3c5e5e2-5d0e-4c8a-9f1b-2f6b0c7f9e11:
+                          status: true
+                          info: ''
+                          view_mode: full
+                    - source_id: block
+                      source:
+                        plugin_id: system_powered_by_block
+                        system_powered_by_block: {}

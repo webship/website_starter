@@ -1,7 +1,16 @@
 antibot
+cassini
+dotnav
 drupical
+earthrise
+getuikit
+gsfc
+kowsky
 linkit
+msss
 natshah
+slidenav
+spitzer
 tagify
 totop
 ultrawide
