@@ -29,7 +29,8 @@ recipes:
   - core/recipes/administrator_role
   - core/recipes/content_editor_role
   # The Webship administration, SEO and security features. Web Admin comes
-  # after the core admin theme recipe: it sets the administration theme.
+  # after the core admin theme recipe: it sets UIkit Admin as the
+  # administration theme, sign-in screens included.
   - modules/contrib/webadmin/recipes/default
   - modules/contrib/webseo/recipes/default
   - modules/contrib/websecurity/recipes/default
