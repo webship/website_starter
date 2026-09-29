@@ -24,7 +24,7 @@ default:
     langcode: en
     pathauto: 0
   body:
-  - value: <p class="uk-text-lead">The UIkit icons ship with the theme as an icon pack, rendered as inline SVG.</p><p>The 162 UIkit icons ship with the theme in <code>icons/uikit</code>, declared as the <code>uikit</code> icon pack for UI Icons.</p><p>They are rendered as inline SVG with a <em>ratio</em> setting, so they follow the text color and scale with the design.</p>
+  - value: <p class="uk-text-lead">The UIkit icons ship with the theme as an icon pack, rendered as inline SVG.</p><p>The 162 UIkit icons ship with the theme in <code>icons/uikit</code>, declared as the <code>ui_suite_uikit</code> icon pack for UI Icons.</p><p>They are rendered as inline SVG with a <em>ratio</em> setting, so they follow the text color and scale with the design.</p>
     format: full_html
     summary: The UIkit icons ship with the theme as an icon pack, rendered as inline SVG.
   field_media:

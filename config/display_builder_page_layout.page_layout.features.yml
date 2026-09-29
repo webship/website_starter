@@ -13,6 +13,10 @@ conditions:
     id: request_path
     negate: false
     pages: /features
+  current_theme:
+    id: current_theme
+    negate: false
+    theme: ui_suite_uikit
 profile: default
 sources:
 - source_id: component
@@ -477,7 +481,7 @@ sources:
                                                       value: 162 icons
                                         - source_id: textarea
                                           source:
-                                            value: '<p>The UIkit icons ship as the <code>uikit</code> icon pack for UI Icons, rendered as inline SVG.</p><p><span uk-icon="icon: heart; ratio: 1.5"></span><span
+                                            value: '<p>The UIkit icons ship as the <code>ui_suite_uikit</code> icon pack for UI Icons, rendered as inline SVG.</p><p><span uk-icon="icon: heart; ratio: 1.5"></span><span
                                               uk-icon="icon: star; ratio: 1.5"></span><span uk-icon="icon: bolt; ratio: 1.5"></span><span uk-icon="icon: camera; ratio: 1.5"></span><span uk-icon="icon: world;
                                               ratio: 1.5"></span><span uk-icon="icon: rss; ratio: 1.5"></span></p>'
           - source_id: component
