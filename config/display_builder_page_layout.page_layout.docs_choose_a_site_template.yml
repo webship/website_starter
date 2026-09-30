@@ -5,14 +5,14 @@ dependencies:
   - display_builder_page_layout
   theme:
   - ui_suite_uikit
-id: image_credits
-label: Image credits
+id: docs_choose_a_site_template
+label: 'Choose a site template'
 weight: -5
 conditions:
   request_path:
     id: request_path
     negate: false
-    pages: /image-credits
+    pages: /docs/choose-a-site-template
   current_theme:
     id: current_theme
     negate: false
@@ -227,24 +227,82 @@ sources:
             source: {}
           - source_id: textarea
             source:
-              value: <p>The demo content uses the UIkit demo images, from the <a href="https://github.com/uikit/uikit">uikit/uikit</a> repository (MIT license), and public domain photos from the <a href="https://images.nasa.gov">NASA
-                Image and Video Library</a>. NASA does not endorse this theme. The photos of the documentation and the products are public domain (CC0) photos from <a href="https://commons.wikimedia.org">Wikimedia Commons</a>.</p><div class="uk-overflow-auto"><table class="uk-table uk-table-divider uk-table-small"><thead><tr><th>File</th><th>Credit</th><th>Source</th></tr></thead><tbody><tr><td><code>uikit-photo.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo.jpg">Source</a></td></tr><tr><td><code>uikit-photo2.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo2.jpg">Source</a></td></tr><tr><td><code>uikit-photo3.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/photo3.jpg">Source</a></td></tr><tr><td><code>uikit-dark.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/dark.jpg">Source</a></td></tr><tr><td><code>uikit-light.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/light.jpg">Source</a></td></tr><tr><td><code>uikit-avatar.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/avatar.jpg">Source</a></td></tr><tr><td><code>uikit-size-h.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size-h.jpg">Source</a></td></tr><tr><td><code>uikit-size-v.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size-v.jpg">Source</a></td></tr><tr><td><code>uikit-size1.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size1.jpg">Source</a></td></tr><tr><td><code>uikit-size2.jpg</code></td><td>UIkit
-                demo image, uikit/uikit repository (MIT)</td><td><a href="https://github.com/uikit/uikit/blob/develop/tests/images/size2.jpg">Source</a></td></tr><tr><td><code>apollo-8-earthrise.jpg</code></td><td>NASA</td><td><a
-                href="https://images.nasa.gov/details/as08-14-2383">Source</a></td></tr><tr><td><code>apollo-17-blue-marble.jpg</code></td><td>NASA</td><td><a href="https://images.nasa.gov/details/as17-148-22727">Source</a></td></tr><tr><td><code>iss-aurora-borealis.jpg</code></td><td>NASA</td><td><a
-                href="https://images.nasa.gov/details/iss072e159172">Source</a></td></tr><tr><td><code>crew-dragon-approaching-iss.jpg</code></td><td>NASA</td><td><a href="https://images.nasa.gov/details/iss058e027349">Source</a></td></tr><tr><td><code>falcon-9-crew-3-launch.jpg</code></td><td>NASA/Joel
-                Kowsky</td><td><a href="https://images.nasa.gov/details/NHQ202111100022">Source</a></td></tr><tr><td><code>artemis-i-sls-launch-pad.jpg</code></td><td>NASA/Jason Parrish</td><td><a href="https://images.nasa.gov/details/KSC-20220915-PH-JNP01_0003">Source</a></td></tr><tr><td><code>perseverance-ingenuity-selfie.jpg</code></td><td>NASA/JPL-Caltech/MSSS</td><td><a
-                href="https://images.nasa.gov/details/PIA24542">Source</a></td></tr><tr><td><code>cassini-saturn-portrait.jpg</code></td><td>NASA/JPL/Space Science Institute</td><td><a href="https://images.nasa.gov/details/PIA06193">Source</a></td></tr><tr><td><code>spitzer-omega-nebula.jpg</code></td><td>NASA/JPL-Caltech/Univ.
-                of Wisc.</td><td><a href="https://images.nasa.gov/details/PIA12071">Source</a></td></tr><tr><td><code>sdo-x8-solar-flare.jpg</code></td><td>NASA/GSFC/Solar Dynamics Observatory</td><td><a
-                href="https://images.nasa.gov/details/PIA21958">Source</a></td></tr><tr><td><code>code-editor-laptop.jpg</code></td><td>Luis Gomes, CC0</td><td><a href="https://commons.wikimedia.org/wiki/File:Pexels-luis-gomes-546819.jpg">Source</a></td></tr><tr><td><code>developer-laptop-code.jpg</code></td><td>Tirza van Dijk, CC0</td><td><a href="https://commons.wikimedia.org/wiki/File:Laptop_coding_programs_(Unsplash).jpg">Source</a></td></tr><tr><td><code>code-on-monitor.jpg</code></td><td>Markus Spiske, CC0</td><td><a href="https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg">Source</a></td></tr><tr><td><code>team-planning-laptops.jpg</code></td><td>Helloquence, CC0</td><td><a href="https://commons.wikimedia.org/wiki/File:Helloquence-61189.jpg">Source</a></td></tr><tr><td><code>webship-portal-product-shot.jpg</code></td><td>Screenshot of Webship Portal with Webtheme (GPL-2.0-or-later)</td><td>Webship</td></tr></tbody></table></div>
+              value: <p>A site template is a Drupal recipe that builds a complete site. Pick the one that matches your project.</p><table class="uk-table uk-table-divider uk-table-small"><thead><tr><th>Site
+                template</th><th>For</th></tr></thead><tbody><tr><td>Website Starter</td><td>A company site or a blog, with a UIkit showcase.</td></tr><tr><td>Webship Starter</td><td>Documentation, products
+                and releases, in UI Suite UIkit.</td></tr><tr><td>Webship Portal</td><td>A software portal like Webship.co, in Webtheme.</td></tr></tbody></table>
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: From the installer
+          - source_id: textarea
+            source:
+              value: '<p>Open the site in the browser: the Webship installer lists the site templates. Choose one and continue.</p><img src="/sites/default/files/website-starter/developer-laptop-code.jpg"
+                data-entity-type="file" data-entity-uuid="724063e6-624c-5942-a484-8da75d4eb895" width="1800" height="1200" alt="A developer writing code on a laptop." class="uk-border-rounded uk-box-shadow-medium">'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 2
+                slots:
+                  title:
+                    sources:
+                    - source_id: textfield
+                      source:
+                        value: With Drush
+          - source_id: textarea
+            source:
+              value: '<p>On the command line, give the path of the site template to the installer:</p><pre><code>ddev drush site:install ../recipes/website_starter -y
+
+                ddev launch</code></pre>'
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:button_group
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: 'class="uk-margin-large-top"'
+                slots:
+                  buttons:
+                    sources:
+                    - source_id: component
+                      source:
+                        component:
+                          component_id: ui_suite_uikit:button
+                          variant_id:
+                            source_id: select
+                            source:
+                              value: default
+                          props:
+                            url:
+                              source_id: url
+                              source:
+                                value: /docs
+                          slots:
+                            label:
+                              sources:
+                              - source_id: textfield
+                                source:
+                                  value: Back to the documentation
 - source_id: component
   source:
     component:

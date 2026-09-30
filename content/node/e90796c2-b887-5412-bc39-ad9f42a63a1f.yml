@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e90796c2-b887-5412-bc39-ad9f42a63a1f
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+  - target_id: 1
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Products
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /products
+    langcode: en
+    pathauto: 0
+  body:
+  - value: |-
+      <p class="uk-text-lead">The Webship installer, the site templates and the theme behind them.</p>
+      <dl class="uk-description-list uk-description-list-divider">
+        <dt><a href="/products/webship">Webship installer</a></dt>
+        <dd>The installer profile: it lists the Webship site templates and installs the one you choose.</dd>
+        <dt><a href="/products/website-starter">Website Starter</a></dt>
+        <dd>A site template for a company site or a blog, with a UIkit showcase and demo content.</dd>
+        <dt><a href="/products/webship-starter">Webship Starter</a></dt>
+        <dd>A site template to manage software: documentation, products and releases.</dd>
+        <dt><a href="/products/webtheme">Webtheme</a></dt>
+        <dd>The theme of Webship.co, generated from UI Suite UIkit.</dd>
+      </dl>
+    format: full_html
+    summary: ''

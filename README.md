@@ -58,6 +58,9 @@ ddev drush recipe ../recipes/website_starter
   credits pages in the footer. The images are the UIkit demo images (MIT) and NASA public domain photos.
 - **Demo content**: About us, Privacy and Terms pages, 32 illustrated blog posts, a video, menus and footer
   links — imported as Drupal default content.
+- **Documentation and products**: a short guide to the Webship site templates at `/docs` (getting started,
+  installing with Composer, choosing a site template, the dashboards, building pages with Display Builder),
+  and pages about the Webship installer, Website Starter, Webship Starter and Webtheme at `/products`.
 
 ## Page layouts and the administration theme
 
@@ -81,6 +84,22 @@ foreach (\Drupal::entityTypeManager()->getStorage("page_layout")->loadMultiple()
   }
 }'
 ```
+
+## Image credits
+
+The UIkit demo images (MIT) and the NASA photos are listed on the *Image credits* page of the site. The photos
+of the documentation and the products are released under CC0 (public domain dedication), and were resized for
+the web:
+
+| File | Photo | Author | License |
+| --- | --- | --- | --- |
+| `developer-laptop-code.jpg` | [Laptop coding programs](https://commons.wikimedia.org/wiki/File:Laptop_coding_programs_(Unsplash).jpg) | Tirza van Dijk | CC0 |
+| `code-on-monitor.jpg` | [Code on computer monitor](https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg) | Markus Spiske | CC0 |
+| `code-editor-laptop.jpg` | [Code editor on a laptop](https://commons.wikimedia.org/wiki/File:Pexels-luis-gomes-546819.jpg) | Luis Gomes | CC0 |
+| `team-planning-laptops.jpg` | [Planning with laptops](https://commons.wikimedia.org/wiki/File:Helloquence-61189.jpg) | Helloquence | CC0 |
+
+`webship-portal-product-shot.jpg` is a screenshot of the Webship Portal front page with Webtheme, distributed
+with this project under GPL-2.0-or-later.
 
 ## Requirements
 

@@ -1,0 +1,56 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 85248e41-730d-55f9-bb6c-d6f7a0d5184b
+  bundle: webpage
+  default_langcode: en
+  depends:
+    724063e6-624c-5942-a484-8da75d4eb895: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Getting started'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /docs/getting-started
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">Webship is a set of Drupal site templates and recipes. This guide takes you from an empty folder to a running site.</p>
+        <h2>What you need</h2>
+        <ul class="uk-list uk-list-bullet">
+          <li><a href="https://ddev.com">DDEV</a> and Docker, to run the site locally.</li>
+          <li>Composer 2, through <code>ddev composer</code>.</li>
+          <li>About 2 GB of free memory for the install.</li>
+        </ul>
+        <h2>The steps</h2>
+        <ol>
+          <li><a href="/docs/install-with-composer">Install with Composer</a>: create the project and start DDEV.</li>
+          <li><a href="/docs/choose-a-site-template">Choose a site template</a>: in the installer, or with Drush.</li>
+          <li><a href="/docs/dashboards">Use the dashboards</a> to manage the content of the site.</li>
+        </ol>
+        <img src="/sites/default/files/website-starter/developer-laptop-code.jpg" data-entity-type="file" data-entity-uuid="724063e6-624c-5942-a484-8da75d4eb895" width="1800" height="1200" alt="A developer writing code on a laptop." class="uk-border-rounded uk-box-shadow-medium">
+
+        <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
+      format: full_html
+      summary: ''

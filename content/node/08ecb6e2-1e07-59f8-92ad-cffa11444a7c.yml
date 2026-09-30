@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 08ecb6e2-1e07-59f8-92ad-cffa11444a7c
+  bundle: webpage
+  default_langcode: en
+  depends:
+    dcba8c3e-c0c8-5c05-aaa5-bd75ac470fee: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Website Starter'
+  created:
+    -
+      value: 1789387200
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /products/website-starter
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">A site template for a company site or a blog, with a UIkit showcase and demo content, built with Display Builder.</p>
+        <drupal-media data-entity-type="media" data-entity-uuid="dcba8c3e-c0c8-5c05-aaa5-bd75ac470fee" data-view-mode="default"></drupal-media>
+        <p>
+          <a class="uk-button uk-button-primary uk-margin-small-right" href="https://www.drupal.org/project/website_starter">Project page</a>
+          <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
+        </p>
+      format: full_html
+      summary: 'A site template for a company site or a blog, with a UIkit showcase and demo content, built with Display Builder.'

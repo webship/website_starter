@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 91fd90a2-21ad-560a-94c7-7d1ddbc4fc4c
+  bundle: webpage
+  default_langcode: en
+  depends:
+    276eeb75-2e9a-51c4-b671-410ac3e1802e: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Webtheme'
+  created:
+    -
+      value: 1789387200
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /products/webtheme
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">The theme of Webship.co: UIkit and SDC components with the Webship.co colors, generated from UI Suite UIkit in 12.0.x.</p>
+        <drupal-media data-entity-type="media" data-entity-uuid="276eeb75-2e9a-51c4-b671-410ac3e1802e" data-view-mode="default"></drupal-media>
+        <p>
+          <a class="uk-button uk-button-primary uk-margin-small-right" href="https://www.drupal.org/project/webtheme">Project page</a>
+          <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
+        </p>
+      format: full_html
+      summary: 'The theme of Webship.co: UIkit and SDC components with the Webship.co colors, generated from UI Suite UIkit in 12.0.x.'

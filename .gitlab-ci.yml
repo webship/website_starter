@@ -66,3 +66,10 @@ recipe:
     - test "$($DRUSH config:get webform.webform.contact id --format=string)" = "contact"
     # The demo content of the recipe is imported.
     - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->count()->execute();')" -gt 0
+    # The pages, the documentation and the products are webpages; the blog
+    # posts are Web Blog posts.
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "webpage")->count()->execute();')" -eq 22
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->condition("type", "webblog")->count()->execute();')" -eq 32
+    - test "$($DRUSH php:eval 'print \Drupal::entityQuery("media")->accessCheck(FALSE)->condition("bundle", "image")->count()->execute();')" -eq 31
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/docs");')" != "/docs"
+    - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/products");')" != "/products"

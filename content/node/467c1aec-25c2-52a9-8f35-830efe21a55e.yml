@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 467c1aec-25c2-52a9-8f35-830efe21a55e
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Install with Composer'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /docs/install-with-composer
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p>Create a Drupal project with the site templates, then install it. Composer runs inside DDEV, so DDEV is all you need on your machine.</p>
+        <pre><code>mkdir my-site && cd my-site
+        ddev config --project-type=drupal11 --docroot=web --php-version=8.4
+        ddev start
+        ddev composer create-project drupal/website
+        ddev drush site:install ../recipes/website_starter -y</code></pre>
+        <h2>Add a site template</h2>
+        <pre><code>ddev composer require drupal/website_starter</code></pre>
+        <p>Composer places the site template in <code>recipes/website_starter</code>, with the Webship modules and the UI Suite UIkit theme it needs.</p>
+        <div class="uk-alert-primary" uk-alert><p>Use <code>ddev composer</code> and <code>ddev drush</code>, so the commands run in the web container with the right PHP version.</p></div>
+
+        <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
+      format: full_html
+      summary: ''

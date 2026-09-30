@@ -10,18 +10,22 @@ Feature: Webpages and the contact webform
       And the page should not contain escaped markup
 
     Examples:
-      | path                 | title          |
-      | /about-us            | About us       |
-      | /privacy             | Privacy        |
-      | /terms               | Terms          |
-      | /welcome             | UIkit showcase |
-      | /features            | Features       |
-      | /get-started         | Get started    |
-      | /showcase/gallery    | Gallery        |
-      | /showcase/slideshows | Slideshows     |
-      | /showcase/elements   | Elements       |
-      | /support             | Support        |
-      | /image-credits       | Image credits  |
+      | path                         | title                  |
+      | /about-us                    | About us               |
+      | /privacy                     | Privacy                |
+      | /terms                       | Terms                  |
+      | /welcome                     | UIkit showcase         |
+      | /features                    | Features               |
+      | /get-started                 | Get started            |
+      | /showcase/gallery            | Gallery                |
+      | /showcase/slideshows         | Slideshows             |
+      | /showcase/elements           | Elements               |
+      | /support                     | Support                |
+      | /image-credits               | Image credits          |
+      | /docs                        | Documentation          |
+      | /docs/choose-a-site-template | Choose a site template |
+      | /products                    | Products               |
+      | /products/webship            | Webship installer      |
 
   Scenario: The UIkit showcase pages use the UIkit components
     Given I am an anonymous user

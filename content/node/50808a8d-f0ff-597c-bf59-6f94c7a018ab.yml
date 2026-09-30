@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 50808a8d-f0ff-597c-bf59-6f94c7a018ab
+  bundle: webpage
+  default_langcode: en
+  depends:
+    59fbc54c-0088-5220-b722-1a1493035dd5: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Dashboards'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /docs/dashboards
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p>Web Dashboard gives each role a default dashboard, built with Display Builder.</p>
+        <h2>Webmaster</h2>
+        <p>For site administrators: content by type, the site status report, who is online and the recent content.</p>
+        <img src="/sites/default/files/website-starter/team-planning-laptops.jpg" data-entity-type="file" data-entity-uuid="59fbc54c-0088-5220-b722-1a1493035dd5" width="1800" height="1202" alt="Two people planning a project with laptops and printed notes." class="uk-border-rounded uk-box-shadow-medium">
+        <h2>Editorial</h2>
+        <p>For content editors: their recent drafts, shortcuts to add content, and the media library.</p>
+        <p>Open <em>Dashboard</em> in the admin toolbar, then <em>Personalize</em> to arrange your own dashboard.</p>
+
+        <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
+      format: full_html
+      summary: ''

@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c5717b5b-bafa-565e-8250-5b93e1aa3120
+  bundle: webpage
+  default_langcode: en
+  depends:
+    61a7032b-8a16-513d-80b7-80887e84accd: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Webship Starter'
+  created:
+    -
+      value: 1789387200
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /products/webship-starter
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">A site template to manage software: documentation, products and releases, a newsletter and social sharing, in UI Suite UIkit.</p>
+        <drupal-media data-entity-type="media" data-entity-uuid="61a7032b-8a16-513d-80b7-80887e84accd" data-view-mode="default"></drupal-media>
+        <p>
+          <a class="uk-button uk-button-primary uk-margin-small-right" href="https://www.drupal.org/project/webship_starter">Project page</a>
+          <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
+        </p>
+      format: full_html
+      summary: 'A site template to manage software: documentation, products and releases, a newsletter and social sharing, in UI Suite UIkit.'

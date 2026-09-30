@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 59fbc54c-0088-5220-b722-1a1493035dd5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: team-planning-laptops.jpg
+  uri:
+    -
+      value: 'public://website-starter/team-planning-laptops.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 331095
+  status:
+    -
+      value: true

@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: edc67ac3-de15-5de6-b005-8ef46ba2ecca
+  bundle: webpage
+  default_langcode: en
+  depends:
+    b1574e5e-19c3-5391-8b54-f7e38a1827ed: file
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Build pages with Display Builder'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /docs/build-pages-with-display-builder
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p>Every content type of the site is displayed with Display Builder, so you arrange pages without writing templates.</p>
+        <img src="/sites/default/files/website-starter/code-editor-laptop.jpg" data-entity-type="file" data-entity-uuid="b1574e5e-19c3-5391-8b54-f7e38a1827ed" width="1800" height="1195" alt="A code editor with test code on a laptop screen." class="uk-border-rounded uk-box-shadow-medium">
+        <h2>Edit a display</h2>
+        <ol>
+          <li>Go to <em>Structure &gt; Content types</em> and choose <em>Manage display</em> for a content type.</li>
+          <li>Open the Display Builder editor, and drag components, blocks and fields from the libraries.</li>
+          <li>Preview the result, then publish.</li>
+        </ol>
+        <p>Undo, redo and the history keep every change, so you can go back to an earlier version.</p>
+
+        <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
+      format: full_html
+      summary: ''

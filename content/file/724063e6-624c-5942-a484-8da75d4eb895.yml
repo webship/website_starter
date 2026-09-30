@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 724063e6-624c-5942-a484-8da75d4eb895
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: developer-laptop-code.jpg
+  uri:
+    -
+      value: 'public://website-starter/developer-laptop-code.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 289238
+  status:
+    -
+      value: true

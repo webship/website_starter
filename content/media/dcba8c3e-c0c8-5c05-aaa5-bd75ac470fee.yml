@@ -1,0 +1,25 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dcba8c3e-c0c8-5c05-aaa5-bd75ac470fee
+  bundle: image
+  default_langcode: en
+  depends:
+    0e4e2413-e9b9-53e3-9354-2b85cad594e9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Colorful source code on a computer monitor'
+  field_media_image:
+    -
+      alt: 'Colorful source code on a computer monitor.'
+      title: ''
+      width: 1800
+      height: 1200
+      entity: 0e4e2413-e9b9-53e3-9354-2b85cad594e9

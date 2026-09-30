@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4eb44db6-3e86-5be4-833a-5416194de7c7
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+  - target_id: 1
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Choose a site template
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /docs/choose-a-site-template
+    langcode: en
+    pathauto: 0
+  body:
+  - value: ''
+    format: full_html
+    summary: ''

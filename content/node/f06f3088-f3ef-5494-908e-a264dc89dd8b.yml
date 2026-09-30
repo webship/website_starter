@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f06f3088-f3ef-5494-908e-a264dc89dd8b
+  bundle: webpage
+  default_langcode: en
+  depends:
+    d45f79c2-6489-5ebb-9358-4c87a62d5f3c: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Webship installer'
+  created:
+    -
+      value: 1789387200
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /products/webship
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: |-
+        <p class="uk-text-lead">The Webship installer profile: it lists the Webship site templates and installs the one you choose, on Drupal 11.4 and later.</p>
+        <drupal-media data-entity-type="media" data-entity-uuid="d45f79c2-6489-5ebb-9358-4c87a62d5f3c" data-view-mode="default"></drupal-media>
+        <p>
+          <a class="uk-button uk-button-primary uk-margin-small-right" href="https://www.drupal.org/project/webship">Project page</a>
+          <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
+        </p>
+      format: full_html
+      summary: 'The Webship installer profile: it lists the Webship site templates and installs the one you choose, on Drupal 11.4 and later.'

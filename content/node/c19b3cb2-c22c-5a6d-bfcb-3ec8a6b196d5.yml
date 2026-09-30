@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c19b3cb2-c22c-5a6d-bfcb-3ec8a6b196d5
+  bundle: webpage
+  default_langcode: en
+default:
+  revision_uid:
+  - target_id: 1
+  status:
+  - value: true
+  uid:
+  - target_id: 1
+  title:
+  - value: Documentation
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  moderation_state:
+  - value: published
+  path:
+  - alias: /docs
+    langcode: en
+    pathauto: 0
+  body:
+  - value: ''
+    format: full_html
+    summary: ''
