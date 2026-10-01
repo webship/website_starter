@@ -1,0 +1,12 @@
+name: 'Website Starter front-end theme'
+description: 'Installs the front-end theme of the Website Starter site template and makes it the default theme, before the editor and feature recipes need one.'
+type: 'Themes'
+install:
+  - block
+  - ui_suite_uikit
+config:
+  strict: false
+  actions:
+    system.theme:
+      simpleConfigUpdate:
+        default: ui_suite_uikit

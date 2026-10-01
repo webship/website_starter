@@ -15,15 +15,19 @@ recipes:
   - modules/contrib/webdev/recipes/default
   - modules/contrib/webblog/recipes/default
   - core/recipes/tags_taxonomy
-  # The core recipes of the text formats, the themes, the roles and the
-  # recommended settings.
+  # The core recipes of the text formats, the admin theme, the roles and the
+  # recommended settings. No core front-end theme recipe: Drupal 12 removed
+  # it, and the front-end theme is UI Suite UIkit, installed below.
   - core/recipes/basic_block_type
   - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
   - core/recipes/core_recommended_performance
   - core/recipes/core_recommended_maintenance
   - core/recipes/core_recommended_admin_theme
-  - core/recipes/core_recommended_front_end_theme
+  # The front-end theme, before the feature recipes: the editor recipes
+  # need an installed default theme. Drupal 12 has no core front-end theme
+  # recipe, so the template ships its own, inside this package.
+  - ../recipes/website_starter/recipes/front_end_theme
   - core/recipes/user_picture
   - core/recipes/restricted_html_format
   - core/recipes/administrator_role
@@ -51,10 +55,13 @@ install:
   - ui_suite_uikit
 config:
   strict: false
-  import:
-    olivero:
-      - block.block.olivero_help
   actions:
+    # The medium date format the Web Blog posts use. It came with the core
+    # front-end theme recipe (Olivero), which Drupal 12 no longer has.
+    core.date_format.olivero_medium:
+      createIfNotExists:
+        label: 'Olivero Medium'
+        pattern: 'j F Y'
     # The pages are built with Display Builder components; the text parts of
     # a page keep their images and figures, so the text format of the builder
     # allows the media tags next to the prose ones.
@@ -220,13 +227,12 @@ config:
     # The contact webform of the site: anti-spam protection, and a line that
     # links to the Privacy page of the demo content.
     webform.webform.contact:
-      simpleConfigUpdate:
-        third_party_settings:
-          antibot:
-            antibot: true
-          honeypot:
-            honeypot: true
-            time_restriction: true
+      # A webform is a config entity: Drupal 12 refuses simpleConfigUpdate on
+      # it, setProperties works on Drupal 11 and 12.
+      setProperties:
+        third_party_settings.antibot.antibot: true
+        third_party_settings.honeypot.honeypot: true
+        third_party_settings.honeypot.time_restriction: true
         elements: |-
           contact_paragraph:
             '#type': webform_markup
