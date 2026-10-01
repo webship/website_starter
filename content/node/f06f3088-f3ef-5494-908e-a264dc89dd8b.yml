@@ -36,7 +36,7 @@ default:
       alias: /products/webship
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">The Webship installer profile: it lists the Webship site templates and installs the one you choose, on Drupal 11.4 and later.</p>
@@ -46,4 +46,6 @@ default:
           <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
         </p>
       format: full_html
-      summary: 'The Webship installer profile: it lists the Webship site templates and installs the one you choose, on Drupal 11.4 and later.'
+  field_summary:
+    -
+      value: 'The Webship installer profile: it lists the Webship site templates and installs the one you choose, on Drupal 11.4 and later.'

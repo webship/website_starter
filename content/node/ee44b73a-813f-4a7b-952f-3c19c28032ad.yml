@@ -33,8 +33,7 @@ default:
     -
       alias: /privacy
       langcode: en
-  body:
+  field_body:
     -
       value: '<p class="uk-text-lead">We only collect the data needed to answer your requests and we never share it.</p><p>This page is part of the demo content of the Website Starter. Replace it with the text reviewed by your legal team before publishing the website.</p><p>For any question about this page, use the contact form: we answer every request within two working days.</p>'
       format: full_html
-      summary: ''

@@ -33,7 +33,7 @@ default:
       alias: /docs/getting-started
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">Webship is a set of Drupal site templates and recipes. This guide takes you from an empty folder to a running site.</p>
@@ -53,4 +53,3 @@ default:
 
         <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
       format: full_html
-      summary: ''

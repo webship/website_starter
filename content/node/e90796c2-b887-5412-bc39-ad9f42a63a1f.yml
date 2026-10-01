@@ -23,7 +23,7 @@ default:
   - alias: /products
     langcode: en
     pathauto: 0
-  body:
+  field_body:
   - value: |-
       <p class="uk-text-lead">The Webship installer, the site templates and the theme behind them.</p>
       <dl class="uk-description-list uk-description-list-divider">
@@ -37,4 +37,3 @@ default:
         <dd>The theme of Webship.co, generated from UI Suite UIkit.</dd>
       </dl>
     format: full_html
-    summary: ''

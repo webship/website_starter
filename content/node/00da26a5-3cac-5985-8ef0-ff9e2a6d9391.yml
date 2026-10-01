@@ -38,7 +38,6 @@ default:
   - alias: /showcase/slideshows
     langcode: en
     pathauto: 0
-  body:
+  field_body:
   - value: ''
     format: full_html
-    summary: ''

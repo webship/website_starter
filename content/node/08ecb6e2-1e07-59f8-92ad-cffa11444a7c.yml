@@ -36,7 +36,7 @@ default:
       alias: /products/website-starter
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">A site template for a company site or a blog, with a UIkit showcase and demo content, built with Display Builder.</p>
@@ -46,4 +46,6 @@ default:
           <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
         </p>
       format: full_html
-      summary: 'A site template for a company site or a blog, with a UIkit showcase and demo content, built with Display Builder.'
+  field_summary:
+    -
+      value: 'A site template for a company site or a blog, with a UIkit showcase and demo content, built with Display Builder.'

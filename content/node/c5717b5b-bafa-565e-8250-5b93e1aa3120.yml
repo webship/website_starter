@@ -36,7 +36,7 @@ default:
       alias: /products/webship-starter
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p class="uk-text-lead">A site template to manage software: documentation, products and releases, a newsletter and social sharing, in UI Suite UIkit.</p>
@@ -46,4 +46,6 @@ default:
           <a class="uk-button uk-button-default" href="/docs/getting-started">Get started</a>
         </p>
       format: full_html
-      summary: 'A site template to manage software: documentation, products and releases, a newsletter and social sharing, in UI Suite UIkit.'
+  field_summary:
+    -
+      value: 'A site template to manage software: documentation, products and releases, a newsletter and social sharing, in UI Suite UIkit.'

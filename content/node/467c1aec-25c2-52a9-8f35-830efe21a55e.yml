@@ -31,7 +31,7 @@ default:
       alias: /docs/install-with-composer
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p>Create a Drupal project with the site templates, then install it. Composer runs inside DDEV, so DDEV is all you need on your machine.</p>
@@ -47,4 +47,3 @@ default:
 
         <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
       format: full_html
-      summary: ''

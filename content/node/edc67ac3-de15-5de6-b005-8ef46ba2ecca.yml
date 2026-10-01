@@ -33,7 +33,7 @@ default:
       alias: /docs/build-pages-with-display-builder
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p>Every content type of the site is displayed with Display Builder, so you arrange pages without writing templates.</p>
@@ -48,4 +48,3 @@ default:
 
         <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
       format: full_html
-      summary: ''

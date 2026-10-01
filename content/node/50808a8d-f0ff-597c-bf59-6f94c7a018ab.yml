@@ -33,7 +33,7 @@ default:
       alias: /docs/dashboards
       langcode: en
       pathauto: 0
-  body:
+  field_body:
     -
       value: |-
         <p>Web Dashboard gives each role a default dashboard, built with Display Builder.</p>
@@ -46,4 +46,3 @@ default:
 
         <p class="uk-margin-large-top"><a class="uk-button uk-button-default" href="/docs">Back to the documentation</a></p>
       format: full_html
-      summary: ''
