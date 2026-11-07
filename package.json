@@ -4,9 +4,10 @@
   "description": "Webship-js tests of the Website Starter recipe.",
   "license": "GPL-2.0-or-later",
   "engines": {
-    "node": ">= 20.0"
+    "node": ">= 24.0"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^12.9.0",
     "webship-js": "^2.0.6"
   },
   "scripts": {
