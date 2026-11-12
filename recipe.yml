@@ -92,7 +92,8 @@ config:
         - 'access content'
         - 'delete own files'
     # Content editors manage the content of every content type of the site,
-    # and move content through the editorial workflow.
+    # the demo content included, which user 1 owns, and move content through
+    # the editorial workflow.
     user.role.content_editor:
       grantPermissions:
         - 'access content overview'
@@ -116,6 +117,7 @@ config:
         - 'create %bundle content'
         - 'delete %bundle revisions'
         - 'delete own %bundle content'
+        - 'edit any %bundle content'
         - 'edit own %bundle content'
     # The demo video is a WebM file. Set through the field API, so the demo
     # content imported next validates against the new extensions.

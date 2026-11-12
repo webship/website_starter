@@ -27,9 +27,12 @@ module.exports = {
       // site-install super-admin (drush site:install --account-name=webmaster --account-pass=...).
       users: {
         'Webmaster': { username: 'webmaster', email: 'webmaster@example.test', password: process.env.DRUPAL_ADMIN_PASSWORD || 'dD.123123ddd', isAdmin: true },
-        'Content editor': { username: 'content_editor_user', email: 'content_editor_user@example.test', password: 'dD.123123ddd', roles: ['content_editor'] },
+        'Content editor': { username: 'Content editor', email: 'content_editor_user@example.test', password: 'dD.123123ddd', roles: ['content_editor'] },
         'Authenticated user': { username: 'authenticated_user', email: 'authenticated_user@example.test', password: 'dD.123123ddd', roles: [] },
       },
+      // Web Security protects the login form with a time limit (Honeypot): the login by handle
+      // waits before it submits.
+      loginWait: Number(process.env.DRUPAL_LOGIN_WAIT) || 3000,
       minWaitTime: {
         page: 1000,
         before_scenario: 0,

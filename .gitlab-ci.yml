@@ -73,6 +73,8 @@ recipe:
     - $DRUSH pm:list --status=enabled --format=list | grep -qx easy_breadcrumb
     - $DRUSH pm:list --status=enabled --format=list | grep -qx login_emailusername
     - test "$($DRUSH config:get webform.webform.contact id --format=string)" = "contact"
+    # Content editors edit any content of the two content types, the demo content included.
+    - test "$($DRUSH php:eval '$r = \Drupal\user\Entity\Role::load("content_editor"); print count(array_filter(array_map(fn ($t) => $r->hasPermission("edit any $t content"), ["webblog", "webpage"])));')" -eq 2
     # The demo content of the recipe is imported.
     - test "$($DRUSH php:eval 'print \Drupal::entityQuery("node")->accessCheck(FALSE)->count()->execute();')" -gt 0
     # The pages, the documentation and the products are webpages; the blog
