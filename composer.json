@@ -27,5 +27,8 @@
         "drupal/webpatches": "~12.0",
         "drupal/websecurity": "~12.0",
         "drupal/webseo": "~12.0"
+    },
+    "conflict": {
+        "drupal/display_builder": "<1.0.0-beta10"
     }
 }

@@ -30,6 +30,23 @@ Feature: Accessibility of the pages
       | /blog            | the blog                     |
       | /form/contact    | the contact form             |
 
+  Scenario Outline: <name> has one h1
+    Given I am an anonymous user
+     When I go to "<path>"
+     Then the page should have exactly one h1
+
+    Examples:
+      | path                        | name                |
+      | /blog/getting-started-uikit | a blog post         |
+      | /welcome                    | the UIkit showcase  |
+      | /docs                       | the documentation   |
+
+  Scenario: The page not found page has one h1
+    Given I am an anonymous user
+     When I go to "/page-that-does-not-exist"
+     Then the response status code should be 404
+      And the page should have exactly one h1
+
   Scenario: The keyboard reaches the content of the front page
     Given I am an anonymous user
      When I go to "/"

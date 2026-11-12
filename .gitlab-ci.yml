@@ -82,3 +82,7 @@ recipe:
     - test "$($DRUSH php:eval 'print \Drupal::entityQuery("media")->accessCheck(FALSE)->condition("bundle", "image")->count()->execute();')" -eq 31
     - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/docs");')" != "/docs"
     - test "$($DRUSH php:eval 'print \Drupal::service("path_alias.manager")->getPathByAlias("/products");')" != "/products"
+    # A page prints one h1: the page layouts put the page title in a heading.
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/"))->getContent(), "<h1");')" -eq 1
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/about-us"))->getContent(), "<h1");')" -eq 1
+    - test "$($DRUSH php:eval 'print substr_count((string) \Drupal::service("http_kernel")->handle(\Symfony\Component\HttpFoundation\Request::create("/welcome"))->getContent(), "<h1");')" -eq 1

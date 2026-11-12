@@ -223,8 +223,21 @@ sources:
             source:
               plugin_id: system_breadcrumb_block
               system_breadcrumb_block: {}
-          - source_id: page_title
-            source: {}
+          - source_id: component
+            source:
+              component:
+                component_id: ui_suite_uikit:heading
+                variant_id: null
+                props:
+                  heading_level:
+                    source_id: select
+                    source:
+                      value: 1
+                slots:
+                  title:
+                    sources:
+                    - source_id: page_title
+                      source: {}
           - source_id: textarea
             source:
               value: <p>A site template is a Drupal recipe that builds a complete site. Pick the one that matches your project.</p><table class="uk-table uk-table-divider uk-table-small"><thead><tr><th>Site
